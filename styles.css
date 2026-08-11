@@ -8,7 +8,9 @@ body { color: var(--cpo-ink); }
 .callout-note { border-left-color: var(--cpo-blue); }
 .table { font-size: .92rem; }
 .table th { background: #f4f8fb; }
-figure { border: 1px solid var(--cpo-line); border-radius: .35rem; padding: .75rem; background: #fff; }
+/* Keep analytical exhibits in the reading column rather than treating them as full-width slides. */
+figure { max-width: 46rem; margin: 1.15rem auto; border: 1px solid var(--cpo-line); border-radius: .35rem; padding: .65rem; background: #fff; }
+figure img, figure object, figure embed { display: block; max-width: 100%; height: auto; margin: 0 auto; }
 figcaption { color: var(--cpo-muted); font-size: .88rem; }
 .status-fact { color: #176b3a; font-weight: 700; }
 .status-inference { color: #8a5200; font-weight: 700; }
@@ -16,7 +18,8 @@ figcaption { color: var(--cpo-muted); font-size: .88rem; }
 .status-open { color: #8b1e2d; font-weight: 700; }
 .callout-warning { background: #fff8ed; }
 .callout-note { background: #f4f8fb; }
-.cell-output-display, .mermaid { margin: 1.25rem auto; }
+.cell-output-display, .mermaid { max-width: 40rem; margin: 1rem auto; }
+.mermaid svg { display: block; width: 100% !important; height: auto !important; max-height: 25rem; margin: 0 auto; }
 .table-responsive { margin: 1.25rem 0; }
 #quarto-content main.content { max-width: 980px; }
 table td, table th { vertical-align: top; }
@@ -39,7 +42,9 @@ table td { line-height: 1.4; }
     overflow-x: auto;
     overflow-y: hidden;
   }
-  figure { padding: .35rem; }
+  figure { max-width: 100%; padding: .35rem; }
+  .cell-output-display, .mermaid { max-width: 100%; }
+  .mermaid svg { max-height: none; }
   #quarto-content main.content { padding-left: .8rem; padding-right: .8rem; }
 }
-@media print { .navbar, .sidebar, .page-footer { display: none !important; } main.content { max-width: 100% !important; } a { color: inherit !important; text-decoration: none !important; } table { font-size: 8.5pt; } figure { break-inside: avoid; } h1, h2, h3 { break-after: avoid; } }
+@media print { .navbar, .sidebar, .page-footer { display: none !important; } main.content { max-width: 100% !important; } a { color: inherit !important; text-decoration: none !important; } table { font-size: 8.5pt; } figure { max-width: 5.9in; break-inside: avoid; } .mermaid { max-width: 5.25in; } h1, h2, h3 { break-after: avoid; } }
