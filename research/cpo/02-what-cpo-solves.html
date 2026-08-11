@@ -99,7 +99,7 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<link rel="stylesheet" href="/cpo-cloudflare.css"></head>
+</head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
 
@@ -108,7 +108,7 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Nur Alpys</span>
     </a>
   </div>
@@ -119,19 +119,19 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -291,7 +291,6 @@ div.csl-indent {
   <ul>
   <li><a href="#the-physical-problem" id="toc-the-physical-problem" class="nav-link active" data-scroll-target="#the-physical-problem">The physical problem</a></li>
   <li><a href="#the-trade-off-is-not-simply-power" id="toc-the-trade-off-is-not-simply-power" class="nav-link" data-scroll-target="#the-trade-off-is-not-simply-power">The trade-off is not simply power</a></li>
-  <li><a href="#scope-discipline" id="toc-scope-discipline" class="nav-link" data-scroll-target="#scope-discipline">Scope discipline</a></li>
   <li><a href="#where-the-electrical-boundary-matters" id="toc-where-the-electrical-boundary-matters" class="nav-link" data-scroll-target="#where-the-electrical-boundary-matters">Where the electrical boundary matters</a></li>
   <li><a href="#power-is-necessary-but-not-sufficient" id="toc-power-is-necessary-but-not-sufficient" class="nav-link" data-scroll-target="#power-is-necessary-but-not-sufficient">Power is necessary, but not sufficient</a></li>
   </ul>
@@ -389,14 +388,10 @@ div.csl-indent {
 </tbody>
 </table>
 </section>
-<section id="scope-discipline" class="level2">
-<h2 class="anchored" data-anchor-id="scope-discipline">Scope discipline</h2>
-<p>Scale-out networking is heterogeneous and favours flexibility; Coherent explicitly describes pluggables as the primary form factor in scale-out while presenting CPO as a more relevant transition for short-reach scale-up. That is a useful supplier framing, not an adoption result <span class="citation" data-cites="coherent2026deck">(<a href="#ref-coherent2026deck" role="doc-biblioref">Coherent 2026</a>)</span>. The report’s current switch-CPO conclusion therefore remains conditional on the 200G/lane electrical boundary, not a claim that every AI link becomes CPO.</p>
-</section>
 <section id="where-the-electrical-boundary-matters" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-electrical-boundary-matters">Where the electrical boundary matters</h2>
 <p>The relevant constraint is not cable length alone. The channel includes host-package escape, board routing, vias, connectors, the module interface and the equalisation burden required to keep the transmitter and receiver inside their error and eye-quality budgets. At a low enough loss and a mature enough module ecosystem, retimed pluggables retain the advantage of modular service. At a difficult enough channel, the price of preserving that modularity rises through DSP, retiming, power, front-panel thermal load and design complexity.</p>
-<p>The OIF’s energy-efficiency requirements and its co-packaged-module work are useful because they describe an industry problem rather than a single vendor product: energy per delivered bit is a system concern, and the optical/electrical partition is becoming an architecture choice <span class="citation" data-cites="oif2024eei oif2023cpo">(<a href="#ref-oif2024eei" role="doc-biblioref">Optical Internetworking Forum 2024</a>, <a href="#ref-oif2023cpo" role="doc-biblioref">2023</a>)</span>. They do not prove that a CPO implementation wins a total-cost comparison in a specific deployment.</p>
+<p>The OIF’s energy-efficiency and co-packaged-module work frame this as a system architecture choice, not a vendor-specific claim <span class="citation" data-cites="oif2024eei oif2023cpo">(<a href="#ref-oif2024eei" role="doc-biblioref">Optical Internetworking Forum 2024</a>, <a href="#ref-oif2023cpo" role="doc-biblioref">2023</a>)</span>.</p>
 <div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
 <div class="cell-output-display">
 <div>
@@ -462,9 +457,6 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-coherent2026deck" class="csl-entry" role="listitem">
-Coherent. 2026. <em>Technology Innovation: OFC 2026 Investor Event</em>. <a href="https://www.coherent.com/content/dam/coherent/site/en/documents/investors/investor-presentations/2026/march-17/OFC-2026-Investor%20event-deck-vf.pdf">https://www.coherent.com/content/dam/coherent/site/en/documents/investors/investor-presentations/2026/march-17/OFC-2026-Investor%20event-deck-vf.pdf</a>.
-</div>
 <div id="ref-marvell2025engine" class="csl-entry" role="listitem">
 Marvell. 2025. <em>Marvell Demonstrates Silicon Photonics Light Engine for Low-Power Rack-Scale Interconnect in AI Networks</em>. <a href="https://www.marvell.com/company/newsroom/marvell-demonstrates-silicon-photonics-light-engine-for-low-power-rack-scale-interconnect-in-ai-networks.html">https://www.marvell.com/company/newsroom/marvell-demonstrates-silicon-photonics-light-engine-for-low-power-rack-scale-interconnect-in-ai-networks.html</a>.
 </div>

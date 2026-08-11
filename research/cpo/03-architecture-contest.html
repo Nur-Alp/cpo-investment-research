@@ -99,7 +99,7 @@ div.csl-indent {
 
 
 <link rel="stylesheet" href="../../styles.css">
-<link rel="stylesheet" href="/cpo-cloudflare.css"></head>
+</head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
 
@@ -108,7 +108,7 @@ div.csl-indent {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Nur Alpys</span>
     </a>
   </div>
@@ -119,19 +119,19 @@ div.csl-indent {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -290,7 +290,6 @@ div.csl-indent {
    
   <ul>
   <li><a href="#five-architectures-five-different-constraints" id="toc-five-architectures-five-different-constraints" class="nav-link active" data-scroll-target="#five-architectures-five-different-constraints">Five architectures, five different constraints</a></li>
-  <li><a href="#glane-versus-400glane" id="toc-glane-versus-400glane" class="nav-link" data-scroll-target="#glane-versus-400glane">200G/lane versus 400G/lane</a></li>
   <li><a href="#decision-matrix" id="toc-decision-matrix" class="nav-link" data-scroll-target="#decision-matrix">Decision matrix</a></li>
   <li><a href="#architecture-is-a-portfolio-of-trade-offs" id="toc-architecture-is-a-portfolio-of-trade-offs" class="nav-link" data-scroll-target="#architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</a></li>
   <li><a href="#the-200g-and-400g-distinction" id="toc-the-200g-and-400g-distinction" class="nav-link" data-scroll-target="#the-200g-and-400g-distinction">The 200G and 400G distinction</a></li>
@@ -379,25 +378,6 @@ div.csl-indent {
 </tbody>
 </table>
 </section>
-<section id="glane-versus-400glane" class="level2">
-<h2 class="anchored" data-anchor-id="glane-versus-400glane">200G/lane versus 400G/lane</h2>
-<p><span class="status-fact">Fact:</span> Broadcom announced a third-generation CPO line with 200G/lane capability and described a production Delta 51.2T switch route <span class="citation" data-cites="broadcom2025cpo">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>)</span>. NVIDIA subsequently described a CPO-based 200G-SerDes Ethernet product as in production <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026</a>)</span>.</p>
-<p><span class="status-inference">Inference:</span> These announcements make 200G/lane switch CPO the strongest public commercial signal, but do not establish a market-wide unit volume, final-engine yield or comparative TCO.</p>
-<p>At 400G/lane, the current public technical record is more experimental. A 2026 OFC paper models a 212.5-GBd linear-drive link and finds a sharp dependence on bump-to-bump loss; it is not a measured end-to-end deployment <span class="citation" data-cites="zhou2026lpo">(<a href="#ref-zhou2026lpo" role="doc-biblioref"><span class="nocase">Zhou et al.</span> 2026</a>)</span>. The investment implication is a shortened electrical boundary may become increasingly valuable, while the timing and economic winner remain open.</p>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Warning</span>Evidence limitation
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This public edition does not reproduce the restricted-paper figure snapshot. It links readers to the original DOI and preserves the model boundary in text. Any future source figure will require an editorial/public-use review and explicit page/figure attribution.</p>
-</div>
-</div>
-</section>
 <section id="decision-matrix" class="level2">
 <h2 class="anchored" data-anchor-id="decision-matrix">Decision matrix</h2>
 <table class="caption-top table">
@@ -467,7 +447,7 @@ div.csl-indent {
 </section>
 <section id="the-200g-and-400g-distinction" class="level2">
 <h2 class="anchored" data-anchor-id="the-200g-and-400g-distinction">The 200G and 400G distinction</h2>
-<p>At 200G/lane, product-route evidence is now specific enough to justify serious diligence: Broadcom describes the BCM78919 as a 102.4T multilayer CPO switch with 200G SerDes, and NVIDIA describes a 200G-SerDes Spectrum-X Photonics route <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025b</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026</a>)</span>. Neither disclosure supplies a matched pluggable/LPO TCO, a final yield waterfall or accepted unit data.</p>
+<p>At 200G/lane, product-route evidence is now specific enough to justify serious diligence: Broadcom describes the BCM78919 as a 102.4T multilayer CPO switch with 200G SerDes, and NVIDIA describes a 200G-SerDes Spectrum-X Photonics route <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026</a>)</span>. Neither disclosure supplies a matched pluggable/LPO TCO, a final yield waterfall or accepted unit data.</p>
 <p>At 400G/lane, technology demonstrators show why the boundary is being investigated but not why a CPO winner has been established. The Zhou paper models a 212.5-GBaud linear-drive environment; the disclosed result depends strongly on the assumed bump-to-bump loss <span class="citation" data-cites="zhou2026lpo">(<a href="#ref-zhou2026lpo" role="doc-biblioref"><span class="nocase">Zhou et al.</span> 2026</a>)</span>. The correct takeaway is conditional: as the electrical loss budget tightens, deep integration becomes more valuable. The incorrect takeaway is that a universal loss threshold automatically establishes CPO economics.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -545,11 +525,8 @@ div.csl-indent {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
-<div id="ref-broadcom2025cpo" class="csl-entry" role="listitem">
-Broadcom. 2025a. <em>Broadcom Announces Third-Generation Co-Packaged Optics Technology with 200G/Lane Capability</em>. <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo">https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo</a>.
-</div>
 <div id="ref-broadcom2025th6" class="csl-entry" role="listitem">
-Broadcom. 2025b. <em>Tomahawk 6 Davisson: 102.4-Tb/s Ethernet Switch with Co-Packaged Optics</em>. <a href="https://www.broadcom.com/company/news/product-releases/63626">https://www.broadcom.com/company/news/product-releases/63626</a>.
+Broadcom. 2025. <em>Tomahawk 6 Davisson: 102.4-Tb/s Ethernet Switch with Co-Packaged Optics</em>. <a href="https://www.broadcom.com/company/news/product-releases/63626">https://www.broadcom.com/company/news/product-releases/63626</a>.
 </div>
 <div id="ref-ieee2026npo" class="csl-entry" role="listitem">
 China Mobile and IEEE 802.3 400G per Lane Study Group. 2026. <em>Consideration on NPO and CPO at 400G/Lane</em>. <a href="https://www.ieee802.org/3/400GPL/public/2605/wang_h_400GPL_01_2605.pdf">https://www.ieee802.org/3/400GPL/public/2605/wang_h_400GPL_01_2605.pdf</a>.

@@ -128,7 +128,7 @@ window.Quarto = {
 </script>
 
 <link rel="stylesheet" href="../../styles.css">
-<link rel="stylesheet" href="/cpo-cloudflare.css"></head>
+</head>
 
 <body class="nav-sidebar docked nav-fixed quarto-light">
 
@@ -137,7 +137,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="/">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Nur Alpys</span>
     </a>
   </div>
@@ -148,19 +148,19 @@ window.Quarto = {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../research.html"> 
 <span class="menu-text">Research</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../projects.html"> 
 <span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="/"> 
+    <a class="nav-link" href="../../about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -321,7 +321,6 @@ window.Quarto = {
   <li><a href="#the-adoption-bottleneck-may-be-manufacturing" id="toc-the-adoption-bottleneck-may-be-manufacturing" class="nav-link active" data-scroll-target="#the-adoption-bottleneck-may-be-manufacturing">The adoption bottleneck may be manufacturing</a></li>
   <li><a href="#qualified-good-engine-equation" id="toc-qualified-good-engine-equation" class="nav-link" data-scroll-target="#qualified-good-engine-equation">Qualified-good-engine equation</a></li>
   <li><a href="#serviceability-is-an-architecture-variable" id="toc-serviceability-is-an-architecture-variable" class="nav-link" data-scroll-target="#serviceability-is-an-architecture-variable">Serviceability is an architecture variable</a></li>
-  <li><a href="#publication-boundary-for-figures" id="toc-publication-boundary-for-figures" class="nav-link" data-scroll-target="#publication-boundary-for-figures">Publication boundary for figures</a></li>
   <li><a href="#yield-compounds-across-interfaces" id="toc-yield-compounds-across-interfaces" class="nav-link" data-scroll-target="#yield-compounds-across-interfaces">Yield compounds across interfaces</a></li>
   <li><a href="#test-and-service-define-the-real-failure-domain" id="toc-test-and-service-define-the-real-failure-domain" class="nav-link" data-scroll-target="#test-and-service-define-the-real-failure-domain">Test and service define the real failure domain</a></li>
   <li><a href="#what-would-clear-the-gate" id="toc-what-would-clear-the-gate" class="nav-link" data-scroll-target="#what-would-clear-the-gate">What would clear the gate</a></li>
@@ -354,7 +353,7 @@ window.Quarto = {
 
 <section id="the-adoption-bottleneck-may-be-manufacturing" class="level2">
 <h2 class="anchored" data-anchor-id="the-adoption-bottleneck-may-be-manufacturing">The adoption bottleneck may be manufacturing</h2>
-<p>The technical case for short electrical paths is necessary but insufficient. In CPO, optical alignment, fibre attach, final package integration and qualification sit closer to the system critical path. If a late-stage optical defect scraps a high-value assembly, apparent component efficiency can be overwhelmed by yield and warranty economics.</p>
+<p>The technical case for short electrical paths is necessary but insufficient. In CPO, optical alignment, fibre attach, final package integration and qualification sit closer to the system critical path. IBM’s full-module test vehicle and a recent heterogeneous-integration review both identify packaging, reliability and maintainability as coupled constraints, not afterthoughts <span class="citation" data-cites="knickerbocker2024cpo gao2025heterogeneous">(<a href="#ref-knickerbocker2024cpo" role="doc-biblioref"><span class="nocase">Knickerbocker et al.</span> 2024</a>; <a href="#ref-gao2025heterogeneous" role="doc-biblioref">Gao et al. 2025</a>)</span>.</p>
 </section>
 <section id="qualified-good-engine-equation" class="level2">
 <h2 class="anchored" data-anchor-id="qualified-good-engine-equation">Qualified-good-engine equation</h2>
@@ -406,15 +405,11 @@ window.Quarto = {
 </section>
 <section id="serviceability-is-an-architecture-variable" class="level2">
 <h2 class="anchored" data-anchor-id="serviceability-is-an-architecture-variable">Serviceability is an architecture variable</h2>
-<p>External laser sources, detachable optical interfaces and socketed engines may reduce the operational penalty of deep integration. They add components, interfaces and qualification requirements. Treat each as a testable route, not a universal solution.</p>
-</section>
-<section id="publication-boundary-for-figures" class="level2">
-<h2 class="anchored" data-anchor-id="publication-boundary-for-figures">Publication boundary for figures</h2>
-<p>This public edition uses original diagrams and tables. The underlying research archive may retain figure snapshots for study, but a snapshot is published only after verifying its source, copyright/usage basis, exact page/figure number and editorial necessity. The authoritative public reference remains the original paper or publisher page.</p>
+<p>External laser sources, detachable optical interfaces and socketed engines may reduce the operational penalty of deep integration. The OIF’s ELSFP work and a detachable-chiplet-connector prototype show the relevant service boundary, but neither establishes a production field-service model <span class="citation" data-cites="oif2025elsfp psaila2023connector">(<a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>; <a href="#ref-psaila2023connector" role="doc-biblioref">Psaila et al. 2023</a>)</span>.</p>
 </section>
 <section id="yield-compounds-across-interfaces" class="level2">
 <h2 class="anchored" data-anchor-id="yield-compounds-across-interfaces">Yield compounds across interfaces</h2>
-<p>The central manufacturing point is mathematical before it is proprietary. If an engine requires many independent connections, the yield of the finished board is approximately the product of the connection yields, before adding die yield, attach, rework, burn-in and system acceptance. At 1,024 interfaces, a 99.90% assumed connection yield implies only about 35.9% all-good yield if no rework is allowed; achieving 95% board yield requires approximately 99.995% per-connection first-pass yield. These are illustrative calculations, not a disclosure about any supplier.</p>
+<p>The central manufacturing point is mathematical before it is proprietary. imec’s development-run data show why optical-interface yield and alignment tolerance are material engineering variables; they are not final-engine production yield <span class="citation" data-cites="imec2024interfacing">(<a href="#ref-imec2024interfacing" role="doc-biblioref"><span class="nocase">imec</span> 2024</a>)</span>. If an engine requires many independent connections, the yield of the finished board is approximately the product of the connection yields, before adding die yield, attach, rework, burn-in and system acceptance. At 1,024 interfaces, a 99.90% assumed connection yield implies only about 35.9% all-good yield if no rework is allowed; achieving 95% board yield requires approximately 99.995% per-connection first-pass yield. These are illustrative calculations, not a disclosure about any supplier.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -490,8 +485,7 @@ window.Quarto = {
 </section>
 <section id="reliability-is-a-system-property" class="level2">
 <h2 class="anchored" data-anchor-id="reliability-is-a-system-property">Reliability is a system property</h2>
-<p>Thermal, optical and mechanical stresses interact in a CPO assembly. A laser can be physically separated from a hot ASIC through an external-light architecture, while the PIC, modulator, photodiodes, interposer, solder joints, fibre interface and connector still experience their own temperature and mechanical environment. A package can pass a component-level thermal cycle and still fail the business test if post-assembly optical alignment shifts, test escapes are expensive, or field repair is operationally unacceptable.</p>
-<p>The report therefore separates three forms of evidence. <strong>Device reliability</strong> asks whether a component maintains its measured behaviour under a stated stress. <strong>Assembly reliability</strong> asks whether the coupled optical/electrical/mechanical path survives integration and reflow/cycling. <strong>Operational reliability</strong> asks whether a deployed customer can detect, isolate and repair the relevant failure without unacceptable downtime or cost. The first two can be advanced by papers and supplier demonstrations. The third normally requires operator, warranty or field-return evidence.</p>
+<p>Thermal, optical and mechanical stresses interact in a CPO assembly. IBM’s work reports full-module reflow and stress testing, while its test-vehicle boundary still falls short of production-lot yield and fleet reliability <span class="citation" data-cites="knickerbocker2024cpo">(<a href="#ref-knickerbocker2024cpo" role="doc-biblioref"><span class="nocase">Knickerbocker et al.</span> 2024</a>)</span>. A separated laser does not remove the PIC, interposer, fibre-interface or connector reliability burden. The report distinguishes <strong>device</strong> reliability, <strong>assembly</strong> reliability and <strong>operational</strong> reliability; only the last establishes whether an operator can isolate and repair the failure domain at acceptable cost.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -545,6 +539,21 @@ window.Quarto = {
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-gao2025heterogeneous" class="csl-entry" role="listitem">
+Gao, Han, Wanyi Yan, Dan Zhang, and Daquan Yu. 2025. <span>“Heterogeneous Integration Technology Drives the Evolution of Co-Packaged Optics.”</span> <em>Micromachines</em> 16 (9): 1037. <a href="https://doi.org/10.3390/mi16091037">https://doi.org/10.3390/mi16091037</a>.
+</div>
+<div id="ref-imec2024interfacing" class="csl-entry" role="listitem">
+<span class="nocase">imec</span>. 2024. <span>“Interfacing Silicon Photonics for High-Density Co-Packaged Optics.”</span> <a href="https://www.imec-int.com/en/articles/interfacing-silicon-photonics-high-density-co-packaged-optics">https://www.imec-int.com/en/articles/interfacing-silicon-photonics-high-density-co-packaged-optics</a>.
+</div>
+<div id="ref-knickerbocker2024cpo" class="csl-entry" role="listitem">
+<span class="nocase">Knickerbocker, John et al.</span> 2024. <em>Next Generation Co-Packaged Optics Technology to Train and Run Generative <span>AI</span> Models in Data Centers and Other Computing Applications</em>. <a href="https://doi.org/10.48550/arXiv.2412.06570">https://doi.org/10.48550/arXiv.2412.06570</a>.
+</div>
+<div id="ref-oif2025elsfp" class="csl-entry" role="listitem">
+Optical Internetworking Forum. 2025. <em>External Laser Small Form Factor Pluggable Implementation Agreement 2.0</em>. <a href="https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-IA-2.0.pdf">https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-IA-2.0.pdf</a>.
+</div>
+<div id="ref-psaila2023connector" class="csl-entry" role="listitem">
+Psaila, Nicholas, Srikant Nekkanty, David Shia, and Pooya Tadayon. 2023. <span>“Detachable Optical Chiplet Connector for Co-Packaged Photonics.”</span> <em>Journal of Lightwave Technology</em> 41 (19): 6315–23. <a href="https://doi.org/10.1109/JLT.2023.3285149">https://doi.org/10.1109/JLT.2023.3285149</a>.
+</div>
 <div id="ref-teradyne2025test" class="csl-entry" role="listitem">
 Teradyne. 2025. <em>Silicon Photonics Raises New Test Challenges</em>. <a href="https://www.teradyne.com/resources/silicon-photonics-raises-new-test-challenges/">https://www.teradyne.com/resources/silicon-photonics-raises-new-test-challenges/</a>.
 </div>
