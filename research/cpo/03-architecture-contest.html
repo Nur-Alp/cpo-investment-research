@@ -93,9 +93,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -326,29 +323,42 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</h2>
 <p>Retimed pluggables move electrical complexity into the module and retain the cleanest replacement model. LPO removes or reduces module DSP complexity but demands a disciplined host-channel and interoperability environment. NPO is a useful category when the electrical path must shrink but the operator still wants an intermediate replacement boundary. CPO moves the optical engine closest to the ASIC; it has the greatest ability to compress the high-speed electrical path and the greatest exposure to package, attach, qualification and field-service economics.</p>
 <p>Accelerator optical I/O should not be used to inflate switch-side CPO adoption. Its product boundary is a scale-up fabric or chiplet/interposer architecture, with different buyers, host integration, failure domain and supplier set. Marvell’s silicon-photonics light-engine announcement and Intel’s optical-I/O-chiplet work demonstrate why this domain matters strategically, but they do not establish a switch-CPO volume curve <span class="citation" data-cites="marvell2025engine intel2024oci">(<a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>; <a href="#ref-intel2024oci" role="doc-biblioref">Intel 2024</a>)</span>.</p>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  A[Required lane rate / reach] --&gt; B{Host electrical channel holds?}
-  B -- Yes --&gt; C{Is module power/density acceptable?}
-  C -- Yes --&gt; D[Retimed or linear pluggable]
-  C -- No --&gt; E[LPO or NPO evaluation]
-  B -- No --&gt; E
-  E --&gt; F{Can a serviceable intermediate boundary work?}
-  F -- Yes --&gt; G[NPO / detachable-engine route]
-  F -- No --&gt; H[Switch-side CPO]
-  H --&gt; I{Qualified yield and service economics clear?}
-  I -- No --&gt; J[Architecture remains unproven]
-  I -- Yes --&gt; K[Commercial CPO candidate]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Decision gate</th>
+<th>If yes</th>
+<th>If no</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does the host electrical channel hold at the required rate and reach?</td>
+<td>Test whether module power/density remains acceptable.</td>
+<td>Evaluate LPO/NPO or a shorter electrical boundary.</td>
+</tr>
+<tr class="even">
+<td>Is module power/density acceptable?</td>
+<td>Retimed or linear pluggable remains viable.</td>
+<td>Evaluate LPO/NPO.</td>
+</tr>
+<tr class="odd">
+<td>Can a serviceable intermediate boundary work?</td>
+<td>Consider NPO or a detachable-engine route.</td>
+<td>Evaluate switch-side CPO.</td>
+</tr>
+<tr class="even">
+<td>Are yield and service economics qualified?</td>
+<td>Commercial CPO candidate.</td>
+<td>Architecture remains unproven.</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="the-200g-and-400g-distinction" class="level2">
 <h2 class="anchored" data-anchor-id="the-200g-and-400g-distinction">The 200G and 400G distinction</h2>

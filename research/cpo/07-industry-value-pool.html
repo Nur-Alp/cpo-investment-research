@@ -93,9 +93,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -275,22 +272,11 @@ div.csl-indent {
 <section id="profit-pool-test" class="level2">
 <h2 class="anchored" data-anchor-id="profit-pool-test">Profit-pool test</h2>
 <p>The supplier most likely to capture economics is not necessarily the one with the best device. Durable capture requires control of a bottleneck, credible switching costs, customer qualification, and economics that survive yield, capex, rework and warranty.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Technical constraint] --&gt; B[Architecture choice]
-  B --&gt; C[Supplier content]
-  C --&gt; D[Qualified yield and service cost]
-  D --&gt; E[Revenue and gross margin]
-  E --&gt; F[Investment outcome]
-</pre>
+<div class="process-row">
+<p><span class="process-step">Technical constraint</span><span class="process-arrow">→</span><span class="process-step">Architecture choice</span><span class="process-arrow">→</span><span class="process-step">Supplier content</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<div class="process-row">
+<p><span class="process-step">Yield / service cost</span><span class="process-arrow">→</span><span class="process-step">Revenue / gross margin</span><span class="process-arrow">→</span><span class="process-step">Investment outcome</span></p>
 </div>
 <p><span class="status-inference">Inference:</span> In the current public record, the likely control points are platform integration, optical-engine/PIC design, lasers and advanced package/test process control. None has yet established a public CPO-specific profit-pool lead.</p>
 </section>

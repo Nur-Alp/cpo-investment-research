@@ -95,9 +95,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -670,27 +667,17 @@ window.Quarto = {
 <section id="the-physical-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-physical-problem">The physical problem</h2>
 <p>At higher lane rates, a long electrical path from switch ASIC through package escape, PCB, connector and faceplate module increasingly consumes channel margin and power. CPO moves the optical engine close to the host ASIC; the potential gain is a much shorter high-speed electrical path. The cost is a tighter integration, thermal, yield and serviceability problem.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Switch ASIC / SerDes] --&gt; B[Package escape]
-  B --&gt; C[PCB channel]
-  C --&gt; D[Connector]
-  D --&gt; E[Pluggable optics]
-  E --&gt; F[Fibre]
-  A --&gt; G[Short package/interposer channel]
-  G --&gt; H[CPO optical engine]
-  H --&gt; F
-  classDef cpo fill:#e7f3fb,stroke:#1064a3,color:#12233b
-  class G,H cpo
-</pre>
+<p class="process-label">
+Pluggable path
+</p>
+<div class="process-row">
+<p><span class="process-step">ASIC / SerDes</span><span class="process-arrow">→</span><span class="process-step">Package + PCB</span><span class="process-arrow">→</span><span class="process-step">Connector</span><span class="process-arrow">→</span><span class="process-step">Pluggable optics</span><span class="process-arrow">→</span><span class="process-step">Fibre</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<p class="process-label">
+CPO path
+</p>
+<div class="process-row">
+<p><span class="process-step">ASIC / SerDes</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">Short interposer</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">Optical engine</span><span class="process-arrow">→</span><span class="process-step">Fibre</span></p>
 </div>
 </section>
 <section id="the-trade-off-is-not-simply-power" class="level2">
@@ -741,24 +728,6 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="where-the-electrical-boundary-matters">Where the electrical boundary matters</h2>
 <p>The relevant constraint is not cable length alone. The channel includes host-package escape, board routing, vias, connectors, the module interface and the equalisation burden required to keep the transmitter and receiver inside their error and eye-quality budgets. At a low enough loss and a mature enough module ecosystem, retimed pluggables retain the advantage of modular service. At a difficult enough channel, the price of preserving that modularity rises through DSP, retiming, power, front-panel thermal load and design complexity.</p>
 <p>The OIF’s energy-efficiency and co-packaged-module work frame this as a system architecture choice, not a vendor-specific claim <span class="citation" data-cites="oif2024eei oif2023cpo">(<a href="#ref-oif2024eei" role="doc-biblioref">Optical Internetworking Forum 2024</a>, <a href="#ref-oif2023cpo" role="doc-biblioref">2023</a>)</span>.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph P[Retimed or linear pluggable]
-  A1[ASIC] --&gt; B1[Package / board] --&gt; C1[Connector] --&gt; D1[Module DSP or linear drive] --&gt; E1[Fibre]
-  end
-  subgraph C[CPO]
-  A2[ASIC] --&gt; B2[Short interposer] --&gt; C2[Optical engine] --&gt; D2[Fibre]
-  end
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 </section>
 <section id="power-is-necessary-but-not-sufficient" class="level2">
 <h2 class="anchored" data-anchor-id="power-is-necessary-but-not-sufficient">Power is necessary, but not sufficient</h2>
@@ -905,29 +874,42 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</h2>
 <p>Retimed pluggables move electrical complexity into the module and retain the cleanest replacement model. LPO removes or reduces module DSP complexity but demands a disciplined host-channel and interoperability environment. NPO is a useful category when the electrical path must shrink but the operator still wants an intermediate replacement boundary. CPO moves the optical engine closest to the ASIC; it has the greatest ability to compress the high-speed electrical path and the greatest exposure to package, attach, qualification and field-service economics.</p>
 <p>Accelerator optical I/O should not be used to inflate switch-side CPO adoption. Its product boundary is a scale-up fabric or chiplet/interposer architecture, with different buyers, host integration, failure domain and supplier set. Marvell’s silicon-photonics light-engine announcement and Intel’s optical-I/O-chiplet work demonstrate why this domain matters strategically, but they do not establish a switch-CPO volume curve <span class="citation" data-cites="marvell2025engine intel2024oci">(<a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>; <a href="#ref-intel2024oci" role="doc-biblioref">Intel 2024</a>)</span>.</p>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TD
-  A[Required lane rate / reach] --&gt; B{Host electrical channel holds?}
-  B -- Yes --&gt; C{Is module power/density acceptable?}
-  C -- Yes --&gt; D[Retimed or linear pluggable]
-  C -- No --&gt; E[LPO or NPO evaluation]
-  B -- No --&gt; E
-  E --&gt; F{Can a serviceable intermediate boundary work?}
-  F -- Yes --&gt; G[NPO / detachable-engine route]
-  F -- No --&gt; H[Switch-side CPO]
-  H --&gt; I{Qualified yield and service economics clear?}
-  I -- No --&gt; J[Architecture remains unproven]
-  I -- Yes --&gt; K[Commercial CPO candidate]
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Decision gate</th>
+<th>If yes</th>
+<th>If no</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Does the host electrical channel hold at the required rate and reach?</td>
+<td>Test whether module power/density remains acceptable.</td>
+<td>Evaluate LPO/NPO or a shorter electrical boundary.</td>
+</tr>
+<tr class="even">
+<td>Is module power/density acceptable?</td>
+<td>Retimed or linear pluggable remains viable.</td>
+<td>Evaluate LPO/NPO.</td>
+</tr>
+<tr class="odd">
+<td>Can a serviceable intermediate boundary work?</td>
+<td>Consider NPO or a detachable-engine route.</td>
+<td>Evaluate switch-side CPO.</td>
+</tr>
+<tr class="even">
+<td>Are yield and service economics qualified?</td>
+<td>Commercial CPO candidate.</td>
+<td>Architecture remains unproven.</td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="the-200g-and-400g-distinction" class="level2">
 <h2 class="anchored" data-anchor-id="the-200g-and-400g-distinction">The 200G and 400G distinction</h2>
@@ -1010,26 +992,12 @@ window.Quarto = {
 <section id="the-engine-is-a-coupled-system" class="level2">
 <h2 class="anchored" data-anchor-id="the-engine-is-a-coupled-system">The engine is a coupled system</h2>
 <p>An optical engine is not a single photonic chip. It is the coupled design of PIC, EIC/driver/TIA, laser architecture, fibre interface, thermal path, electrical package and test strategy. The most valuable technology is the one that improves the cost of a <strong>qualified good engine</strong>, not merely a laboratory metric.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Switch ASIC / SerDes] --&gt; B[EIC: drivers and TIAs]
-  B --&gt; C[PIC: modulators, mux/demux, detectors]
-  D[External or integrated laser] --&gt; C
-  C --&gt; E[Fibre attach / connector]
-  E --&gt; F[Optical network]
-  G[Thermal, test and package co-design] -.determines qualified yield.-&gt; B
-  G -.-&gt; C
-  G -.-&gt; E
-</pre>
+<div class="process-row">
+<p><span class="process-step">ASIC / SerDes</span><span class="process-arrow">→</span><span class="process-step">EIC drivers / TIAs</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">PIC</span><span class="process-arrow">→</span><span class="process-step">Fibre interface</span><span class="process-arrow">→</span><span class="process-step">Optical network</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p class="process-note">
+External or integrated laser, package thermal design and test coverage determine whether this becomes a qualified engine.
+</p>
 </section>
 <section id="where-durable-economics-could-accrue" class="level2">
 <h2 class="anchored" data-anchor-id="where-durable-economics-could-accrue">Where durable economics could accrue</h2>
@@ -1253,27 +1221,21 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Known-good dies] --&gt; B[Optical attach]
-  B --&gt; C[Electrical / optical test]
-  C --&gt; D[Package and thermal integration]
-  D --&gt; E[Stress, burn-in and qualification]
-  E --&gt; F[Customer acceptance]
-  X[Rework / scrap / warranty] -.reduces yield or raises cost.-&gt; B
-  X -.-&gt; C
-  X -.-&gt; D
-  X -.-&gt; E
-</pre>
+<p class="process-label">
+Build and screen
+</p>
+<div class="process-row">
+<p><span class="process-step">Known-good dies</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">Optical attach</span><span class="process-arrow">→</span><span class="process-step">Electrical / optical test</span></p>
 </div>
-<p></p></figure><p></p>
+<p class="process-label">
+Integrate and qualify
+</p>
+<div class="process-row">
+<p><span class="process-step">Package + thermal integration</span><span class="process-arrow">→</span><span class="process-step">Stress + burn-in</span><span class="process-arrow">→</span><span class="process-step">Customer acceptance</span></p>
 </div>
-</div>
-</div>
+<p class="process-note">
+Rework, scrap and warranty can reduce yield or raise cost at every stage.
+</p>
 </section>
 <section id="test-and-service-define-the-real-failure-domain" class="level2">
 <h2 class="anchored" data-anchor-id="test-and-service-define-the-real-failure-domain">Test and service define the real failure domain</h2>
@@ -1447,23 +1409,17 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Component or lab demo] --&gt; B[Product definition]
-  B --&gt; C[Qualification]
-  C --&gt; D[Named customer production]
-  D --&gt; E[Repeat shipments]
-  E --&gt; F[Accepted unit / port denominator]
-  F --&gt; G[Attributable supplier economics]
-</pre>
+<p class="process-label">
+Commercial proof
+</p>
+<div class="process-row">
+<p><span class="process-step">Lab demo</span><span class="process-arrow">→</span><span class="process-step">Product definition</span><span class="process-arrow">→</span><span class="process-step">Qualification</span><span class="process-arrow">→</span><span class="process-step">Named production</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<p class="process-label">
+Investment proof
+</p>
+<div class="process-row">
+<p><span class="process-step">Repeat shipments</span><span class="process-arrow">→</span><span class="process-step">Accepted units / ports</span><span class="process-arrow">→</span><span class="process-step">Supplier economics</span></p>
 </div>
 </section>
 <section id="scenario-conditions" class="level2">
@@ -1579,22 +1535,11 @@ window.Quarto = {
 <section id="profit-pool-test" class="level2">
 <h2 class="anchored" data-anchor-id="profit-pool-test">Profit-pool test</h2>
 <p>The supplier most likely to capture economics is not necessarily the one with the best device. Durable capture requires control of a bottleneck, credible switching costs, customer qualification, and economics that survive yield, capex, rework and warranty.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Technical constraint] --&gt; B[Architecture choice]
-  B --&gt; C[Supplier content]
-  C --&gt; D[Qualified yield and service cost]
-  D --&gt; E[Revenue and gross margin]
-  E --&gt; F[Investment outcome]
-</pre>
+<div class="process-row">
+<p><span class="process-step">Technical constraint</span><span class="process-arrow">→</span><span class="process-step">Architecture choice</span><span class="process-arrow">→</span><span class="process-step">Supplier content</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<div class="process-row">
+<p><span class="process-step">Yield / service cost</span><span class="process-arrow">→</span><span class="process-step">Revenue / gross margin</span><span class="process-arrow">→</span><span class="process-step">Investment outcome</span></p>
 </div>
 <p><span class="status-inference">Inference:</span> In the current public record, the likely control points are platform integration, optical-engine/PIC design, lasers and advanced package/test process control. None has yet established a public CPO-specific profit-pool lead.</p>
 </section>
@@ -1923,25 +1868,17 @@ window.Quarto = {
 \text{CPO revenue} = \text{systems} \times \text{adoption} \times \text{engines/system} \times \text{content/engine} \times \text{qualified share}.
 \]</span></p>
 <p>Incremental gross profit must then subtract the correct product cost, yield/rework burden, warranty and cannibalised legacy content. The model must keep supplier layers mutually exclusive. For example, an optical engine cannot be counted once as Broadcom platform value, again as Coherent PIC value, again as Lumentum laser value and again as TSMC packaging value unless the separate transfer-price/content boundaries are identified. That is why the report publishes relative stances rather than a spurious market-size allocation.</p>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Customer systems] --&gt; B[CPO adoption rate]
-  B --&gt; C[Engines per system]
-  C --&gt; D[Company content per engine]
-  D --&gt; E[Qualified supplier share]
-  E --&gt; F[Revenue]
-  F --&gt; G[Product gross margin]
-  G --&gt; H[Yield, rework and warranty]
-  H --&gt; I[Incremental EBIT / EPS sensitivity]
-</pre>
+<p class="process-label">
+Revenue bridge
+</p>
+<div class="process-row">
+<p><span class="process-step">Systems × adoption</span><span class="process-arrow">→</span><span class="process-step">Engines / system</span><span class="process-arrow">→</span><span class="process-step">Content × qualified share</span><span class="process-arrow">→</span><span class="process-step">Revenue</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<p class="process-label">
+Profit bridge
+</p>
+<div class="process-row">
+<p><span class="process-step">Revenue</span><span class="process-arrow">→</span><span class="process-step">Product gross margin</span><span class="process-arrow">→</span><span class="process-step">Yield, rework, warranty</span><span class="process-arrow">→</span><span class="process-step">EBIT / EPS sensitivity</span></p>
 </div>
 </section>
 <section id="catalysts-by-company" class="level3">

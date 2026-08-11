@@ -9,7 +9,7 @@ body { color: var(--cpo-ink); }
 .table { font-size: .92rem; }
 .table th { background: #f4f8fb; }
 /* Keep analytical exhibits in the reading column rather than treating them as full-width slides. */
-figure { max-width: 46rem; margin: 1.15rem auto; border: 1px solid var(--cpo-line); border-radius: .35rem; padding: .65rem; background: #fff; }
+figure { width: min(100%, 42rem); max-width: 42rem; margin: 1.15rem auto; border: 1px solid var(--cpo-line); border-radius: .35rem; padding: .65rem; background: #fff; }
 figure img, figure object, figure embed { display: block; max-width: 100%; height: auto; margin: 0 auto; }
 figcaption { color: var(--cpo-muted); font-size: .88rem; }
 .status-fact { color: #176b3a; font-weight: 700; }
@@ -18,8 +18,19 @@ figcaption { color: var(--cpo-muted); font-size: .88rem; }
 .status-open { color: #8b1e2d; font-weight: 700; }
 .callout-warning { background: #fff8ed; }
 .callout-note { background: #f4f8fb; }
-.cell-output-display, .mermaid { max-width: 40rem; margin: 1rem auto; }
-.mermaid svg { display: block; width: 100% !important; height: auto !important; max-height: 25rem; margin: 0 auto; }
+#quarto-content main.content .cell-output-display { width: min(100%, 38rem); max-width: 38rem; margin: 1rem auto; }
+#quarto-content main.content .cell-output-display figure.figure { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
+#quarto-content main.content pre.mermaid,
+#quarto-content main.content .mermaid { display: block; width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
+#quarto-content main.content pre.mermaid svg,
+#quarto-content main.content .mermaid svg { display: block; width: 100% !important; height: auto !important; max-height: 18rem !important; margin: 0 auto; }
+.process-label { max-width: 42rem; margin: 1.1rem auto .35rem; color: var(--cpo-muted); font-size: .82rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.process-row { max-width: 42rem; margin: .35rem auto 1rem; }
+.process-row > p { display: flex; align-items: stretch; width: 100%; margin: 0; gap: .35rem; }
+.process-step { display: flex; flex: 1 1 0; align-items: center; justify-content: center; min-width: 0; padding: .55rem .45rem; border: 1px solid #b9c9d8; border-radius: .28rem; background: #f5f8fb; color: var(--cpo-ink); font-size: .9rem; font-weight: 600; line-height: 1.22; text-align: center; }
+.process-step-cpo { border-color: #7daed2; background: #e7f3fb; }
+.process-arrow { display: flex; flex: 0 0 auto; align-items: center; color: var(--cpo-muted); font-size: 1.15rem; }
+.process-note { max-width: 42rem; margin: -.25rem auto 1rem; color: var(--cpo-muted); font-size: .9rem; text-align: center; }
 .table-responsive { margin: 1.25rem 0; }
 #quarto-content main.content { max-width: 980px; }
 table td, table th { vertical-align: top; }
@@ -43,8 +54,13 @@ table td { line-height: 1.4; }
     overflow-y: hidden;
   }
   figure { max-width: 100%; padding: .35rem; }
-  .cell-output-display, .mermaid { max-width: 100%; }
-  .mermaid svg { max-height: none; }
+  #quarto-content main.content .cell-output-display { width: 100%; max-width: 100%; }
+  #quarto-content main.content pre.mermaid svg,
+  #quarto-content main.content .mermaid svg { max-height: 16rem !important; }
+  .process-row > p { gap: .2rem; }
+  .process-row > p { flex-wrap: wrap; }
+  .process-step { flex-basis: calc(50% - .1rem); padding: .45rem .3rem; font-size: .75rem; }
+  .process-arrow { display: none; }
   #quarto-content main.content { padding-left: .8rem; padding-right: .8rem; }
 }
 @media print { .navbar, .sidebar, .page-footer { display: none !important; } main.content { max-width: 100% !important; } a { color: inherit !important; text-decoration: none !important; } table { font-size: 8.5pt; } figure { max-width: 5.9in; break-inside: avoid; } .mermaid { max-width: 5.25in; } h1, h2, h3 { break-after: avoid; } }

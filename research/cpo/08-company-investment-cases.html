@@ -93,9 +93,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -542,25 +539,17 @@ window.Quarto = {
 \text{CPO revenue} = \text{systems} \times \text{adoption} \times \text{engines/system} \times \text{content/engine} \times \text{qualified share}.
 \]</span></p>
 <p>Incremental gross profit must then subtract the correct product cost, yield/rework burden, warranty and cannibalised legacy content. The model must keep supplier layers mutually exclusive. For example, an optical engine cannot be counted once as Broadcom platform value, again as Coherent PIC value, again as Lumentum laser value and again as TSMC packaging value unless the separate transfer-price/content boundaries are identified. That is why the report publishes relative stances rather than a spurious market-size allocation.</p>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Customer systems] --&gt; B[CPO adoption rate]
-  B --&gt; C[Engines per system]
-  C --&gt; D[Company content per engine]
-  D --&gt; E[Qualified supplier share]
-  E --&gt; F[Revenue]
-  F --&gt; G[Product gross margin]
-  G --&gt; H[Yield, rework and warranty]
-  H --&gt; I[Incremental EBIT / EPS sensitivity]
-</pre>
+<p class="process-label">
+Revenue bridge
+</p>
+<div class="process-row">
+<p><span class="process-step">Systems × adoption</span><span class="process-arrow">→</span><span class="process-step">Engines / system</span><span class="process-arrow">→</span><span class="process-step">Content × qualified share</span><span class="process-arrow">→</span><span class="process-step">Revenue</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<p class="process-label">
+Profit bridge
+</p>
+<div class="process-row">
+<p><span class="process-step">Revenue</span><span class="process-arrow">→</span><span class="process-step">Product gross margin</span><span class="process-arrow">→</span><span class="process-step">Yield, rework, warranty</span><span class="process-arrow">→</span><span class="process-step">EBIT / EPS sensitivity</span></p>
 </div>
 </section>
 <section id="catalysts-by-company" class="level3">

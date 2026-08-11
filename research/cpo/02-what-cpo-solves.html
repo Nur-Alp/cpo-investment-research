@@ -93,9 +93,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -226,27 +223,17 @@ div.csl-indent {
 <section id="the-physical-problem" class="level2">
 <h2 class="anchored" data-anchor-id="the-physical-problem">The physical problem</h2>
 <p>At higher lane rates, a long electrical path from switch ASIC through package escape, PCB, connector and faceplate module increasingly consumes channel margin and power. CPO moves the optical engine close to the host ASIC; the potential gain is a much shorter high-speed electrical path. The cost is a tighter integration, thermal, yield and serviceability problem.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Switch ASIC / SerDes] --&gt; B[Package escape]
-  B --&gt; C[PCB channel]
-  C --&gt; D[Connector]
-  D --&gt; E[Pluggable optics]
-  E --&gt; F[Fibre]
-  A --&gt; G[Short package/interposer channel]
-  G --&gt; H[CPO optical engine]
-  H --&gt; F
-  classDef cpo fill:#e7f3fb,stroke:#1064a3,color:#12233b
-  class G,H cpo
-</pre>
+<p class="process-label">
+Pluggable path
+</p>
+<div class="process-row">
+<p><span class="process-step">ASIC / SerDes</span><span class="process-arrow">→</span><span class="process-step">Package + PCB</span><span class="process-arrow">→</span><span class="process-step">Connector</span><span class="process-arrow">→</span><span class="process-step">Pluggable optics</span><span class="process-arrow">→</span><span class="process-step">Fibre</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
+<p class="process-label">
+CPO path
+</p>
+<div class="process-row">
+<p><span class="process-step">ASIC / SerDes</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">Short interposer</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">Optical engine</span><span class="process-arrow">→</span><span class="process-step">Fibre</span></p>
 </div>
 </section>
 <section id="the-trade-off-is-not-simply-power" class="level2">
@@ -297,24 +284,6 @@ div.csl-indent {
 <h2 class="anchored" data-anchor-id="where-the-electrical-boundary-matters">Where the electrical boundary matters</h2>
 <p>The relevant constraint is not cable length alone. The channel includes host-package escape, board routing, vias, connectors, the module interface and the equalisation burden required to keep the transmitter and receiver inside their error and eye-quality budgets. At a low enough loss and a mature enough module ecosystem, retimed pluggables retain the advantage of modular service. At a difficult enough channel, the price of preserving that modularity rises through DSP, retiming, power, front-panel thermal load and design complexity.</p>
 <p>The OIF’s energy-efficiency and co-packaged-module work frame this as a system architecture choice, not a vendor-specific claim <span class="citation" data-cites="oif2024eei oif2023cpo">(<a href="#ref-oif2024eei" role="doc-biblioref">Optical Internetworking Forum 2024</a>, <a href="#ref-oif2023cpo" role="doc-biblioref">2023</a>)</span>.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  subgraph P[Retimed or linear pluggable]
-  A1[ASIC] --&gt; B1[Package / board] --&gt; C1[Connector] --&gt; D1[Module DSP or linear drive] --&gt; E1[Fibre]
-  end
-  subgraph C[CPO]
-  A2[ASIC] --&gt; B2[Short interposer] --&gt; C2[Optical engine] --&gt; D2[Fibre]
-  end
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
 </section>
 <section id="power-is-necessary-but-not-sufficient" class="level2">
 <h2 class="anchored" data-anchor-id="power-is-necessary-but-not-sufficient">Power is necessary, but not sufficient</h2>

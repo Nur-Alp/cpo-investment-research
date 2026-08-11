@@ -93,9 +93,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../styles.css">
@@ -225,26 +222,12 @@ div.csl-indent {
 <section id="the-engine-is-a-coupled-system" class="level2">
 <h2 class="anchored" data-anchor-id="the-engine-is-a-coupled-system">The engine is a coupled system</h2>
 <p>An optical engine is not a single photonic chip. It is the coupled design of PIC, EIC/driver/TIA, laser architecture, fibre interface, thermal path, electrical package and test strategy. The most valuable technology is the one that improves the cost of a <strong>qualified good engine</strong>, not merely a laboratory metric.</p>
-<div class="cell" data-fig-width="5" data-fig-height="4" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Switch ASIC / SerDes] --&gt; B[EIC: drivers and TIAs]
-  B --&gt; C[PIC: modulators, mux/demux, detectors]
-  D[External or integrated laser] --&gt; C
-  C --&gt; E[Fibre attach / connector]
-  E --&gt; F[Optical network]
-  G[Thermal, test and package co-design] -.determines qualified yield.-&gt; B
-  G -.-&gt; C
-  G -.-&gt; E
-</pre>
+<div class="process-row">
+<p><span class="process-step">ASIC / SerDes</span><span class="process-arrow">→</span><span class="process-step">EIC drivers / TIAs</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">PIC</span><span class="process-arrow">→</span><span class="process-step">Fibre interface</span><span class="process-arrow">→</span><span class="process-step">Optical network</span></p>
 </div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
+<p class="process-note">
+External or integrated laser, package thermal design and test coverage determine whether this becomes a qualified engine.
+</p>
 </section>
 <section id="where-durable-economics-could-accrue" class="level2">
 <h2 class="anchored" data-anchor-id="where-durable-economics-could-accrue">Where durable economics could accrue</h2>

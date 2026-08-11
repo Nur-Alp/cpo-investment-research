@@ -93,9 +93,6 @@ div.csl-indent {
   }
 }</script>
 <style>html{ scroll-behavior: smooth; }</style>
-<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js" type="text/javascript"></script>
@@ -357,27 +354,21 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
-<div class="cell" data-fig-width="4.5" data-fig-height="5" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class="figure"><p></p>
-<div>
-<pre class="mermaid mermaid-js">flowchart TB
-  A[Known-good dies] --&gt; B[Optical attach]
-  B --&gt; C[Electrical / optical test]
-  C --&gt; D[Package and thermal integration]
-  D --&gt; E[Stress, burn-in and qualification]
-  E --&gt; F[Customer acceptance]
-  X[Rework / scrap / warranty] -.reduces yield or raises cost.-&gt; B
-  X -.-&gt; C
-  X -.-&gt; D
-  X -.-&gt; E
-</pre>
+<p class="process-label">
+Build and screen
+</p>
+<div class="process-row">
+<p><span class="process-step">Known-good dies</span><span class="process-arrow">→</span><span class="process-step process-step-cpo">Optical attach</span><span class="process-arrow">→</span><span class="process-step">Electrical / optical test</span></p>
 </div>
-<p></p></figure><p></p>
+<p class="process-label">
+Integrate and qualify
+</p>
+<div class="process-row">
+<p><span class="process-step">Package + thermal integration</span><span class="process-arrow">→</span><span class="process-step">Stress + burn-in</span><span class="process-arrow">→</span><span class="process-step">Customer acceptance</span></p>
 </div>
-</div>
-</div>
+<p class="process-note">
+Rework, scrap and warranty can reduce yield or raise cost at every stage.
+</p>
 </section>
 <section id="test-and-service-define-the-real-failure-domain" class="level2">
 <h2 class="anchored" data-anchor-id="test-and-service-define-the-real-failure-domain">Test and service define the real failure domain</h2>
