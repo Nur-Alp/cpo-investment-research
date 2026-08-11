@@ -1,0 +1,7 @@
+/* Cloudflare deployment: this host intentionally contains only CPO research. */
+#quarto-header .navbar-nav,
+#quarto-header .quarto-search,
+#quarto-header .aa-Autocomplete,
+#quarto-header .navbar .quarto-navbar-tools {
+  display: none !important;
+}

@@ -1,0 +1,45 @@
+:root { --cpo-ink: #12233b; --cpo-blue: #1064a3; --cpo-muted: #5f6d7a; --cpo-line: #dfe7ee; }
+body { color: var(--cpo-ink); }
+.navbar { border-bottom: 1px solid var(--cpo-line); }
+.sidebar nav[role="doc-toc"] ul, .sidebar .sidebar-menu-container { font-size: .93rem; }
+.report-kicker { color: var(--cpo-blue); font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; }
+.report-meta { color: var(--cpo-muted); font-size: .95rem; }
+.callout { border-radius: .35rem; }
+.callout-note { border-left-color: var(--cpo-blue); }
+.table { font-size: .92rem; }
+.table th { background: #f4f8fb; }
+figure { border: 1px solid var(--cpo-line); border-radius: .35rem; padding: .75rem; background: #fff; }
+figcaption { color: var(--cpo-muted); font-size: .88rem; }
+.status-fact { color: #176b3a; font-weight: 700; }
+.status-inference { color: #8a5200; font-weight: 700; }
+.status-forecast { color: #7048a8; font-weight: 700; }
+.status-open { color: #8b1e2d; font-weight: 700; }
+.callout-warning { background: #fff8ed; }
+.callout-note { background: #f4f8fb; }
+.cell-output-display, .mermaid { margin: 1.25rem auto; }
+.table-responsive { margin: 1.25rem 0; }
+#quarto-content main.content { max-width: 980px; }
+table td, table th { vertical-align: top; }
+table td { line-height: 1.4; }
+.hanging-indent .csl-entry { padding-left: 1.5rem; text-indent: -1.5rem; margin-bottom: .65rem; }
+@media (max-width: 768px) {
+  .table { font-size: .82rem; }
+  #quarto-content main.content table {
+    display: table;
+    width: 100% !important;
+    max-width: 100%;
+    table-layout: fixed;
+  }
+  #quarto-content main.content th,
+  #quarto-content main.content td { overflow-wrap: anywhere; }
+  mjx-container[display="true"] {
+    display: block;
+    width: 100% !important;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  figure { padding: .35rem; }
+  #quarto-content main.content { padding-left: .8rem; padding-right: .8rem; }
+}
+@media print { .navbar, .sidebar, .page-footer { display: none !important; } main.content { max-width: 100% !important; } a { color: inherit !important; text-decoration: none !important; } table { font-size: 8.5pt; } figure { break-inside: avoid; } h1, h2, h3 { break-after: avoid; } }
