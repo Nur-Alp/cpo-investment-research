@@ -26,7 +26,26 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
@@ -231,7 +250,7 @@ ul.task-list li input[type="checkbox"] {
 <li>Expands the public book into an evidence-gated investment report covering architecture, power, optical engines, manufacturing, adoption, value capture, six company cases and a quarterly watchlist.</li>
 <li>Adds a public decision-evidence register with 80 selected records and a curated bibliography of primary public company, customer, standards and technical sources.</li>
 <li>Adds original analytical diagrams and explicit comparison boundaries; source-PDF snapshots and private archives remain excluded.</li>
-<li>Restates the central conclusion: 200G/lane switch CPO has the strongest disclosed commercial signal, while volume, supplier profit-pool leadership and CPO-specific equity earnings remain unproven <span class="citation" data-cites="nvidia2026production broadcom2025cpo broadcom2026ofc">[@nvidia2026production; @broadcom2025cpo; @broadcom2026ofc]</span>.</li>
+<li>Restates the central conclusion: 200G/lane switch CPO has the strongest disclosed commercial signal, while volume, supplier profit-pool leadership and CPO-specific equity earnings remain unproven <span class="citation" data-cites="nvidia2026production broadcom2025cpo broadcom2026ofc">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026</a>; <a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026</a>)</span>.</li>
 </ul>
 </section>
 <section id="q3-v1.3-manufacturing-and-commercial-proof-edition" class="level2">
@@ -249,9 +268,20 @@ ul.task-list li input[type="checkbox"] {
 <p>Each update will list new sources, changed assessments, claims withdrawn or downgraded, and unresolved evidence gaps. Historical editions will remain identifiable by version and date.</p>
 
 
+
 </section>
 
-</main> <!-- /main -->
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-broadcom2025cpo" class="csl-entry" role="listitem">
+Broadcom. 2025. <em>Broadcom Announces Third-Generation Co-Packaged Optics Technology with 200G/Lane Capability</em>. <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo">https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo</a>.
+</div>
+<div id="ref-broadcom2026ofc" class="csl-entry" role="listitem">
+Broadcom. 2026. <em>Broadcom Showcases Industry-Leading Solutions for Scaling AI Infrastructure at OFC 2026</em>. March. <a href="https://investors.broadcom.com/node/64036/pdf">https://investors.broadcom.com/node/64036/pdf</a>.
+</div>
+<div id="ref-nvidia2026production" class="csl-entry" role="listitem">
+NVIDIA. 2026. <em>NVIDIA Vera Rubin Ramps into Full Production to Power Agentic AI Factories Worldwide</em>. May. <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx">https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx</a>.
+</div>
+</div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
     const icon = "";
