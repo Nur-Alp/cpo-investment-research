@@ -171,6 +171,12 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../research/cpo/digest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CPO digest</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../research/cpo/cpo-investment-brief.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CPO investment brief</span></a>
   </div>
@@ -279,6 +285,7 @@ CPO path
 </tr>
 </tbody>
 </table>
+<p>The table defines the investment trade: CPO removes electrical and faceplate constraints, but transfers difficulty into thermal integration, optical assembly, test and service. The technology wins only when the removed burden is larger than the manufacturing and operating burden it adds.</p>
 </section>
 <section id="where-the-electrical-boundary-matters" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-electrical-boundary-matters">Where the electrical boundary matters</h2>
@@ -287,7 +294,7 @@ CPO path
 </section>
 <section id="power-is-necessary-but-not-sufficient" class="level2">
 <h2 class="anchored" data-anchor-id="power-is-necessary-but-not-sufficient">Power is necessary, but not sufficient</h2>
-<p>A 102.4T thought experiment illustrates the distinction. With 64 x 1.6T ports, an assumed 7.2 W CPO optical interface per port produces 460.8 W of direct interface power; a 24 W fully retimed interface produces 1,536 W. These are scenario calculations, not a measured chassis comparison. They omit the switch core, endpoint optics and common chassis loads and therefore should not be read as a complete facility-power claim. Under the same assumptions, the CPO case is approximately 70% lower than the fully retimed interface case, while the gap versus an 8 W LPO case is only 10% <span class="citation" data-cites="nvidia2025power marvell2025engine">(<a href="#ref-nvidia2025power" role="doc-biblioref">NVIDIA 2025</a>; <a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>)</span>.</p>
+<p>A 102.4T thought experiment makes the boundary concrete. With 64 × 1.6T ports, an assumed 7.2 W CPO optical interface per port uses 460.8 W; a 24 W fully retimed interface uses 1,536 W. The comparison covers the interfaces only—switch core, endpoint optics and common chassis loads are held outside the frame. On these assumptions, CPO uses about 70% less interface power than retimed optics and sits 10% below an 8 W LPO case <span class="citation" data-cites="nvidia2025power marvell2025engine">(<a href="#ref-nvidia2025power" role="doc-biblioref">NVIDIA 2025</a>; <a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>)</span>.</p>
 <p>That last comparison is the investment challenge. If a linear or near-packaged alternative can preserve serviceability while remaining near CPO on power, CPO must earn its integration penalty through density, electrical reach, thermal design or a better qualified-cost curve.</p>
 <table class="caption-top table">
 <colgroup>

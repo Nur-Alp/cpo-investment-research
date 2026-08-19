@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Nur Alpys">
-<meta name="dcterms.date" content="2026-08-10">
+<meta name="dcterms.date" content="2026-08-18">
 
 <title>Co-Packaged Optics – Nur Alpys</title>
 <style>
@@ -202,6 +202,12 @@ window.Quarto = {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../research/cpo/digest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CPO digest</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../research/cpo/cpo-investment-brief.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CPO investment brief</span></a>
   </div>
@@ -247,7 +253,10 @@ window.Quarto = {
   </ul></li>
   <li><a href="#architecture-contest" id="toc-architecture-contest" class="nav-link" data-scroll-target="#architecture-contest">3. Architecture contest</a>
   <ul class="collapse">
-  <li><a href="#five-architectures-five-different-constraints" id="toc-five-architectures-five-different-constraints" class="nav-link" data-scroll-target="#five-architectures-five-different-constraints">Five architectures, five different constraints</a></li>
+  <li><a href="#five-architectures-five-different-constraints" id="toc-five-architectures-five-different-constraints" class="nav-link" data-scroll-target="#five-architectures-five-different-constraints">Five architectures, five different constraints</a>
+  <ul class="collapse">
+  <li><a href="#how-to-read-the-matrix" id="toc-how-to-read-the-matrix" class="nav-link" data-scroll-target="#how-to-read-the-matrix">How to read the matrix</a></li>
+  </ul></li>
   <li><a href="#decision-matrix" id="toc-decision-matrix" class="nav-link" data-scroll-target="#decision-matrix">Decision matrix</a></li>
   <li><a href="#architecture-is-a-portfolio-of-trade-offs" id="toc-architecture-is-a-portfolio-of-trade-offs" class="nav-link" data-scroll-target="#architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</a></li>
   <li><a href="#the-200g-and-400g-distinction" id="toc-the-200g-and-400g-distinction" class="nav-link" data-scroll-target="#the-200g-and-400g-distinction">The 200G and 400G distinction</a></li>
@@ -257,13 +266,13 @@ window.Quarto = {
   <li><a href="#optical-engines-and-pics" id="toc-optical-engines-and-pics" class="nav-link" data-scroll-target="#optical-engines-and-pics">4. Optical engines and PICs</a>
   <ul class="collapse">
   <li><a href="#the-engine-is-a-coupled-system" id="toc-the-engine-is-a-coupled-system" class="nav-link" data-scroll-target="#the-engine-is-a-coupled-system">The engine is a coupled system</a></li>
-  <li><a href="#where-durable-economics-could-accrue" id="toc-where-durable-economics-could-accrue" class="nav-link" data-scroll-target="#where-durable-economics-could-accrue">Where durable economics could accrue</a></li>
+  <li><a href="#where-durable-economics-could-be-captured" id="toc-where-durable-economics-could-be-captured" class="nav-link" data-scroll-target="#where-durable-economics-could-be-captured">Where durable economics could be captured</a></li>
   <li><a href="#scale-out-remains-the-near-term-focus" id="toc-scale-out-remains-the-near-term-focus" class="nav-link" data-scroll-target="#scale-out-remains-the-near-term-focus">Scale-out remains the near-term focus</a></li>
   </ul></li>
   <li><a href="#manufacturing-and-reliability" id="toc-manufacturing-and-reliability" class="nav-link" data-scroll-target="#manufacturing-and-reliability">5. Manufacturing and reliability</a>
   <ul class="collapse">
   <li><a href="#the-adoption-bottleneck-may-be-manufacturing" id="toc-the-adoption-bottleneck-may-be-manufacturing" class="nav-link" data-scroll-target="#the-adoption-bottleneck-may-be-manufacturing">The adoption bottleneck may be manufacturing</a></li>
-  <li><a href="#qualified-good-engine-equation" id="toc-qualified-good-engine-equation" class="nav-link" data-scroll-target="#qualified-good-engine-equation">Qualified-good-engine equation</a></li>
+  <li><a href="#cost-per-qualified-shippable-engine" id="toc-cost-per-qualified-shippable-engine" class="nav-link" data-scroll-target="#cost-per-qualified-shippable-engine">Cost per qualified, shippable engine</a></li>
   <li><a href="#serviceability-is-an-architecture-variable" id="toc-serviceability-is-an-architecture-variable" class="nav-link" data-scroll-target="#serviceability-is-an-architecture-variable">Serviceability is an architecture variable</a></li>
   <li><a href="#yield-compounds-across-interfaces" id="toc-yield-compounds-across-interfaces" class="nav-link" data-scroll-target="#yield-compounds-across-interfaces">Yield compounds across interfaces</a></li>
   <li><a href="#test-and-service-define-the-real-failure-domain" id="toc-test-and-service-define-the-real-failure-domain" class="nav-link" data-scroll-target="#test-and-service-define-the-real-failure-domain">Test and service define the real failure domain</a></li>
@@ -283,7 +292,10 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#cpo-redistributes-content-it-does-not-automatically-create-value" id="toc-cpo-redistributes-content-it-does-not-automatically-create-value" class="nav-link" data-scroll-target="#cpo-redistributes-content-it-does-not-automatically-create-value">CPO redistributes content; it does not automatically create value</a></li>
   <li><a href="#profit-pool-test" id="toc-profit-pool-test" class="nav-link" data-scroll-target="#profit-pool-test">Profit-pool test</a></li>
-  <li><a href="#content-migration-is-not-profit-creation" id="toc-content-migration-is-not-profit-creation" class="nav-link" data-scroll-target="#content-migration-is-not-profit-creation">Content migration is not profit creation</a></li>
+  <li><a href="#content-migration-is-not-profit-creation" id="toc-content-migration-is-not-profit-creation" class="nav-link" data-scroll-target="#content-migration-is-not-profit-creation">Content migration is not profit creation</a>
+  <ul class="collapse">
+  <li><a href="#supplier-role-status" id="toc-supplier-role-status" class="nav-link" data-scroll-target="#supplier-role-status">Supplier-role status</a></li>
+  </ul></li>
   <li><a href="#the-profit-pool-scorecard" id="toc-the-profit-pool-scorecard" class="nav-link" data-scroll-target="#the-profit-pool-scorecard">The profit-pool scorecard</a></li>
   </ul></li>
   <li><a href="#company-investment-cases" id="toc-company-investment-cases" class="nav-link" data-scroll-target="#company-investment-cases">8. Company investment cases</a>
@@ -312,7 +324,7 @@ window.Quarto = {
   <li><a href="#marvell-a-separate-scale-up-optionality-case" id="toc-marvell-a-separate-scale-up-optionality-case" class="nav-link" data-scroll-target="#marvell-a-separate-scale-up-optionality-case">Marvell: a separate scale-up optionality case</a></li>
   <li><a href="#tsmc-process-control-not-an-optical-engine-peer" id="toc-tsmc-process-control-not-an-optical-engine-peer" class="nav-link" data-scroll-target="#tsmc-process-control-not-an-optical-engine-peer">TSMC: process control, not an optical-engine peer</a></li>
   </ul></li>
-  <li><a href="#what-the-consensus-versus-variant-framework-can-and-cannot-do-today" id="toc-what-the-consensus-versus-variant-framework-can-and-cannot-do-today" class="nav-link" data-scroll-target="#what-the-consensus-versus-variant-framework-can-and-cannot-do-today">What the consensus-versus-variant framework can and cannot do today</a>
+  <li><a href="#what-the-consensus-versus-variant-framework-can-and-cannot-do" id="toc-what-the-consensus-versus-variant-framework-can-and-cannot-do" class="nav-link" data-scroll-target="#what-the-consensus-versus-variant-framework-can-and-cannot-do">What the consensus-versus-variant framework can and cannot do</a>
   <ul class="collapse">
   <li><a href="#how-a-future-model-will-be-constructed" id="toc-how-a-future-model-will-be-constructed" class="nav-link" data-scroll-target="#how-a-future-model-will-be-constructed">How a future model will be constructed</a></li>
   <li><a href="#catalysts-by-company" id="toc-catalysts-by-company" class="nav-link" data-scroll-target="#catalysts-by-company">Catalysts by company</a></li>
@@ -362,6 +374,7 @@ window.Quarto = {
   <li><a href="#q3-v1.0" id="toc-q3-v1.0" class="nav-link" data-scroll-target="#q3-v1.0">2026 Q3 — v1.0</a></li>
   <li><a href="#q3-v1.1-framework-update" id="toc-q3-v1.1-framework-update" class="nav-link" data-scroll-target="#q3-v1.1-framework-update">2026 Q3 — v1.1 (framework update)</a></li>
   <li><a href="#q3-v1.2-public-investment-report-expansion" id="toc-q3-v1.2-public-investment-report-expansion" class="nav-link" data-scroll-target="#q3-v1.2-public-investment-report-expansion">2026 Q3 — v1.2 (public investment report expansion)</a></li>
+  <li><a href="#q3-v1.3-manufacturing-and-commercial-proof-edition" id="toc-q3-v1.3-manufacturing-and-commercial-proof-edition" class="nav-link" data-scroll-target="#q3-v1.3-manufacturing-and-commercial-proof-edition">2026 Q3 — v1.3 (manufacturing and commercial-proof edition)</a></li>
   <li><a href="#future-quarterly-updates" id="toc-future-quarterly-updates" class="nav-link" data-scroll-target="#future-quarterly-updates">Future quarterly updates</a></li>
   </ul></li>
   </ul>
@@ -390,14 +403,14 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">August 10, 2026</p>
+      <p class="date">August 18, 2026</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">August 11, 2026</p>
+      <p class="date-modified">August 19, 2026</p>
     </div>
   </div>
     
@@ -409,11 +422,12 @@ window.Quarto = {
 
 
 <div class="report-kicker">
-<p>2026 Q3 · Version 1.0 · Public research edition</p>
+<p>2026 Q3 · Version 1.1 · Public research edition</p>
 </div>
 <div class="report-meta">
-<p>Coverage: 2026–2032 · Focus: Ethernet scale-out optical engines and PICs · Last evidence review: 10 August 2026</p>
+<p>Coverage: 2026–2032 · Focus: Ethernet scale-out optical engines and PICs · Last evidence review: 18 August 2026</p>
 </div>
+<p><a href="../../research/cpo/digest.html" class="btn btn-outline-primary">Start with the plain-language CPO digest</a></p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -429,7 +443,7 @@ window.Quarto = {
 </div>
 <section id="executive-conclusion" class="level2">
 <h2 class="anchored" data-anchor-id="executive-conclusion">Executive conclusion</h2>
-<p><strong>The central view:</strong> switch-side CPO at 200G/lane has the strongest currently disclosed commercial signal for Ethernet scale-out. NVIDIA states that Spectrum-X Ethernet Photonics, its CPO-based 200G-SerDes switch system, is in production; Broadcom has announced a third-generation 200G/lane CPO route and a 102.4T CPO demonstration path. These are important product-route signals, not independently reconciled accepted-unit, yield or margin disclosures <span class="citation" data-cites="nvidia2026production broadcom2025cpo broadcom2026ofc">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026</a>)</span>.</p>
+<p><strong>The central view:</strong> switch-side CPO at 200G/lane remains the clearest disclosed commercial route for Ethernet scale-out, but product-route evidence is stronger than exact-SKU customer and scale proof. NVIDIA has defined <code>SN6810</code>/<code>SN6800</code> Spectrum-X Ethernet Photonics CPO configurations; Broadcom has defined the 102.4T, 200G/lane <code>BCM78919</code> / TH6-Davisson route. These are meaningful product signals, not independently reconciled accepted-unit, repeat-shipment, yield or margin disclosures <span class="citation" data-cites="nvidia2026production broadcom2025bcm78919 broadcom2025cpo broadcom2026ofc">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2025bcm78919" role="doc-biblioref">Broadcom 2025a</a>, <a href="#ref-broadcom2025cpo" role="doc-biblioref">2025b</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026b</a>)</span>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -478,14 +492,43 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Public-disclosure conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The missing commercial and economic fields are <strong>not publicly available in a form that supports a decision</strong> as of this edition. For NVIDIA and Broadcom, public material identifies CPO product routes but does not reconcile an exact customer SKU with accepted units or ports, repeat shipment, field-service experience, supplier allocation, realised ASP, yield/rework, warranty or product margin. For component and process suppliers, public material identifies technology and ecosystem routes but not product-matched share or economics.</p>
+<p>This is a conclusion from the disclosure record, not an assumption that the underlying activity is zero: <strong>the public record does not establish a deployed-volume leader, a profit-pool leader, or a standalone CPO public-equity conclusion.</strong></p>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Public evidence basis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Three retained public technical records strengthen the manufacturing frame but do not clear the commercial gate: a historical 51.2T CPO system-test record <span class="citation" data-cites="amiralizadeh2025cpo">(<a href="#ref-amiralizadeh2025cpo" role="doc-biblioref"><span class="nocase">Amiralizadeh et al.</span> 2025</a>)</span>, a measured 1.6T FOWLP optical-package result <span class="citation" data-cites="wu2026fowlp">(<a href="#ref-wu2026fowlp" role="doc-biblioref"><span class="nocase">Wu et al.</span> 2026</a>)</span>, and a 180-GBaud driver/modulator subassembly result <span class="citation" data-cites="tran2026driver">(<a href="#ref-tran2026driver" role="doc-biblioref"><span class="nocase">Tran et al.</span> 2026</a>)</span>. They establish bounded technical evidence—not current TH6 or Spectrum-X deployment, full-engine yield, service cost, or product margin.</p>
+<p>An exact-label review of NVIDIA <code>SN6810</code>/<code>SN6800</code> and Broadcom <code>BCM78919</code> also did not find a public record joining an exact CPO SKU to a named customer, accepted unit or port denominator and a repeat shipment. This is a negative retrieval result, not proof that deployment is absent.</p>
+<p>The manufacturing record indicates that TSMC states that COUPE-on-substrate CPO is beginning production in 2026; ASE maps wafer probing, optical assembly and final test; Teradyne, Advantest and ficonTEC describe wafer, engine/package and module test insertions; and Aehr reports a follow-on production order for silicon-photonics wafer burn-in <span class="citation" data-cites="tsmc2026coupe ase2025cpo teradyne2026photon advantest2026cpo ficontec2025dlt aehr2026burnin">(<a href="#ref-tsmc2026coupe" role="doc-biblioref">TSMC 2026b</a>; <a href="#ref-ase2025cpo" role="doc-biblioref">ASE 2025a</a>; <a href="#ref-teradyne2026photon" role="doc-biblioref">Teradyne 2026</a>; <a href="#ref-advantest2026cpo" role="doc-biblioref">Advantest 2026</a>; <a href="#ref-ficontec2025dlt" role="doc-biblioref"><span class="nocase">ficonTEC</span> 2025</a>; <a href="#ref-aehr2026burnin" role="doc-biblioref">Aehr Test Systems 2026</a>)</span>. This shifts the likely manufacturing diligence focus from fibre attach alone to package geometry, test coverage, burn-in and final qualification. It still does not disclose stage yield, test cost, accepted engines or supplier economics.</p>
+</div>
+</div>
 </section>
 <section id="named-investment-views" class="level2">
 <h2 class="anchored" data-anchor-id="named-investment-views">Named investment views</h2>
 <ul>
-<li><strong>NVIDIA — positive strategic exposure, medium confidence.</strong> The company’s integrated platform and declared production status create the clearest switch-CPO commercialization route. The unresolved issue is how much incremental CPO economics accrue to NVIDIA versus the supply chain <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>.</li>
-<li><strong>Broadcom — positive enabling exposure, medium confidence.</strong> Broadcom has the clearest merchant switch-silicon/CPO product-definition route, but production customer, supplier-content and field-reliability evidence remain limited in public disclosure <span class="citation" data-cites="broadcom2025cpo broadcom2026ofc">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026</a>)</span>.</li>
+<li><strong>NVIDIA — positive strategic exposure, medium confidence.</strong> The company’s integrated platform and declared production status create the clearest switch-CPO commercialization route. The unresolved issue is how much incremental CPO economics NVIDIA captures versus the supply chain <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>.</li>
+<li><strong>Broadcom — positive enabling exposure, medium confidence.</strong> Broadcom has the clearest merchant switch-silicon/CPO product-definition route, but production customer, supplier-content and field-reliability evidence remain limited in public disclosure <span class="citation" data-cites="broadcom2025cpo broadcom2026ofc">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025b</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026b</a>)</span>.</li>
 <li><strong>Coherent — constructive component-stack exposure, medium confidence.</strong> Coherent’s demonstrations span silicon photonics, external lasers, VCSELs, InP modulators and packaging. Demonstrated breadth is not proof of design wins or CPO margins <span class="citation" data-cites="coherent2026cpo">(<a href="#ref-coherent2026cpo" role="doc-biblioref">Coherent 2026a</a>)</span>.</li>
-<li><strong>Lumentum — watch for external-laser conversion, medium confidence.</strong> External-laser content can be a valuable CPO input, but public evidence must still establish quantity, customer concentration and margin capture.</li>
+<li><strong>Lumentum — watch for external-laser conversion, medium confidence.</strong> External-laser content can be a valuable CPO input. Its accelerated UHP-laser reliability record strengthens the component qualification case, but public evidence must still establish finished-module quantity, customer concentration and margin capture <span class="citation" data-cites="lumentum2026ofc lumentum2026nvidia lumentum2026elsfp">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026c</a>, <a href="#ref-lumentum2026nvidia" role="doc-biblioref">2026d</a>, <a href="#ref-lumentum2026elsfp" role="doc-biblioref">2026a</a>)</span>.</li>
 <li><strong>Marvell and TSMC — strategic watchlist, not a CPO-specific call.</strong> Marvell’s accelerator optical-I/O route and TSMC’s advanced-packaging position matter, but their CPO profit attribution is not yet publicly separable.</li>
 </ul>
 </section>
@@ -511,7 +554,7 @@ window.Quarto = {
 <div class="callout-body-container callout-body">
 <p><strong>Architecture:</strong> CPO is most credible where 200G/lane makes the host electrical boundary and optical-interface power binding. It is not the default answer for every rack-scale link.</p>
 <p><strong>Timing:</strong> 2026–2027 is the commercial-proof window. The base case requires customer-confirmed, repeat paid production; a vendor production statement alone is necessary but insufficient.</p>
-<p><strong>Value capture:</strong> The potential beneficiaries are platform integrators, qualified-engine/PIC designers, external-laser suppliers and advanced package/test routes. No public record yet identifies their realised share, qualified yield or margin.</p>
+<p><strong>Value capture:</strong> The potential beneficiaries are platform integrators, qualified-engine/PIC designers, external-laser suppliers and advanced package/test routes. Public evidence confirms these process boundaries, but no record identifies their realised share, qualified yield or margin.</p>
 <p><strong>Portfolio interpretation:</strong> NVIDIA and Broadcom have the clearest system/product routes; Coherent and Lumentum have the clearest optical-content routes; Marvell and TSMC are strategic optionality/control-point cases. All six remain evidence-gated rather than valuation calls.</p>
 </div>
 </div>
@@ -528,8 +571,8 @@ window.Quarto = {
 <section id="what-changed-this-quarter" class="level2">
 <h2 class="anchored" data-anchor-id="what-changed-this-quarter">What changed this quarter</h2>
 <ol type="1">
-<li>NVIDIA publicly described Spectrum-X Ethernet Photonics as a CPO-based 200G-SerDes system “now in production” <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>.</li>
-<li>Broadcom presented a 102.4T CPO route alongside 200G/lane connectivity at OFC 2026 <span class="citation" data-cites="broadcom2026ofc">(<a href="#ref-broadcom2026ofc" role="doc-biblioref">Broadcom 2026</a>)</span>.</li>
+<li>NVIDIA publicly described Spectrum-X Ethernet Photonics as a CPO-based 200G-SerDes system in production, while its product boundary remains distinct from customer-accepted unit proof <span class="citation" data-cites="nvidia2026production nvidia2025sipho">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>, <a href="#ref-nvidia2025sipho" role="doc-biblioref">2025a</a>)</span>.</li>
+<li>Broadcom presented a 102.4T CPO route alongside 200G/lane connectivity at OFC 2026 <span class="citation" data-cites="broadcom2026ofc">(<a href="#ref-broadcom2026ofc" role="doc-biblioref">Broadcom 2026b</a>)</span>.</li>
 <li>Coherent demonstrated multiple CPO technology paths, including 6.4T socketed CPO and 400G-per-lane InP-on-silicon work <span class="citation" data-cites="coherent2026cpo">(<a href="#ref-coherent2026cpo" role="doc-biblioref">Coherent 2026a</a>)</span>.</li>
 </ol>
 <p>See the <a href="../../research/cpo/appendix-changelog.html">change log</a> for the evidence boundary and version history.</p>
@@ -659,6 +702,7 @@ window.Quarto = {
 </tr>
 </tbody>
 </table>
+<p>This boundary table is the report’s anti-conflation rule. A claim is decision-useful only when its architecture, system, commercial and economic boundaries are stated together; otherwise a component result can be mistaken for a deployed product or a platform announcement for supplier profit.</p>
 <p>The hierarchy and claim labels above apply to every chapter: lower-tier sources can identify a diligence question, but cannot settle a higher-tier economic claim. A supplier demonstration can establish a device route; only customer, qualified-manufacturer or contractual evidence can establish accepted volume and allocation.</p>
 </section>
 </section>
@@ -723,6 +767,7 @@ CPO path
 </tr>
 </tbody>
 </table>
+<p>The table defines the investment trade: CPO removes electrical and faceplate constraints, but transfers difficulty into thermal integration, optical assembly, test and service. The technology wins only when the removed burden is larger than the manufacturing and operating burden it adds.</p>
 </section>
 <section id="where-the-electrical-boundary-matters" class="level2">
 <h2 class="anchored" data-anchor-id="where-the-electrical-boundary-matters">Where the electrical boundary matters</h2>
@@ -731,7 +776,7 @@ CPO path
 </section>
 <section id="power-is-necessary-but-not-sufficient" class="level2">
 <h2 class="anchored" data-anchor-id="power-is-necessary-but-not-sufficient">Power is necessary, but not sufficient</h2>
-<p>A 102.4T thought experiment illustrates the distinction. With 64 x 1.6T ports, an assumed 7.2 W CPO optical interface per port produces 460.8 W of direct interface power; a 24 W fully retimed interface produces 1,536 W. These are scenario calculations, not a measured chassis comparison. They omit the switch core, endpoint optics and common chassis loads and therefore should not be read as a complete facility-power claim. Under the same assumptions, the CPO case is approximately 70% lower than the fully retimed interface case, while the gap versus an 8 W LPO case is only 10% <span class="citation" data-cites="nvidia2025power marvell2025engine">(<a href="#ref-nvidia2025power" role="doc-biblioref">NVIDIA 2025b</a>; <a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>)</span>.</p>
+<p>A 102.4T thought experiment makes the boundary concrete. With 64 × 1.6T ports, an assumed 7.2 W CPO optical interface per port uses 460.8 W; a 24 W fully retimed interface uses 1,536 W. The comparison covers the interfaces only—switch core, endpoint optics and common chassis loads are held outside the frame. On these assumptions, CPO uses about 70% less interface power than retimed optics and sits 10% below an 8 W LPO case <span class="citation" data-cites="nvidia2025power marvell2025engine">(<a href="#ref-nvidia2025power" role="doc-biblioref">NVIDIA 2025c</a>; <a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>)</span>.</p>
 <p>That last comparison is the investment challenge. If a linear or near-packaged alternative can preserve serviceability while remaining near CPO on power, CPO must earn its integration penalty through density, electrical reach, thermal design or a better qualified-cost curve.</p>
 <table class="caption-top table">
 <colgroup>
@@ -830,6 +875,11 @@ CPO path
 </tr>
 </tbody>
 </table>
+<section id="how-to-read-the-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-read-the-matrix">How to read the matrix</h3>
+<p>The comparison has one dominant countercase and two distinct alternatives. LPO is the immediate test of whether the host channel can carry the lane rate while preserving modular replacement. NPO is the compromise route when the electrical path must shorten but operators still value an intermediate service boundary. Switch-side CPO has the strongest 200G/lane timing signal because it moves the electrical boundary closest to the ASIC; its investment case depends on qualified yield and service economics, not on proximity alone. Accelerator optical I/O belongs in a separate scale-up adoption track rather than in the switch-CPO ranking.</p>
+<p><strong>Decision rule:</strong> CPO wins only when its electrical and density advantage is large enough to pay for the added package, attach, qualification and replacement burden. If LPO or NPO meets the channel and power requirement with materially better field economics, the system can remain modular even at a higher lane rate.</p>
+</section>
 </section>
 <section id="decision-matrix" class="level2">
 <h2 class="anchored" data-anchor-id="decision-matrix">Decision matrix</h2>
@@ -869,11 +919,12 @@ CPO path
 </tr>
 </tbody>
 </table>
+<p>This matrix makes the substitution test explicit. Pluggables and LPO are not inferior versions of CPO; they are the control case whenever channel margin and power remain acceptable. NPO is the intermediate test. CPO earns a preference only when the shorter electrical path solves a binding system constraint and the added qualification and service burden is shown to be manageable.</p>
 </section>
 <section id="architecture-is-a-portfolio-of-trade-offs" class="level2">
 <h2 class="anchored" data-anchor-id="architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</h2>
 <p>Retimed pluggables move electrical complexity into the module and retain the cleanest replacement model. LPO removes or reduces module DSP complexity but demands a disciplined host-channel and interoperability environment. NPO is a useful category when the electrical path must shrink but the operator still wants an intermediate replacement boundary. CPO moves the optical engine closest to the ASIC; it has the greatest ability to compress the high-speed electrical path and the greatest exposure to package, attach, qualification and field-service economics.</p>
-<p>Accelerator optical I/O should not be used to inflate switch-side CPO adoption. Its product boundary is a scale-up fabric or chiplet/interposer architecture, with different buyers, host integration, failure domain and supplier set. Marvell’s silicon-photonics light-engine announcement and Intel’s optical-I/O-chiplet work demonstrate why this domain matters strategically, but they do not establish a switch-CPO volume curve <span class="citation" data-cites="marvell2025engine intel2024oci">(<a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>; <a href="#ref-intel2024oci" role="doc-biblioref">Intel 2024</a>)</span>.</p>
+<p>Accelerator optical I/O is a separate adoption track: a scale-up fabric or chiplet/interposer architecture with different buyers, host integration, failure domain and supplier set. Marvell’s silicon-photonics light-engine announcement and Intel’s optical-I/O-chiplet work make the strategic case, while leaving the switch-CPO volume curve as a separate question <span class="citation" data-cites="marvell2025engine intel2024oci">(<a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>; <a href="#ref-intel2024oci" role="doc-biblioref">Intel 2024</a>)</span>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -913,7 +964,7 @@ CPO path
 </section>
 <section id="the-200g-and-400g-distinction" class="level2">
 <h2 class="anchored" data-anchor-id="the-200g-and-400g-distinction">The 200G and 400G distinction</h2>
-<p>At 200G/lane, product-route evidence is now specific enough to justify serious diligence: Broadcom describes the BCM78919 as a 102.4T multilayer CPO switch with 200G SerDes, and NVIDIA describes a 200G-SerDes Spectrum-X Photonics route <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025c</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>. Neither disclosure supplies a matched pluggable/LPO TCO, a final yield waterfall or accepted unit data.</p>
+<p>At 200G/lane, product-route evidence is sufficiently specific to justify serious diligence: Broadcom describes the BCM78919 as a 102.4T multilayer CPO switch with 200G SerDes, and NVIDIA describes a 200G-SerDes Spectrum-X Photonics route <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025d</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>. Neither disclosure supplies a matched pluggable/LPO TCO, a final yield waterfall or accepted unit data.</p>
 <p>At 400G/lane, technology demonstrators show why the boundary is being investigated but not why a CPO winner has been established. The Zhou paper models a 212.5-GBaud linear-drive environment; the disclosed result depends strongly on the assumed bump-to-bump loss <span class="citation" data-cites="zhou2026lpo">(<a href="#ref-zhou2026lpo" role="doc-biblioref"><span class="nocase">Zhou et al.</span> 2026</a>)</span>. The correct takeaway is conditional: as the electrical loss budget tightens, deep integration becomes more valuable. The incorrect takeaway is that a universal loss threshold automatically establishes CPO economics.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -983,7 +1034,7 @@ CPO path
 </section>
 <section id="npo-deserves-separate-diligence" class="level2">
 <h2 class="anchored" data-anchor-id="npo-deserves-separate-diligence">NPO deserves separate diligence</h2>
-<p>NPO is often placed between pluggables and CPO on a simple integration spectrum. That is useful but incomplete. A near-packaged approach can alter the electrical path and thermal layout without inheriting every CPO service boundary; it may also create a new package, connector or cable-management problem. IEEE 400G-per-lane study-group material explicitly treats NPO and CPO as distinct considerations at the next lane-rate boundary <span class="citation" data-cites="ieee2026npo">(<a href="#ref-ieee2026npo" role="doc-biblioref">China Mobile and IEEE 802.3 400G per Lane Study Group 2026</a>)</span>.</p>
+<p>NPO is often placed between pluggables and CPO on a simple integration spectrum. That is useful but incomplete. A near-packaged approach can alter the electrical path and thermal layout without inheriting every CPO service boundary; it may also create a new package, connector or cable-management problem. IEEE 400G-per-lane study-group material and the OIF CEI-448G framework explicitly treat NPO and CPO as distinct electrical-attachment contexts. OIF also makes management, mechanical compatibility and multi-vendor interoperability separate requirements rather than consequences of a short path alone <span class="citation" data-cites="ieee2026npo oif2026cei448">(<a href="#ref-ieee2026npo" role="doc-biblioref">China Mobile and IEEE 802.3 400G per Lane Study Group 2026</a>; <a href="#ref-oif2026cei448" role="doc-biblioref">Optical Internetworking Forum 2026</a>)</span>.</p>
 <p>The investor implication is that NPO is not merely a delayed CPO outcome. It can be a genuine substitute if it captures enough electrical/power benefit while preserving a better acceptance, replacement or supply-chain model. Any claim that CPO necessarily wins at 400G/lane must therefore be tested against NPO as well as LPO and advanced pluggables.</p>
 </section>
 </section>
@@ -999,8 +1050,8 @@ CPO path
 External or integrated laser, package thermal design and test coverage determine whether this becomes a qualified engine.
 </p>
 </section>
-<section id="where-durable-economics-could-accrue" class="level2">
-<h2 class="anchored" data-anchor-id="where-durable-economics-could-accrue">Where durable economics could accrue</h2>
+<section id="where-durable-economics-could-be-captured" class="level2">
+<h2 class="anchored" data-anchor-id="where-durable-economics-could-be-captured">Where durable economics could be captured</h2>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1042,6 +1093,7 @@ External or integrated laser, package thermal design and test coverage determine
 </tr>
 </tbody>
 </table>
+<p>The control-point ranking is therefore economic as well as technical. PIC/EIC, laser and fibre choices matter because they determine the cost and replaceability of a qualified engine; package and test matter because they determine whether that engine can be accepted repeatedly. The public record supports the control points, but not yet a ranking of supplier margins.</p>
 </section>
 <section id="scale-out-remains-the-near-term-focus" class="level2">
 <h2 class="anchored" data-anchor-id="scale-out-remains-the-near-term-focus">Scale-out remains the near-term focus</h2>
@@ -1108,11 +1160,12 @@ External or integrated laser, package thermal design and test coverage determine
 </tr>
 </tbody>
 </table>
-<p>The OIF ELSFP work is important because external-light architectures can separate the replaceable laser boundary from a deeply integrated optical engine <span class="citation" data-cites="oif2025elsfp">(<a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>)</span>. This is not a free serviceability solution: laser distribution, connectors, optical power budgeting, contamination, qualification and operational spares become part of the system requirement.</p>
+<p>The engine should be evaluated as one costed chain. A stronger PIC cannot offset a weak fibre interface or late package escape, and an external laser is valuable only if its service boundary improves the whole system rather than adding another qualification and inventory burden.</p>
+<p>The OIF ELSFP work is important because external-light architectures can separate the replaceable laser boundary from a deeply integrated optical engine <span class="citation" data-cites="oif2025elsfp">(<a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>)</span>. Lumentum’s 2026 reliability paper adds a concrete component-level qualification signal for that route, but not finished-module service economics <span class="citation" data-cites="lumentum2026elsfp">(<a href="#ref-lumentum2026elsfp" role="doc-biblioref">Lumentum 2026a</a>)</span>. This is not a free serviceability solution: laser distribution, connectors, optical power budgeting, contamination, qualification and operational spares become part of the system requirement.</p>
 </section>
 <section id="scale-out-pic-thesis" class="level2">
 <h2 class="anchored" data-anchor-id="scale-out-pic-thesis">Scale-out PIC thesis</h2>
-<p>The investable scale-out opportunity is a reproducible engine platform that carries its test coverage, laser architecture and attachment process across switch configurations. Coherent demonstrates route breadth; TSMC demonstrates that process integration can be a distinct control point <span class="citation" data-cites="coherent2026cpo tsmc2024symposium tsmc2025annual">(<a href="#ref-coherent2026cpo" role="doc-biblioref">Coherent 2026a</a>; <a href="#ref-tsmc2024symposium" role="doc-biblioref">TSMC 2024</a>, <a href="#ref-tsmc2025annual" role="doc-biblioref">2026</a>)</span>. Public evidence still does not map qualified supplier share or margin.</p>
+<p>The investable scale-out opportunity is a reproducible engine platform that carries its test coverage, laser architecture and attachment process across switch configurations. Coherent demonstrates route breadth; TSMC demonstrates that process integration can be a distinct control point <span class="citation" data-cites="coherent2026cpo tsmc2024symposium tsmc2025annual">(<a href="#ref-coherent2026cpo" role="doc-biblioref">Coherent 2026a</a>; <a href="#ref-tsmc2024symposium" role="doc-biblioref">TSMC 2024</a>, <a href="#ref-tsmc2025annual" role="doc-biblioref">2026a</a>)</span>. Public evidence still does not map qualified supplier share or margin.</p>
 </section>
 </div>
 </div>
@@ -1124,12 +1177,12 @@ External or integrated laser, package thermal design and test coverage determine
 <h2 class="anchored" data-anchor-id="the-adoption-bottleneck-may-be-manufacturing">The adoption bottleneck may be manufacturing</h2>
 <p>The technical case for short electrical paths is necessary but insufficient. In CPO, optical alignment, fibre attach, final package integration and qualification sit closer to the system critical path. IBM’s full-module test vehicle and a recent heterogeneous-integration review both identify packaging, reliability and maintainability as coupled constraints, not afterthoughts <span class="citation" data-cites="knickerbocker2024cpo gao2025heterogeneous">(<a href="#ref-knickerbocker2024cpo" role="doc-biblioref"><span class="nocase">Knickerbocker et al.</span> 2024</a>; <a href="#ref-gao2025heterogeneous" role="doc-biblioref">Gao et al. 2025</a>)</span>.</p>
 </section>
-<section id="qualified-good-engine-equation" class="level2">
-<h2 class="anchored" data-anchor-id="qualified-good-engine-equation">Qualified-good-engine equation</h2>
+<section id="cost-per-qualified-shippable-engine" class="level2">
+<h2 class="anchored" data-anchor-id="cost-per-qualified-shippable-engine">Cost per qualified, shippable engine</h2>
 <p><span class="math display">\[
-\text{Qualified cost per engine} = \frac{\text{materials + assembly + test + rework + capital + warranty}}{\text{accepted engines}}
+\text{Cost per qualified engine} = \frac{\text{materials + assembly + test + rework + capital + warranty}}{\text{engines that pass}}
 \]</span></p>
-<p>The numerator and denominator must be measured at the same boundary. A paper’s coupling loss, a company’s test-tool announcement or a one-time reflow result cannot by itself determine this value.</p>
+<p>The calculation asks what each shippable engine costs after failed units, rework and support costs are included. For example, a $16,000 batch that produces 80 accepted engines costs $200 per accepted engine—not $160 per attempted unit.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1138,39 +1191,35 @@ External or integrated laser, package thermal design and test coverage determine
 </colgroup>
 <thead>
 <tr class="header">
-<th>Manufacturing question</th>
+<th>Gate</th>
 <th>Why it matters</th>
-<th>Public status</th>
+<th>Public read</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Fibre-attach first-pass yield</td>
-<td>Can compound across many interfaces</td>
-<td><span class="status-open">Not broadly disclosed</span></td>
+<td>Fibre attach and package</td>
+<td>Set first-pass yield and scrap</td>
+<td><strong>Fact:</strong> process boundaries are documented; yields remain undisclosed</td>
 </tr>
 <tr class="even">
-<td>Rework and retest yield</td>
-<td>Determines whether known-good-engine concepts work economically</td>
-<td><span class="status-open">Not broadly disclosed</span></td>
+<td>Test and burn-in</td>
+<td>Find defects and control throughput</td>
+<td><strong>Fact:</strong> equipment and insertions are public; time, coverage and escapes are not</td>
 </tr>
 <tr class="odd">
-<td>Environmental qualification</td>
-<td>Converts a demo into a deployment candidate</td>
-<td><span class="status-inference">Partial prototype evidence</span></td>
+<td>Qualification and rework</td>
+<td>Determine accepted output</td>
+<td><strong>Partial:</strong> prototype stress evidence; no production waterfall</td>
 </tr>
 <tr class="even">
-<td>Field replacement</td>
-<td>Determines operational acceptance and warranty exposure</td>
-<td><span class="status-open">No comparable public evidence</span></td>
-</tr>
-<tr class="odd">
-<td>Test time and coverage</td>
-<td>Determines throughput and escape-rate economics</td>
-<td><span class="status-open">Not broadly disclosed</span></td>
+<td>Field service</td>
+<td>Determines lifetime operating cost</td>
+<td><strong>Open:</strong> no comparable CPO field data</td>
 </tr>
 </tbody>
 </table>
+<p>Recent ASE, Teradyne, Advantest, ficonTEC and Aehr sources map the wafer-to-engine- to-module flow; TSMC and Lumentum add production and component-qualification signals <span class="citation" data-cites="ase2025cpo teradyne2026photon advantest2026cpo ficontec2025dlt aehr2026burnin tsmc2026coupe lumentum2026elsfp">(<a href="#ref-ase2025cpo" role="doc-biblioref">ASE 2025a</a>; <a href="#ref-teradyne2026photon" role="doc-biblioref">Teradyne 2026</a>; <a href="#ref-advantest2026cpo" role="doc-biblioref">Advantest 2026</a>; <a href="#ref-ficontec2025dlt" role="doc-biblioref"><span class="nocase">ficonTEC</span> 2025</a>; <a href="#ref-aehr2026burnin" role="doc-biblioref">Aehr Test Systems 2026</a>; <a href="#ref-tsmc2026coupe" role="doc-biblioref">TSMC 2026b</a>; <a href="#ref-lumentum2026elsfp" role="doc-biblioref">Lumentum 2026a</a>)</span>. They improve the process map, but do not yet supply the yield, rework or cost data needed to rank companies.</p>
 </section>
 <section id="serviceability-is-an-architecture-variable" class="level2">
 <h2 class="anchored" data-anchor-id="serviceability-is-an-architecture-variable">Serviceability is an architecture variable</h2>
@@ -1178,7 +1227,7 @@ External or integrated laser, package thermal design and test coverage determine
 </section>
 <section id="yield-compounds-across-interfaces" class="level2">
 <h2 class="anchored" data-anchor-id="yield-compounds-across-interfaces">Yield compounds across interfaces</h2>
-<p>The central manufacturing point is mathematical before it is proprietary. imec’s development-run data show why optical-interface yield and alignment tolerance are material engineering variables; they are not final-engine production yield <span class="citation" data-cites="imec2024interfacing">(<a href="#ref-imec2024interfacing" role="doc-biblioref"><span class="nocase">imec</span> 2024</a>)</span>. If an engine requires many independent connections, the yield of the finished board is approximately the product of the connection yields, before adding die yield, attach, rework, burn-in and system acceptance. At 1,024 interfaces, a 99.90% assumed connection yield implies only about 35.9% all-good yield if no rework is allowed; achieving 95% board yield requires approximately 99.995% per-connection first-pass yield. These are illustrative calculations, not a disclosure about any supplier.</p>
+<p>The central manufacturing point is mathematical before it is proprietary. imec’s development-run data show why optical-interface yield and alignment tolerance matter <span class="citation" data-cites="imec2024interfacing">(<a href="#ref-imec2024interfacing" role="doc-biblioref"><span class="nocase">imec</span> 2024</a>)</span>. If an engine requires many independent connections, finished-board yield compounds across those connections before die yield, attach, rework, burn-in and system acceptance are added. At 1,024 interfaces, a 99.90% assumed connection yield gives about 35.9% all-good yield without rework; 95% board yield requires approximately 99.995% per-connection first-pass yield. These figures define the sensitivity, not a supplier-specific production result.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -1221,6 +1270,7 @@ External or integrated laser, package thermal design and test coverage determine
 </tr>
 </tbody>
 </table>
+<p>The sensitivity is steepest at high interface counts. Even a small improvement in per-connection yield has a large effect on all-good output, which is why automated alignment, screening and rework can matter more than a marginal component-level efficiency gain. ASE’s warpage and coplanarity disclosures add a second failure mechanism after attach: package geometry can move the binding constraint into assembly even when the optical interface itself is controlled <span class="citation" data-cites="ase2025warpage">(<a href="#ref-ase2025warpage" role="doc-biblioref">ASE 2025b</a>)</span>. These are scenario mechanics, not reported factory yields.</p>
 <p class="process-label">
 Build and screen
 </p>
@@ -1240,7 +1290,7 @@ Rework, scrap and warranty can reduce yield or raise cost at every stage.
 <section id="test-and-service-define-the-real-failure-domain" class="level2">
 <h2 class="anchored" data-anchor-id="test-and-service-define-the-real-failure-domain">Test and service define the real failure domain</h2>
 <p>The difference between a replaceable laser module and a replaceable optical engine is commercially important. A field-replaceable ELS can isolate a laser failure, but it does not automatically make the PIC, fibre attach or package replaceable. A socket, detachable fibre interface or known-good subassembly can improve serviceability, but it introduces its own insertion-loss, contamination, connector-life and handling requirements. The relevant operator metric is not only power; it is recovery time, spare inventory, field procedure, warranty ownership and blast radius.</p>
-<p>Teradyne’s discussion of silicon-photonics test challenges illustrates the industry direction: wafer, die, package and system test must be linked rather than treated as a conventional module-only workflow <span class="citation" data-cites="teradyne2025test">(<a href="#ref-teradyne2025test" role="doc-biblioref">Teradyne 2025</a>)</span>. Public data do not yet disclose the actual test time, escape rate or cost per qualified engine for a CPO platform.</p>
+<p>Teradyne’s current Photon 100 platform, together with Advantest and ficonTEC capability descriptions, makes the test boundary more concrete: wafer, die/engine, package and CPO-module test are separate insertions rather than one conventional module test <span class="citation" data-cites="teradyne2026photon advantest2026cpo ficontec2025dlt">(<a href="#ref-teradyne2026photon" role="doc-biblioref">Teradyne 2026</a>; <a href="#ref-advantest2026cpo" role="doc-biblioref">Advantest 2026</a>; <a href="#ref-ficontec2025dlt" role="doc-biblioref"><span class="nocase">ficonTEC</span> 2025</a>)</span>. Aehr’s follow-on production order further shows that wafer-level silicon-photonics burn-in is being purchased for an expanding manufacturing programme, although the customer, architecture and pass/fail distribution remain undisclosed <span class="citation" data-cites="aehr2026burnin">(<a href="#ref-aehr2026burnin" role="doc-biblioref">Aehr Test Systems 2026</a>)</span>. The public record still does not disclose test seconds, escape rate or cost per accepted engine.</p>
 </section>
 <section id="what-would-clear-the-gate" class="level2">
 <h2 class="anchored" data-anchor-id="what-would-clear-the-gate">What would clear the gate</h2>
@@ -1248,7 +1298,7 @@ Rework, scrap and warranty can reduce yield or raise cost at every stage.
 </section>
 <section id="reliability-is-a-system-property" class="level2">
 <h2 class="anchored" data-anchor-id="reliability-is-a-system-property">Reliability is a system property</h2>
-<p>Thermal, optical and mechanical stresses interact in a CPO assembly. IBM’s work reports full-module reflow and stress testing, while its test-vehicle boundary still falls short of production-lot yield and fleet reliability <span class="citation" data-cites="knickerbocker2024cpo">(<a href="#ref-knickerbocker2024cpo" role="doc-biblioref"><span class="nocase">Knickerbocker et al.</span> 2024</a>)</span>. A separated laser does not remove the PIC, interposer, fibre-interface or connector reliability burden. The report distinguishes <strong>device</strong> reliability, <strong>assembly</strong> reliability and <strong>operational</strong> reliability; only the last establishes whether an operator can isolate and repair the failure domain at acceptable cost.</p>
+<p>Thermal, optical and mechanical stresses interact in a CPO assembly. IBM’s work reports full-module reflow and stress testing, while its test-vehicle boundary still falls short of production-lot yield and fleet reliability <span class="citation" data-cites="knickerbocker2024cpo">(<a href="#ref-knickerbocker2024cpo" role="doc-biblioref"><span class="nocase">Knickerbocker et al.</span> 2024</a>)</span>. A separated laser does not remove the PIC, interposer, fibre-interface or connector reliability burden. Lumentum’s accelerated UHP-laser programme is a stronger component-level qualification signal—more than 100 million accelerated device-hours with no reported catastrophic failures—but it is not a finished ELSFP-module or engine field result <span class="citation" data-cites="lumentum2026elsfp">(<a href="#ref-lumentum2026elsfp" role="doc-biblioref">Lumentum 2026a</a>)</span>. The report distinguishes <strong>device</strong> reliability, <strong>assembly</strong> reliability and <strong>operational</strong> reliability; only the last establishes whether an operator can isolate and repair the failure domain at acceptable cost.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 25%">
@@ -1291,6 +1341,7 @@ Rework, scrap and warranty can reduce yield or raise cost at every stage.
 </tr>
 </tbody>
 </table>
+<p>The layers are sequential, not interchangeable. Device ageing can pass while an assembly fails thermal cycling; an assembly can qualify while field replacement is too slow or expensive. A commercial CPO claim therefore needs evidence through the operation layer, not only a component or test-vehicle result.</p>
 </section>
 <section id="the-cost-of-a-late-failure" class="level2">
 <h2 class="anchored" data-anchor-id="the-cost-of-a-late-failure">The cost of a late failure</h2>
@@ -1339,7 +1390,9 @@ Rework, scrap and warranty can reduce yield or raise cost at every stage.
 </tr>
 </tbody>
 </table>
+<p>The scenarios differ by evidence, not by enthusiasm. The base case requires repeat production at 200G/lane but keeps adoption concentrated until yield, service and matched-TCO data improve. The bull case adds reproducible qualification and supplier economics; the bear case is confirmed if modular alternatives close the system gap.</p>
 <p><span class="status-forecast">Forecast:</span> 2026–2027 is the central commercial-proof window. NVIDIA’s current production statement is the strongest positive public signal; it does not settle accepted units, customer mix, comparative economics or supplier profit capture <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>.</p>
+<p>The August 2026 NVIDIA page adds named-adopter context, while CoreWeave provides a useful negative control: its SN6600-LD deployment is not identified as the separate SN6800/SN6810 CPO configuration, even though CoreWeave is also named as a Photonics adopter <span class="citation" data-cites="nvidia2026photonicsrefresh coreweave2026sn6600">(<a href="#ref-nvidia2026photonicsrefresh" role="doc-biblioref">NVIDIA 2026c</a>; <a href="#ref-coreweave2026sn6600" role="doc-biblioref">CoreWeave 2026</a>)</span>. The commercial gate therefore remains open for exact SKU, accepted units and repeat shipments.</p>
 </section>
 <section id="falsification-checklist" class="level2">
 <h2 class="anchored" data-anchor-id="falsification-checklist">Falsification checklist</h2>
@@ -1409,6 +1462,7 @@ Rework, scrap and warranty can reduce yield or raise cost at every stage.
 </tr>
 </tbody>
 </table>
+<p>The timeline is a sequence of gates rather than a market-share curve. Each row advances only when the specified product, customer, qualification and economic evidence appears; a roadmap announcement alone does not move a domain into the next stage.</p>
 <p class="process-label">
 Commercial proof
 </p>
@@ -1431,7 +1485,7 @@ Investment proof
 </section>
 <section id="what-counts-as-a-timing-miss" class="level2">
 <h2 class="anchored" data-anchor-id="what-counts-as-a-timing-miss">What counts as a timing miss</h2>
-<p>The report will treat a delayed roadmap differently from a disconfirmed architecture. A schedule slip without negative qualification evidence can move the commercial-proof window but leave the technical thesis intact. A repeated inability to identify a customer CPO SKU, accepted-unit range or repeat shipment after a claimed production period weakens the commercial interpretation. A field or qualification issue that requires a return to a pluggable or NPO boundary is stronger disconfirming evidence because it attacks the architecture’s operational premise.</p>
+<p>The report treats a delayed roadmap differently from a disconfirmed architecture. A schedule slip without negative qualification evidence can move the commercial-proof window but leave the technical thesis intact. A repeated inability to identify a customer CPO SKU, accepted-unit range or repeat shipment after a claimed production period weakens the commercial interpretation. A field or qualification issue that requires a return to a pluggable or NPO boundary is stronger disconfirming evidence because it attacks the architecture’s operational premise.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -1478,6 +1532,7 @@ Investment proof
 </tr>
 </tbody>
 </table>
+<p>This ordering prevents timing signals from being mistaken for earnings evidence. Production language can move the calendar, but only repeat shipments, qualified yield and attributable content can move the investment conclusion.</p>
 <p>This sequence is deliberately more conservative than a technology-market forecast. It avoids declaring adoption when the public evidence might only show an engineering sample, a platform family, a partner relationship or a programme award. It also makes the report useful on a quarterly basis: each new disclosure can be placed on a clear progression rather than absorbed into a vague “CPO is happening” narrative.</p>
 </section>
 </section>
@@ -1531,10 +1586,24 @@ Investment proof
 </tr>
 </tbody>
 </table>
+<p>The value chain is a map of where work moves, not a forecast of who gets paid. The key diligence question at every layer is whether the added responsibility is scarce, qualified and priced above its capital, yield and warranty burden.</p>
 </section>
 <section id="profit-pool-test" class="level2">
 <h2 class="anchored" data-anchor-id="profit-pool-test">Profit-pool test</h2>
 <p>The supplier most likely to capture economics is not necessarily the one with the best device. Durable capture requires control of a bottleneck, credible switching costs, customer qualification, and economics that survive yield, capex, rework and warranty.</p>
+<div class="callout callout-style-default callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Public-data boundary
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>No retained public disclosure identifies, for a common CPO product boundary, supplier share, realised ASP, final good-engine yield, rework, warranty burden and product gross margin. The absence of this disclosure does not mean there is no value pool; it means the public record cannot attribute that value pool to NVIDIA, Broadcom, Coherent, Lumentum, TSMC or another supplier with enough confidence for an investment conclusion.</p>
+</div>
+</div>
 <div class="process-row">
 <p><span class="process-step">Technical constraint</span><span class="process-arrow">→</span><span class="process-step">Architecture choice</span><span class="process-arrow">→</span><span class="process-step">Supplier content</span></p>
 </div>
@@ -1594,11 +1663,83 @@ Investment proof
 </tr>
 </tbody>
 </table>
+<p>This second table narrows the investment test to control and leakage. A supplier can sit at a technically critical boundary yet lose economics through multi-sourcing, price-down or downstream rework. That is why the report keeps strategic exposure separate from a proven profit-pool claim.</p>
+<p>Public process evidence reinforces a distributed control map: TSMC has stated that COUPE-on-substrate CPO is beginning production in 2026; ASE describes package, fibre and final-test integration; Corning demonstrates a Broadcom-silicon switch tray with fibre-array units; and Teradyne, Advantest and ficonTEC supply different test insertions <span class="citation" data-cites="tsmc2026coupe ase2025cpo corning2026switchtray teradyne2026photon advantest2026cpo ficontec2025dlt">(<a href="#ref-tsmc2026coupe" role="doc-biblioref">TSMC 2026b</a>; <a href="#ref-ase2025cpo" role="doc-biblioref">ASE 2025a</a>; <a href="#ref-corning2026switchtray" role="doc-biblioref">Corning 2026</a>; <a href="#ref-teradyne2026photon" role="doc-biblioref">Teradyne 2026</a>; <a href="#ref-advantest2026cpo" role="doc-biblioref">Advantest 2026</a>; <a href="#ref-ficontec2025dlt" role="doc-biblioref"><span class="nocase">ficonTEC</span> 2025</a>)</span>. These are confirmed technology or capability boundaries, not confirmed supplier allocation or margin.</p>
+<section id="supplier-role-status" class="level3">
+<h3 class="anchored" data-anchor-id="supplier-role-status">Supplier-role status</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Company</th>
+<th>Boundary</th>
+<th>Public status</th>
+<th>Still unknown</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NVIDIA</td>
+<td>Switch platform, CPO system and adopter route</td>
+<td><strong>Confirmed platform; partnered ecosystem</strong></td>
+<td>Exact customer SKU, accepted volume, supplier share and CPO margin</td>
+</tr>
+<tr class="even">
+<td>Lumentum</td>
+<td>External laser / ELSFP and optical inputs</td>
+<td><strong>Partnered technology route; component qualification signal</strong></td>
+<td>Finished-module allocation, engine share, ASP and margin</td>
+</tr>
+<tr class="odd">
+<td>TSMC</td>
+<td>COUPE, silicon photonics and advanced package</td>
+<td><strong>Confirmed company-stated production milestone</strong></td>
+<td>Customer allocation, accepted output and merchant economics</td>
+</tr>
+<tr class="even">
+<td>ASE</td>
+<td>CPO package, fibre assembly and final-test flow</td>
+<td><strong>Confirmed OSAT capability/demonstration</strong></td>
+<td>Installed product line, stage yield, customer and pricing</td>
+</tr>
+<tr class="odd">
+<td>Corning</td>
+<td>Fibre-array units and optical-management hardware</td>
+<td><strong>Partnered demonstration</strong></td>
+<td>Broadcom SKU linkage, supplied share and production volume</td>
+</tr>
+<tr class="even">
+<td>Teradyne</td>
+<td>Wafer, engine/package and module test equipment</td>
+<td><strong>Confirmed equipment capability</strong></td>
+<td>Installed CPO line, throughput, coverage and cost per good engine</td>
+</tr>
+<tr class="odd">
+<td>Advantest</td>
+<td>Wafer-to-final optical test concepts</td>
+<td><strong>Confirmed equipment capability</strong></td>
+<td>Customer installation, test economics and output</td>
+</tr>
+<tr class="even">
+<td>ficonTEC</td>
+<td>Die-level optical-engine test and automated coupling</td>
+<td><strong>Confirmed equipment capability</strong></td>
+<td>Installed production use, yield and pricing</td>
+</tr>
+</tbody>
+</table>
+<p>“Confirmed” describes the public boundary actually disclosed; it does not imply allocation, exclusivity or profit capture. “Partnered” describes a named ecosystem or demonstration relationship whose commercial share remains unreported.</p>
+</section>
 </section>
 <section id="the-profit-pool-scorecard" class="level2">
 <h2 class="anchored" data-anchor-id="the-profit-pool-scorecard">The profit-pool scorecard</h2>
 <p>For every company, the report asks six questions: does it control a product-critical layer; is that layer qualified in a named system; is it difficult to replace; is supplier share identifiable; can it earn a margin after yield/rework/warranty; and is the result material to consolidated earnings? A “yes” only to the first question is technology optionality, not a completed investment case.</p>
-<p>NVIDIA’s and Broadcom’s announcements establish platform/product control points <span class="citation" data-cites="nvidia2026production broadcom2025th6">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025c</a>)</span>. NVIDIA’s partnerships with Coherent and Lumentum strengthen the supply-chain signal, not the supplier-allocation case <span class="citation" data-cites="nvidia2026coherent lumentum2026nvidia">(<a href="#ref-nvidia2026coherent" role="doc-biblioref">NVIDIA and Coherent 2026</a>; <a href="#ref-lumentum2026nvidia" role="doc-biblioref">Lumentum 2026c</a>)</span>.</p>
+<p>NVIDIA’s and Broadcom’s announcements establish platform/product control points <span class="citation" data-cites="nvidia2026production broadcom2025th6">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025d</a>)</span>. NVIDIA’s partnerships with Coherent and Lumentum strengthen the supply-chain signal, not the supplier-allocation case <span class="citation" data-cites="nvidia2026coherent lumentum2026nvidia">(<a href="#ref-nvidia2026coherent" role="doc-biblioref">NVIDIA and Coherent 2026</a>; <a href="#ref-lumentum2026nvidia" role="doc-biblioref">Lumentum 2026d</a>)</span>.</p>
 </section>
 </section>
 <section id="company-investment-cases" class="level1">
@@ -1606,6 +1747,19 @@ Investment proof
 <section id="how-to-read-these-cases" class="level2">
 <h2 class="anchored" data-anchor-id="how-to-read-these-cases">How to read these cases</h2>
 <p>These are evidence-gated thematic views, not price targets. “Positive” means the company has credible strategic exposure to a potential CPO control point; it does <strong>not</strong> mean CPO earnings are presently quantifiable or that the security is suitable for any investor.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Common public-disclosure conclusion
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Across all six cases, the decision-grade data are not publicly attributable: customer acceptance and repeat volume at an exact product boundary; supplier content/share; product price and margin; final yield/rework; field returns and warranty. This report treats those fields as unavailable, not as zero. The result is a relative strategic stance rather than a CPO revenue, EPS, valuation or profit-pool ranking.</p>
+</div>
+</div>
 </section>
 <section id="expectations-versus-variant-view" class="level2">
 <h2 class="anchored" data-anchor-id="expectations-versus-variant-view">Expectations versus variant view</h2>
@@ -1613,7 +1767,7 @@ Investment proof
 <ol type="1">
 <li><strong>Observed public facts</strong> — product, customer, qualification, shipment and filing records linked in the report.</li>
 <li><strong>External expectations</strong> — management targets and market estimates. Restricted sell-side research is used privately only; exact proprietary estimates and analyst identities are not published here.</li>
-<li><strong>Nur Alpys’ variant view</strong> — a derived positive, neutral or negative stance, with a stated catalyst and falsification condition.</li>
+<li><strong>Author’s variant view</strong> — a derived positive, neutral or negative stance, with a stated catalyst and falsification condition.</li>
 </ol>
 <p>The private model is being prepared to translate reconciled consensus baselines into bear/base/bull CPO revenue, EPS and valuation sensitivity. No CPO-specific sensitivity is published until the underlying inputs are sourced, date-stamped and internally reconciled. This is deliberately not a target-price report.</p>
 <table class="caption-top table">
@@ -1681,7 +1835,7 @@ Investment proof
 <td>Broadcom</td>
 <td>Positive enabling exposure</td>
 <td>Merchant switch ASIC + third-generation CPO route</td>
-<td>200G/lane CPO announcement; 102.4T CPO path <span class="citation" data-cites="broadcom2025cpo broadcom2026ofc">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026</a>)</span></td>
+<td>200G/lane CPO announcement; 102.4T CPO path <span class="citation" data-cites="broadcom2025cpo broadcom2026ofc">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025b</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026b</a>)</span></td>
 <td>Customer deployment, yields and field data</td>
 </tr>
 <tr class="odd">
@@ -1695,7 +1849,7 @@ Investment proof
 <td>Lumentum</td>
 <td>Constructive/watch</td>
 <td>High-power and DWDM external-laser inputs</td>
-<td>OFC 2026 CPO-oriented laser demonstrations <span class="citation" data-cites="lumentum2026ofc">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026b</a>)</span></td>
+<td>OFC 2026 CPO-oriented laser demonstrations <span class="citation" data-cites="lumentum2026ofc">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026c</a>)</span></td>
 <td>Customer conversion, volume and margin attribution</td>
 </tr>
 <tr class="odd">
@@ -1709,15 +1863,16 @@ Investment proof
 <td>TSMC</td>
 <td>Strategic infrastructure watch</td>
 <td>Silicon photonics and advanced packaging</td>
-<td>Annual-report CPO/silicon-photonics development disclosure <span class="citation" data-cites="tsmc2025annual">(<a href="#ref-tsmc2025annual" role="doc-biblioref">TSMC 2026</a>)</span></td>
+<td>Annual-report CPO/silicon-photonics development disclosure <span class="citation" data-cites="tsmc2025annual">(<a href="#ref-tsmc2025annual" role="doc-biblioref">TSMC 2026a</a>)</span></td>
 <td>Merchant economics and customer content capture</td>
 </tr>
 </tbody>
 </table>
+<p>The ranking is intentionally relative. NVIDIA and Broadcom have the clearest platform control; Coherent and Lumentum have component optionality; Marvell and TSMC remain watches because the public record does not yet connect their routes to repeat CPO revenue or attributable margins. A positive strategic view is therefore not the same as a proven CPO earnings beneficiary.</p>
 </section>
 <section id="nvidia" class="level2">
 <h2 class="anchored" data-anchor-id="nvidia">NVIDIA</h2>
-<p><span class="status-fact">Fact:</span> NVIDIA states that Spectrum-X Ethernet Photonics combines CPO with 200G SerDes and is now in production <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>.</p>
+<p><span class="status-fact">Fact:</span> NVIDIA states that Spectrum-X Ethernet Photonics combines CPO with 200G SerDes and is in production <span class="citation" data-cites="nvidia2026production">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>)</span>.</p>
 <p><span class="status-inference">Inference:</span> NVIDIA has the strongest disclosed integrated platform route to commercial switch-side CPO. Its power is system control: ASIC, NIC/DPU, software, reference design and customer route. The public record does not allocate CPO revenue, gross margin or component sourcing to NVIDIA.</p>
 <p><strong>Invalidation trigger:</strong> disclosed deployments show the CPO element is non-material, yields/service cost are poor, or alternative optics retain comparable system economics.</p>
 <section id="product-boundary-and-public-evidence" class="level3">
@@ -1726,7 +1881,7 @@ Investment proof
 </section>
 <section id="variant-view" class="level3">
 <h3 class="anchored" data-anchor-id="variant-view">Variant view</h3>
-<p><strong>Stance: positive strategic exposure; medium confidence.</strong> NVIDIA is best positioned to force a CPO architecture decision because it can coordinate the ASIC, NIC/DPU, rack design, software and customer deployment. That coordination can matter more than ownership of any individual optical component. The differentiated question is whether the system benefit is enough to accelerate high-end CPO adoption before alternate pluggable or LPO routes preserve the same economics.</p>
+<p><strong>Stance: positive strategic exposure; medium confidence.</strong> NVIDIA is best positioned to force a CPO architecture decision because it can coordinate the ASIC, NIC/DPU, rack design, software and customer deployment. Its product page names CoreWeave, Lambda, Meta, Microsoft and OCI as first adopters, but does not link those operators to a specific SN6800/SN6810 CPO acceptance record <span class="citation" data-cites="nvidia2026photonicsrefresh">(<a href="#ref-nvidia2026photonicsrefresh" role="doc-biblioref">NVIDIA 2026c</a>)</span>. The differentiated question is whether the system benefit is enough to accelerate high-end CPO adoption before alternate pluggable or LPO routes preserve the same economics.</p>
 </section>
 <section id="earnings-relevance-and-falsification" class="level3">
 <h3 class="anchored" data-anchor-id="earnings-relevance-and-falsification">Earnings relevance and falsification</h3>
@@ -1735,11 +1890,11 @@ Investment proof
 </section>
 <section id="broadcom" class="level2">
 <h2 class="anchored" data-anchor-id="broadcom">Broadcom</h2>
-<p><span class="status-fact">Fact:</span> Broadcom announced its third-generation 200G/lane CPO technology and, at OFC 2026, presented a 102.4T CPO route <span class="citation" data-cites="broadcom2025cpo broadcom2026ofc">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026</a>)</span>.</p>
-<p><span class="status-inference">Inference:</span> Broadcom has the strongest merchant CPO product-definition position. That does not prove that it owns the engine profit pool, that customers deploy at volume, or that merchant CPO earns structurally higher returns.</p>
+<p><span class="status-fact">Fact:</span> Broadcom announced its third-generation 200G/lane CPO technology and, at OFC 2026, presented a 102.4T CPO route <span class="citation" data-cites="broadcom2025cpo broadcom2026ofc">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025b</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026b</a>)</span>.</p>
+<p><span class="status-inference">Inference:</span> Broadcom has the strongest merchant CPO product-definition position. The investment question is where economics settle after customers, engine suppliers and manufacturing partners are paid.</p>
 <section id="product-boundary-and-public-evidence-1" class="level3">
 <h3 class="anchored" data-anchor-id="product-boundary-and-public-evidence-1">Product boundary and public evidence</h3>
-<p>Broadcom provides the cleanest merchant-switch product definition in the report. Its Tomahawk 6 Davisson materials identify a 102.4T Ethernet switch/CPO route and 200G SerDes; the product catalogue separately shows CPO as a defined product family <span class="citation" data-cites="broadcom2025th6 broadcom2025catalogue">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025c</a>, <a href="#ref-broadcom2025catalogue" role="doc-biblioref">2025b</a>)</span>. Broadcom also announced a third-generation CPO technology with 200G/lane capability <span class="citation" data-cites="broadcom2025cpo">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>)</span>. These are credible indicators that a merchant platform vendor is spending product resources on the transition.</p>
+<p>Broadcom provides the cleanest merchant-switch product definition in the report. Its Tomahawk 6 Davisson materials identify a 102.4T Ethernet switch/CPO route and 200G SerDes; the product catalogue separately shows CPO as a defined product family <span class="citation" data-cites="broadcom2025th6 broadcom2025catalogue">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025d</a>, <a href="#ref-broadcom2025catalogue" role="doc-biblioref">2025c</a>)</span>. Broadcom also announced a third-generation CPO technology with 200G/lane capability <span class="citation" data-cites="broadcom2025cpo">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025b</a>)</span>. These are credible indicators that a merchant platform vendor is spending product resources on the transition.</p>
 </section>
 <section id="variant-view-1" class="level3">
 <h3 class="anchored" data-anchor-id="variant-view-1">Variant view</h3>
@@ -1747,12 +1902,12 @@ Investment proof
 </section>
 <section id="earnings-relevance-and-falsification-1" class="level3">
 <h3 class="anchored" data-anchor-id="earnings-relevance-and-falsification-1">Earnings relevance and falsification</h3>
-<p>CPO’s incremental effect on Broadcom depends on whether it protects switch-silicon share, increases platform value, lowers customer power constraints or creates new high-margin content. Its contribution cannot be inferred from overall semiconductor revenue or corporate margin. The stance is strengthened by named customer deployments, repeated shipments and evidence that Broadcom controls differentiated CPO silicon/content. It is weakened if customers use the platform mainly as a technology evaluation route, if pluggable/LPO alternatives meet the same 200G system requirements, or if external suppliers capture the incremental economics.</p>
+<p>CPO’s incremental effect on Broadcom depends on whether it protects switch-silicon share, increases platform value, lowers customer power constraints or creates new high-margin content. Its contribution cannot be inferred from overall semiconductor revenue or corporate margin. Broadcom’s March 2026 release strengthens family-level timing by stating that Tomahawk 6 is shipping in production volume, but it covers the TH6 family and multiple interconnect options rather than an exact TH6-Davisson/BCM78919 CPO shipment <span class="citation" data-cites="broadcom2026th6shipping">(<a href="#ref-broadcom2026th6shipping" role="doc-biblioref">Broadcom 2026a</a>)</span>. The stance is strengthened by named CPO customer deployments, repeated shipments and evidence that Broadcom controls differentiated CPO silicon/content. It is weakened if customers use the platform mainly as a technology evaluation route, if pluggable/LPO alternatives meet the same 200G system requirements, or if external suppliers capture the incremental economics.</p>
 </section>
 </section>
 <section id="coherent-and-lumentum" class="level2">
 <h2 class="anchored" data-anchor-id="coherent-and-lumentum">Coherent and Lumentum</h2>
-<p><span class="status-fact">Fact:</span> Coherent demonstrated socketed CPO, external-laser, VCSEL and InP-on-silicon routes at OFC 2026; Lumentum demonstrated high-power CPO-oriented laser technology and a 16-channel DWDM laser source <span class="citation" data-cites="coherent2026cpo lumentum2026ofc">(<a href="#ref-coherent2026cpo" role="doc-biblioref">Coherent 2026a</a>; <a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026b</a>)</span>.</p>
+<p><span class="status-fact">Fact:</span> Coherent demonstrated socketed CPO, external-laser, VCSEL and InP-on-silicon routes at OFC 2026; Lumentum demonstrated high-power CPO-oriented laser technology and a 16-channel DWDM laser source <span class="citation" data-cites="coherent2026cpo lumentum2026ofc">(<a href="#ref-coherent2026cpo" role="doc-biblioref">Coherent 2026a</a>; <a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026c</a>)</span>.</p>
 <p><span class="status-inference">Inference:</span> Both are credible optical-content beneficiaries if external laser and optical-engine content expands. Coherent’s disclosed technology breadth is broader; Lumentum’s laser route is more focused. Neither has public CPO-specific revenue, qualified-engine yield or gross-margin attribution.</p>
 <section id="coherent-broad-optical-engine-option-value" class="level3">
 <h3 class="anchored" data-anchor-id="coherent-broad-optical-engine-option-value">Coherent: broad optical-engine option value</h3>
@@ -1761,106 +1916,29 @@ Investment proof
 </section>
 <section id="lumentum-external-laser-conversion-case" class="level3">
 <h3 class="anchored" data-anchor-id="lumentum-external-laser-conversion-case">Lumentum: external-laser conversion case</h3>
-<p><strong>Stance: constructive/watch; medium confidence.</strong> Lumentum’s CPO relevance is more concentrated in high-power laser, external-light and DWDM laser routes. Its OFC material identifies technologies aimed at scale-out and scale-up optical infrastructure <span class="citation" data-cites="lumentum2026ofc">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026b</a>)</span>. The announced NVIDIA optics partnership and new U.S. laser manufacturing facility strengthen the strategic/capacity signal <span class="citation" data-cites="lumentum2026nvidia lumentum2026factory">(<a href="#ref-lumentum2026nvidia" role="doc-biblioref">Lumentum 2026c</a>, <a href="#ref-lumentum2026factory" role="doc-biblioref">2026a</a>)</span>. They do not disclose CPO units, customer-specific laser content, realised price or gross margin.</p>
+<p><strong>Stance: constructive/watch; medium confidence.</strong> Lumentum’s CPO relevance is concentrated in high-power laser, external-light and DWDM laser routes. Its OFC material identifies technologies aimed at scale-out and scale-up infrastructure <span class="citation" data-cites="lumentum2026ofc">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026c</a>)</span>. The NVIDIA optics partnership and new U.S. laser facility strengthen the strategic and capacity signals <span class="citation" data-cites="lumentum2026nvidia lumentum2026factory">(<a href="#ref-lumentum2026nvidia" role="doc-biblioref">Lumentum 2026d</a>, <a href="#ref-lumentum2026factory" role="doc-biblioref">2026b</a>)</span>. Its ELSFP reliability paper adds a component-level qualification signal, not a finished-module or CPO revenue bridge <span class="citation" data-cites="lumentum2026elsfp">(<a href="#ref-lumentum2026elsfp" role="doc-biblioref">Lumentum 2026a</a>)</span>. The next evidence is product-linked units, laser content, realised price and gross margin.</p>
 <p>The differentiated question is whether external light becomes a serviceable, scarce and margin-accretive CPO layer rather than a qualified component with modest content and price-down exposure. Positive evidence would be conversion of a disclosed order or capacity commitment into named product shipments and segment-level economics. Negative evidence would be multi-source commodity pricing, lower-than-expected laser count/content, or a system architecture that integrates light differently.</p>
 </section>
 </section>
 <section id="marvell-and-tsmc" class="level2">
 <h2 class="anchored" data-anchor-id="marvell-and-tsmc">Marvell and TSMC</h2>
-<p><span class="status-fact">Fact:</span> Marvell completed the Celestial AI acquisition and describes Photonic Fabric as a scale-up optical-interconnect route; TSMC’s annual report says it is developing silicon photonics and CPO solutions <span class="citation" data-cites="marvell2026annual tsmc2025annual">(<a href="#ref-marvell2026annual" role="doc-biblioref">Marvell Technology 2026</a>; <a href="#ref-tsmc2025annual" role="doc-biblioref">TSMC 2026</a>)</span>.</p>
+<p><span class="status-fact">Fact:</span> Marvell completed the Celestial AI acquisition and describes Photonic Fabric as a scale-up optical-interconnect route; TSMC’s annual report says it is developing silicon photonics and CPO solutions <span class="citation" data-cites="marvell2026annual tsmc2025annual">(<a href="#ref-marvell2026annual" role="doc-biblioref">Marvell Technology 2026</a>; <a href="#ref-tsmc2025annual" role="doc-biblioref">TSMC 2026a</a>)</span>.</p>
 <p><span class="status-inference">Inference:</span> Marvell is the strongest public-company vehicle for accelerator optical-I/O optionality, a distinct domain from switch-side CPO. TSMC is a likely manufacturing/packaging control point, not a directly comparable optical-engine supplier.</p>
 <section id="marvell-a-separate-scale-up-optionality-case" class="level3">
 <h3 class="anchored" data-anchor-id="marvell-a-separate-scale-up-optionality-case">Marvell: a separate scale-up optionality case</h3>
 <p><strong>Stance: strategic watch; low-to-medium confidence.</strong> Marvell’s Celestial AI acquisition and its silicon-photonics light-engine work place it at the accelerator optical-I/O and rack-scale interconnect boundary rather than squarely in the switch-CPO comparison <span class="citation" data-cites="marvell2026annual marvell2025engine">(<a href="#ref-marvell2026annual" role="doc-biblioref">Marvell Technology 2026</a>; <a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>)</span>. This can be strategically important because scale-up fabrics may require tighter electrical/optical integration than conventional Ethernet scale-out. But it has a different customer denominator, software/system dependency, product cycle and service model.</p>
-<p>The report will not use switch-CPO production signals as evidence for Marvell’s accelerator optical-I/O revenue. The stance improves with a named product, customer adoption, realised Photonic Fabric revenue or a disclosed content/margin bridge. It weakens if the integration remains a roadmap/demo, if competing interconnect standards capture the relevant deployments, or if the acquired technology adds capability without commercial scale.</p>
+<p>The report does not use switch-CPO production signals as evidence for Marvell’s accelerator optical-I/O revenue. The stance improves with a named product, customer adoption, realised Photonic Fabric revenue or a disclosed content/margin bridge. It weakens if the integration remains a roadmap/demo, if competing interconnect standards capture the relevant deployments, or if the acquired technology adds capability without commercial scale.</p>
 </section>
 <section id="tsmc-process-control-not-an-optical-engine-peer" class="level3">
 <h3 class="anchored" data-anchor-id="tsmc-process-control-not-an-optical-engine-peer">TSMC: process control, not an optical-engine peer</h3>
-<p><strong>Stance: strategic infrastructure watch; medium confidence.</strong> TSMC’s CPO relevance lies in silicon photonics, heterogeneous EIC/PIC integration and advanced packaging, not in acting as a merchant optical-engine supplier. Its technology symposium and annual report establish that these capabilities are active development areas <span class="citation" data-cites="tsmc2024symposium tsmc2025annual">(<a href="#ref-tsmc2024symposium" role="doc-biblioref">TSMC 2024</a>, <a href="#ref-tsmc2025annual" role="doc-biblioref">2026</a>)</span>. The potential strategic value is process control: if CPO packages require a scarce integration flow, the foundry/package route can shape what platforms become manufacturable.</p>
+<p><strong>Stance: strategic infrastructure watch; medium confidence.</strong> TSMC’s CPO relevance lies in silicon photonics, heterogeneous EIC/PIC integration and advanced packaging, not in acting as a merchant optical-engine supplier. TSMC states that a COUPE-on-substrate CPO solution is beginning production in 2026, upgrading process readiness from development to a company-stated production milestone <span class="citation" data-cites="tsmc2024symposium tsmc2025annual tsmc2026coupe">(<a href="#ref-tsmc2024symposium" role="doc-biblioref">TSMC 2024</a>, <a href="#ref-tsmc2025annual" role="doc-biblioref">2026a</a>, <a href="#ref-tsmc2026coupe" role="doc-biblioref">2026b</a>)</span>. The disclosure gives no customer, accepted output, capacity allocation or CPO-specific economics. The potential strategic value is process control: if CPO packages require a scarce integration flow, the foundry/package route can shape what platforms become manufacturable.</p>
 <p>The investment limitation is attribution. Advanced packaging and silicon photonics can be valuable without being separately visible in TSMC revenue, margin or customer disclosures. A stronger case would require programme-level production volume, a clearer technology/service boundary or signs of constrained capacity and pricing power. It is weakened if CPO remains low volume, if integration is widely reproducible, or if the value concentrates in system suppliers rather than the manufacturing stack.</p>
 </section>
 </section>
-<section id="what-the-consensus-versus-variant-framework-can-and-cannot-do-today" class="level2">
-<h2 class="anchored" data-anchor-id="what-the-consensus-versus-variant-framework-can-and-cannot-do-today">What the consensus-versus-variant framework can and cannot do today</h2>
-<p>Consolidated estimates are only a scale check: diversified platform companies may capture CPO through system differentiation, while optical suppliers still lack attributable content, margin and volume data. The report requires both a proven product/control point and a reconciled revenue-and-margin bridge; no company clears the second test today.</p>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-<col style="width: 14%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Input needed for a CPO earnings bridge</th>
-<th>NVIDIA</th>
-<th>Broadcom</th>
-<th>Coherent</th>
-<th>Lumentum</th>
-<th>Marvell</th>
-<th>TSMC</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Named product and route</td>
-<td>Partial</td>
-<td>Strong</td>
-<td>Partial</td>
-<td>Partial</td>
-<td>Partial</td>
-<td>Partial</td>
-</tr>
-<tr class="even">
-<td>Named customer CPO SKU / volume</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-</tr>
-<tr class="odd">
-<td>Supplier content / qualified share</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-</tr>
-<tr class="even">
-<td>CPO-specific ASP / gross margin</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-</tr>
-<tr class="odd">
-<td>Yield / rework / warranty allocation</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-<td>Open</td>
-</tr>
-<tr class="even">
-<td>Defensible public EPS sensitivity</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-<td>No</td>
-</tr>
-</tbody>
-</table>
+<section id="what-the-consensus-versus-variant-framework-can-and-cannot-do" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-consensus-versus-variant-framework-can-and-cannot-do">What the consensus-versus-variant framework can and cannot do</h2>
+<p>Consolidated estimates are only a scale check: diversified platform companies may capture CPO through system differentiation, while optical suppliers still lack attributable content, margin and volume data. The public record supports product and technology views, but it does not yet support a defensible CPO-specific EPS bridge for any of the six companies.</p>
+<p>The missing bridge is concentrated in three linked inputs: customer-accepted CPO volume, supplier content/share, and product-level margin after yield, rework and warranty. Until those inputs are disclosed at the same product boundary, a numeric EPS sensitivity would be false precision rather than useful analysis.</p>
 <section id="how-a-future-model-will-be-constructed" class="level3">
 <h3 class="anchored" data-anchor-id="how-a-future-model-will-be-constructed">How a future model will be constructed</h3>
 <p>For a platform or component supplier, incremental CPO revenue must be built from a common unit chain:</p>
@@ -1950,6 +2028,7 @@ Profit bridge
 </tr>
 </tbody>
 </table>
+<p>These risks are linked. A weak alternative can make CPO necessary, but poor yield or serviceability can still prevent adoption; a successful platform can prove demand, but concentrated sourcing can leave suppliers with little profit. The watchlist therefore tracks architecture, deployment and economics together.</p>
 </section>
 <section id="quarterly-watchlist" class="level2">
 <h2 class="anchored" data-anchor-id="quarterly-watchlist">Quarterly watchlist</h2>
@@ -1964,7 +2043,7 @@ Profit bridge
 </section>
 <section id="re-rating-rule" class="level2">
 <h2 class="anchored" data-anchor-id="re-rating-rule">Re-rating rule</h2>
-<p>The report will not upgrade a technology demo to a profit-pool conclusion. A material upgrade requires evidence from both a <strong>commercial/system</strong> gate (customer, units, deployment) and an <strong>economic</strong> gate (content, yield, margin or warranty) in the same product boundary.</p>
+<p>The report does not upgrade a technology demo to a profit-pool conclusion. A material upgrade requires evidence from both a <strong>commercial/system</strong> gate (customer, units, deployment) and an <strong>economic</strong> gate (content, yield, margin or warranty) in the same product boundary.</p>
 </section>
 <section id="evidence-that-would-change-the-ranking" class="level2">
 <h2 class="anchored" data-anchor-id="evidence-that-would-change-the-ranking">Evidence that would change the ranking</h2>
@@ -2009,10 +2088,11 @@ Profit bridge
 </tr>
 </tbody>
 </table>
+<p>The action column is deliberately asymmetric: positive evidence upgrades a specific gate, while a boundary mismatch narrows the claim immediately. This keeps the report from converting one strong announcement into a market-wide or company-wide call.</p>
 </section>
 <section id="quarterly-evidence-dashboard" class="level2">
 <h2 class="anchored" data-anchor-id="quarterly-evidence-dashboard">Quarterly evidence dashboard</h2>
-<p>The next edition should answer the same questions with a dated before/after comparison. The watchlist is intentionally short enough to use:</p>
+<p>Each edition answers the same questions with a dated before/after comparison. The watchlist is intentionally short enough to use:</p>
 <ol type="1">
 <li>Which exact CPO SKU is shipping, to whom, in what range, and is the shipment repeated?</li>
 <li>What is the optical-engine and external-laser boundary in that SKU?</li>
@@ -2033,7 +2113,7 @@ Profit bridge
 <p>The report has enough evidence to rank technical routes and commercial signals. It does not have enough public evidence to calculate CPO-specific supplier revenue, gross margin, EPS or target prices. That is an evidence boundary, not a missing spreadsheet cell.</p>
 </div>
 </div>
-<p>The main analytical risk is narrative leakage: treating a platform announcement as a CPO-SKU deployment, a partnership as supplier allocation, a component result as production yield, or a market forecast as company revenue. The next update withdraws an inference whenever a newly disclosed product boundary requires a narrower reading.</p>
+<p>The main analytical risk is narrative leakage: treating a platform announcement as a CPO-SKU deployment, a partnership as supplier allocation, a component result as production yield, or a market forecast as company revenue. An update withdraws an inference whenever a newly disclosed product boundary requires a narrower reading.</p>
 </section>
 </section>
 <section id="appendices" class="level1">
@@ -2284,20 +2364,20 @@ Profit bridge
 <tr class="odd">
 <td>Figure 3.1 — signal-path comparison</td>
 <td>Original analytical diagram</td>
-<td>OIF co-packaged-module and energy-efficiency framework <span class="citation" data-cites="oif2023cpo oif2024eei">(<a href="#ref-oif2023cpo" role="doc-biblioref">Optical Internetworking Forum 2023</a>, <a href="#ref-oif2024eei" role="doc-biblioref">2024</a>)</span>. Evidence cut-off: 10 August 2026.</td>
+<td>OIF co-packaged-module and energy-efficiency framework <span class="citation" data-cites="oif2023cpo oif2024eei">(<a href="#ref-oif2023cpo" role="doc-biblioref">Optical Internetworking Forum 2023</a>, <a href="#ref-oif2024eei" role="doc-biblioref">2024</a>)</span>. Evidence cut-off: 18 August 2026.</td>
 <td>Redrawn from the stated electrical and service boundaries. It is conceptual, not to scale, and contains no measured power, cost, yield or market-share value.</td>
 </tr>
 <tr class="even">
 <td>HTML process rows — physical path, engine, manufacturing, adoption, value pool and earnings bridge</td>
 <td>Original explanatory layouts</td>
-<td>The cited facts and assumptions in the surrounding section. Evidence cut-off: 10 August 2026.</td>
+<td>The cited facts and assumptions in the surrounding section. Evidence cut-off: 18 August 2026.</td>
 <td>Text-only layouts generated from report markup and CSS. They add no facts, calculations or supplier allocation; they make the adjacent causal framework easier to read.</td>
 </tr>
 <tr class="odd">
-<td>Retained-paper snapshots</td>
-<td>Not published</td>
-<td>Original sources remain in the private evidence system.</td>
-<td>Excluded pending copyright and editorial review. No restricted or third-party source figure is reproduced on the public site.</td>
+<td>Digest source snapshots — Wan Fig. 4; Chou Fig. 1; Wu Fig. 4; Watanabe Fig. 1; Brusberg Fig. 1</td>
+<td>Source figures reproduced with attribution</td>
+<td>Wan et al.&nbsp;(2026), Chou et al.&nbsp;(OFC 2024 W4H.3), Wu et al.&nbsp;(SPIE 2026 13905H-3), Watanabe et al.&nbsp;(OFC 2025 M4J.2), Brusberg et al.&nbsp;(OFC 2025 Th3H.1). Evidence cut-off: 19 August 2026.</td>
+<td>Cropped snapshots are labelled in the digest and link to the original DOI. They are evidence illustrations, not original analytical calculations, market-share claims or cost forecasts.</td>
 </tr>
 </tbody>
 </table>
@@ -2364,35 +2444,35 @@ Profit bridge
 </tr>
 <tr class="even">
 <td>P-04</td>
-<td>Broadcom describes a 200G/lane third-generation CPO route <span class="citation" data-cites="broadcom2025cpo">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>)</span>.</td>
+<td>Broadcom describes a 200G/lane third-generation CPO route <span class="citation" data-cites="broadcom2025cpo">(<a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025b</a>)</span>.</td>
 <td>Fact</td>
 <td>3, 8</td>
 <td>Vendor product claim</td>
 </tr>
 <tr class="odd">
 <td>P-05</td>
-<td>Broadcom describes a 102.4T Davisson CPO switch route <span class="citation" data-cites="broadcom2025th6">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025c</a>)</span>.</td>
+<td>Broadcom describes a 102.4T Davisson CPO switch route <span class="citation" data-cites="broadcom2025th6">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025d</a>)</span>.</td>
 <td>Fact</td>
 <td>3, 8</td>
 <td>Product definition, not accepted-unit disclosure</td>
 </tr>
 <tr class="even">
 <td>P-06</td>
-<td>Broadcom lists CPO switches as a product category <span class="citation" data-cites="broadcom2025catalogue">(<a href="#ref-broadcom2025catalogue" role="doc-biblioref">Broadcom 2025b</a>)</span>.</td>
+<td>Broadcom lists CPO switches as a product category <span class="citation" data-cites="broadcom2025catalogue">(<a href="#ref-broadcom2025catalogue" role="doc-biblioref">Broadcom 2025c</a>)</span>.</td>
 <td>Fact</td>
 <td>3, 8</td>
 <td>Catalogue presence, not customer deployment</td>
 </tr>
 <tr class="odd">
 <td>P-07</td>
-<td>NVIDIA describes CPO power-efficiency logic for AI factories <span class="citation" data-cites="nvidia2025power">(<a href="#ref-nvidia2025power" role="doc-biblioref">NVIDIA 2025b</a>)</span>.</td>
+<td>NVIDIA describes CPO power-efficiency logic for AI factories <span class="citation" data-cites="nvidia2025power">(<a href="#ref-nvidia2025power" role="doc-biblioref">NVIDIA 2025c</a>)</span>.</td>
 <td>Fact</td>
 <td>2</td>
 <td>Vendor technical framing</td>
 </tr>
 <tr class="even">
 <td>P-08</td>
-<td>NVIDIA describes cross-industry CPO collaboration and engine architecture <span class="citation" data-cites="nvidia2025collaboration">(<a href="#ref-nvidia2025collaboration" role="doc-biblioref">NVIDIA 2025a</a>)</span>.</td>
+<td>NVIDIA describes cross-industry CPO collaboration and engine architecture <span class="citation" data-cites="nvidia2025collaboration">(<a href="#ref-nvidia2025collaboration" role="doc-biblioref">NVIDIA 2025b</a>)</span>.</td>
 <td>Fact</td>
 <td>2, 4</td>
 <td>Vendor architecture statement</td>
@@ -2550,7 +2630,7 @@ Profit bridge
 </tr>
 <tr class="even">
 <td>P-24</td>
-<td>TSMC’s annual report documents the company context <span class="citation" data-cites="tsmc2025annual">(<a href="#ref-tsmc2025annual" role="doc-biblioref">TSMC 2026</a>)</span>.</td>
+<td>TSMC’s annual report documents the company context <span class="citation" data-cites="tsmc2025annual">(<a href="#ref-tsmc2025annual" role="doc-biblioref">TSMC 2026a</a>)</span>.</td>
 <td>Fact</td>
 <td>4, 8</td>
 <td>Consolidated disclosure; no CPO margin line</td>
@@ -2564,14 +2644,14 @@ Profit bridge
 </tr>
 <tr class="even">
 <td>P-26</td>
-<td>Lumentum shows CPO-oriented optical infrastructure technologies <span class="citation" data-cites="lumentum2026ofc">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026b</a>)</span>.</td>
+<td>Lumentum shows CPO-oriented optical infrastructure technologies <span class="citation" data-cites="lumentum2026ofc">(<a href="#ref-lumentum2026ofc" role="doc-biblioref">Lumentum 2026c</a>)</span>.</td>
 <td>Fact</td>
 <td>4, 8</td>
 <td>Vendor demonstration</td>
 </tr>
 <tr class="odd">
 <td>P-27</td>
-<td>Lumentum/NVIDIA announce an optics technology partnership <span class="citation" data-cites="lumentum2026nvidia">(<a href="#ref-lumentum2026nvidia" role="doc-biblioref">Lumentum 2026c</a>)</span>.</td>
+<td>Lumentum/NVIDIA announce an optics technology partnership <span class="citation" data-cites="lumentum2026nvidia">(<a href="#ref-lumentum2026nvidia" role="doc-biblioref">Lumentum 2026d</a>)</span>.</td>
 <td>Fact</td>
 <td>7, 8</td>
 <td>Partnership, not content allocation</td>
@@ -2729,7 +2809,7 @@ Profit bridge
 </tr>
 <tr class="odd">
 <td>P-43</td>
-<td>Broadcom presents a 102.4T CPO route at OFC 2026 <span class="citation" data-cites="broadcom2026ofc">(<a href="#ref-broadcom2026ofc" role="doc-biblioref">Broadcom 2026</a>)</span>.</td>
+<td>Broadcom presents a 102.4T CPO route at OFC 2026 <span class="citation" data-cites="broadcom2026ofc">(<a href="#ref-broadcom2026ofc" role="doc-biblioref">Broadcom 2026b</a>)</span>.</td>
 <td>Fact</td>
 <td>Executive, 3, 8</td>
 <td>Event material; no customer volume</td>
@@ -3095,7 +3175,17 @@ Profit bridge
 <li>Expands the public book into an evidence-gated investment report covering architecture, power, optical engines, manufacturing, adoption, value capture, six company cases and a quarterly watchlist.</li>
 <li>Adds a public decision-evidence register with 80 selected records and a curated bibliography of primary public company, customer, standards and technical sources.</li>
 <li>Adds original analytical diagrams and explicit comparison boundaries; source-PDF snapshots and private archives remain excluded.</li>
-<li>Restates the central conclusion: 200G/lane switch CPO has the strongest disclosed commercial signal, while volume, supplier profit-pool leadership and CPO-specific equity earnings remain unproven <span class="citation" data-cites="nvidia2026production broadcom2025cpo broadcom2026ofc">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025a</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026</a>)</span>.</li>
+<li>Restates the central conclusion: 200G/lane switch CPO has the strongest disclosed commercial signal, while volume, supplier profit-pool leadership and CPO-specific equity earnings remain unproven <span class="citation" data-cites="nvidia2026production broadcom2025cpo broadcom2026ofc">(<a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2025cpo" role="doc-biblioref">Broadcom 2025b</a>, <a href="#ref-broadcom2026ofc" role="doc-biblioref">2026b</a>)</span>.</li>
+</ul>
+</section>
+<section id="q3-v1.3-manufacturing-and-commercial-proof-edition" class="level2">
+<h2 class="anchored" data-anchor-id="q3-v1.3-manufacturing-and-commercial-proof-edition">2026 Q3 — v1.3 (manufacturing and commercial-proof edition)</h2>
+<ul>
+<li>Adds TSMC COUPE production, ASE package/test and warpage, Teradyne, Advantest, ficonTEC and Aehr burn-in evidence.</li>
+<li>Adds OIF CEI-448G interoperability framing and Lumentum ELSFP component-level reliability evidence.</li>
+<li>Adds NVIDIA adopter and Broadcom TH6 family-level production boundaries, while keeping exact CPO SKU, accepted units, repeat shipments and supplier economics open.</li>
+<li>Re-ranks the manufacturing bottleneck from fibre attach alone to a coupled package/test/qualification chain.</li>
+<li>Adds a public supplier-role map separating confirmed capability, partnered demonstration and unknown allocation.</li>
 </ul>
 </section>
 <section id="future-quarterly-updates" class="level2">
@@ -3108,17 +3198,41 @@ Profit bridge
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-advantest2026cpo" class="csl-entry" role="listitem">
+Advantest. 2026. <span>“Silicon Photonics and Co-Packaged Optics Test Capability.”</span> <a href="https://www.advantest.com/tw/products/semiconductor-test-system/soc/v93000/">https://www.advantest.com/tw/products/semiconductor-test-system/soc/v93000/</a>.
+</div>
+<div id="ref-aehr2026burnin" class="csl-entry" role="listitem">
+Aehr Test Systems. 2026. <span>“Follow-on Production Order from Lead Silicon-Photonics Customer.”</span> <a href="https://www.aehr.com/2026/08/aehr-test-systems-expands-silicon-photonics-production-momentum-with-follow-on-production-order-from-lead-customer/">https://www.aehr.com/2026/08/aehr-test-systems-expands-silicon-photonics-production-momentum-with-follow-on-production-order-from-lead-customer/</a>.
+</div>
+<div id="ref-amiralizadeh2025cpo" class="csl-entry" role="listitem">
+<span class="nocase">Amiralizadeh, Amir et al.</span> 2025. <span>“Co-Packaged Optics Technology Evaluation for Hyperscale Data Center Fabric Switches.”</span> <em>European Conference on Optical Communication</em>. <a href="https://doi.org/10.1109/ECOC66593.2025.11263202">https://doi.org/10.1109/ECOC66593.2025.11263202</a>.
+</div>
+<div id="ref-ase2025cpo" class="csl-entry" role="listitem">
+ASE. 2025a. <span>“Advanced Packaging for AI, Chiplet and Co-Packaged Optics.”</span> <a href="https://ase.aseglobal.com/blog/technology/advanced-packaging-for-ai-chiplet-and-cpo/">https://ase.aseglobal.com/blog/technology/advanced-packaging-for-ai-chiplet-and-cpo/</a>.
+</div>
+<div id="ref-ase2025warpage" class="csl-entry" role="listitem">
+ASE. 2025b. <span>“ASE Demonstrates Co-Packaged Optics for AI Applications.”</span> <a href="https://ase.aseglobal.com/press-room/ase-demonstrates-cpo-for-ai-applications/">https://ase.aseglobal.com/press-room/ase-demonstrates-cpo-for-ai-applications/</a>.
+</div>
+<div id="ref-broadcom2025bcm78919" class="csl-entry" role="listitem">
+Broadcom. 2025a. <span>“BCM78919 102.4-Tb/s Multilayer CPO Switch with 200G SerDes.”</span> <a href="https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches/bcm78919">https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches/bcm78919</a>.
+</div>
 <div id="ref-broadcom2025cpo" class="csl-entry" role="listitem">
-Broadcom. 2025a. <em>Broadcom Announces Third-Generation Co-Packaged Optics Technology with 200G/Lane Capability</em>. <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo">https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo</a>.
+Broadcom. 2025b. <em>Broadcom Announces Third-Generation Co-Packaged Optics Technology with 200G/Lane Capability</em>. <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo">https://investors.broadcom.com/news-releases/news-release-details/broadcom-announces-third-generation-co-packaged-optics-cpo</a>.
 </div>
 <div id="ref-broadcom2025catalogue" class="csl-entry" role="listitem">
-Broadcom. 2025b. <span>“Ethernet Switch Co-Packaged Optics Product Catalogue.”</span> <a href="https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches">https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches</a>.
+Broadcom. 2025c. <span>“Ethernet Switch Co-Packaged Optics Product Catalogue.”</span> <a href="https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches">https://www.broadcom.com/products/fiber-optic-modules-components/co-packaged-optics/switches</a>.
 </div>
 <div id="ref-broadcom2025th6" class="csl-entry" role="listitem">
-Broadcom. 2025c. <em>Tomahawk 6 Davisson: 102.4-Tb/s Ethernet Switch with Co-Packaged Optics</em>. <a href="https://www.broadcom.com/company/news/product-releases/63626">https://www.broadcom.com/company/news/product-releases/63626</a>.
+Broadcom. 2025d. <em>Tomahawk 6 Davisson: 102.4-Tb/s Ethernet Switch with Co-Packaged Optics</em>. <a href="https://www.broadcom.com/company/news/product-releases/63626">https://www.broadcom.com/company/news/product-releases/63626</a>.
+</div>
+<div id="ref-broadcom2026th6shipping" class="csl-entry" role="listitem">
+Broadcom. 2026a. <span>“Broadcom Now Shipping the World’s First 1.024 Tbps Switch in Production.”</span> <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production">https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production</a>.
 </div>
 <div id="ref-broadcom2026ofc" class="csl-entry" role="listitem">
-Broadcom. 2026. <em>Broadcom Showcases Industry-Leading Solutions for Scaling AI Infrastructure at OFC 2026</em>. March. <a href="https://investors.broadcom.com/node/64036/pdf">https://investors.broadcom.com/node/64036/pdf</a>.
+Broadcom. 2026b. <em>Broadcom Showcases Industry-Leading Solutions for Scaling AI Infrastructure at OFC 2026</em>. March. <a href="https://investors.broadcom.com/node/64036/pdf">https://investors.broadcom.com/node/64036/pdf</a>.
+</div>
+<div id="ref-brusberg2025detachable" class="csl-entry" role="listitem">
+Brusberg, Lars, Jorge A. Holguin-Lerma, Janderson R. Rodrigues, et al. 2025. <span>“High-Density Evanescent Chip Coupling with Detachable Fiber Connector for Co-Packaged Optics.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2025.Th3H.1">https://doi.org/10.1364/OFC.2025.Th3H.1</a>.
 </div>
 <div id="ref-celestica2026ds6000" class="csl-entry" role="listitem">
 Celestica. 2026a. <em>Celestica Accelerates AI-Scale Networking with DS6000 Series 1.6TbE Switches</em>. <a href="https://corporate.celestica.com/news-releases/news-release-details/celestica-accelerates-ai-scale-networking-ds6000-series-16tbe">https://corporate.celestica.com/news-releases/news-release-details/celestica-accelerates-ai-scale-networking-ds6000-series-16tbe</a>.
@@ -3129,11 +3243,23 @@ Celestica. 2026b. <em>First Quarter 2026 Results</em>. <a href="https://corporat
 <div id="ref-ieee2026npo" class="csl-entry" role="listitem">
 China Mobile and IEEE 802.3 400G per Lane Study Group. 2026. <em>Consideration on NPO and CPO at 400G/Lane</em>. <a href="https://www.ieee802.org/3/400GPL/public/2605/wang_h_400GPL_01_2605.pdf">https://www.ieee802.org/3/400GPL/public/2605/wang_h_400GPL_01_2605.pdf</a>.
 </div>
+<div id="ref-chou2024lpo" class="csl-entry" role="listitem">
+Chou, Elaine S., Yishen Huang, Siamak Amiralizadeh, et al. 2024. <span>“100G and 200G Per Lane Linear Drive Optics for Data Center Applications.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2024.W4H.3">https://doi.org/10.1364/OFC.2024.W4H.3</a>.
+</div>
 <div id="ref-coherent2026cpo" class="csl-entry" role="listitem">
 Coherent. 2026a. <em>Coherent Demonstrates Multiple Technologies for Co-Packaged Optics at OFC 2026</em>. March. <a href="https://www.coherent.com/news/press-releases/coherent-co-packaged-optics-cpo-technologies-ofc-2026">https://www.coherent.com/news/press-releases/coherent-co-packaged-optics-cpo-technologies-ofc-2026</a>.
 </div>
 <div id="ref-coherent2026deck" class="csl-entry" role="listitem">
 Coherent. 2026b. <em>Technology Innovation: OFC 2026 Investor Event</em>. <a href="https://www.coherent.com/content/dam/coherent/site/en/documents/investors/investor-presentations/2026/march-17/OFC-2026-Investor%20event-deck-vf.pdf">https://www.coherent.com/content/dam/coherent/site/en/documents/investors/investor-presentations/2026/march-17/OFC-2026-Investor%20event-deck-vf.pdf</a>.
+</div>
+<div id="ref-coreweave2026sn6600" class="csl-entry" role="listitem">
+CoreWeave. 2026. <span>“Why AI Factories Need Proof Before Production.”</span> <a href="https://coreweave.com/blog/why-ai-factories-need-proof-before-production">https://coreweave.com/blog/why-ai-factories-need-proof-before-production</a>.
+</div>
+<div id="ref-corning2026switchtray" class="csl-entry" role="listitem">
+Corning. 2026. <span>“Corning at OFC 2026: CPO Switch-Tray Demonstration.”</span> <a href="https://www.corning.com/optical-communications/worldwide/en/home/the-signal-network-blog/corning-at-ofc-2026.html">https://www.corning.com/optical-communications/worldwide/en/home/the-signal-network-blog/corning-at-ofc-2026.html</a>.
+</div>
+<div id="ref-ficontec2025dlt" class="csl-entry" role="listitem">
+<span class="nocase">ficonTEC</span>. 2025. <span>“Multi-Site Die-Level Tester for Double-Sided Compact 3D CPO Optical Engines.”</span> <a href="https://www.ficontec.com/jp/multi-site-die-level-tester-for-double-sided-compact-3d-cpo-optical-engines/">https://www.ficontec.com/jp/multi-site-die-level-tester-for-double-sided-compact-3d-cpo-optical-engines/</a>.
 </div>
 <div id="ref-gao2025heterogeneous" class="csl-entry" role="listitem">
 Gao, Han, Wanyi Yan, Dan Zhang, and Daquan Yu. 2025. <span>“Heterogeneous Integration Technology Drives the Evolution of Co-Packaged Optics.”</span> <em>Micromachines</em> 16 (9): 1037. <a href="https://doi.org/10.3390/mi16091037">https://doi.org/10.3390/mi16091037</a>.
@@ -3150,14 +3276,17 @@ Intel. 2024. <em>Intel Demonstrates Industry’s First Fully Integrated Optical 
 <div id="ref-knickerbocker2024cpo" class="csl-entry" role="listitem">
 <span class="nocase">Knickerbocker, John et al.</span> 2024. <em>Next Generation Co-Packaged Optics Technology to Train and Run Generative <span>AI</span> Models in Data Centers and Other Computing Applications</em>. <a href="https://doi.org/10.48550/arXiv.2412.06570">https://doi.org/10.48550/arXiv.2412.06570</a>.
 </div>
+<div id="ref-lumentum2026elsfp" class="csl-entry" role="listitem">
+Lumentum. 2026a. <span>“External-Laser CPO Reliability White Paper.”</span> <a href="https://www.lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf">https://www.lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf</a>.
+</div>
 <div id="ref-lumentum2026factory" class="csl-entry" role="listitem">
-Lumentum. 2026a. <em>Lumentum Announces New u.s. Manufacturing Facility to Produce Advanced Lasers for the World’s Largest AI Data Centers</em>. <a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-New-U-S--Manufacturing-Facility-to-Produce-Advanced-Lasers-for-the-Worlds-Largest-AI-Data-Centers/default.aspx">https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-New-U-S--Manufacturing-Facility-to-Produce-Advanced-Lasers-for-the-Worlds-Largest-AI-Data-Centers/default.aspx</a>.
+Lumentum. 2026b. <em>Lumentum Announces New u.s. Manufacturing Facility to Produce Advanced Lasers for the World’s Largest AI Data Centers</em>. <a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-New-U-S--Manufacturing-Facility-to-Produce-Advanced-Lasers-for-the-Worlds-Largest-AI-Data-Centers/default.aspx">https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Announces-New-U-S--Manufacturing-Facility-to-Produce-Advanced-Lasers-for-the-Worlds-Largest-AI-Data-Centers/default.aspx</a>.
 </div>
 <div id="ref-lumentum2026ofc" class="csl-entry" role="listitem">
-Lumentum. 2026b. <em>Lumentum Demonstrates Industry-Leading Technologies and Products for Scale-Out, Scale-up and Scale-Across AI Infrastructure at OFC 2026</em>. <a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Demonstrates-Industry-Leading-Technologies-and-Products-for-Scale-Out-Scale-Up-and-Scale-Across-AI-Infrastructure-at-OFC-2026/default.aspx">https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Demonstrates-Industry-Leading-Technologies-and-Products-for-Scale-Out-Scale-Up-and-Scale-Across-AI-Infrastructure-at-OFC-2026/default.aspx</a>.
+Lumentum. 2026c. <em>Lumentum Demonstrates Industry-Leading Technologies and Products for Scale-Out, Scale-up and Scale-Across AI Infrastructure at OFC 2026</em>. <a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Demonstrates-Industry-Leading-Technologies-and-Products-for-Scale-Out-Scale-Up-and-Scale-Across-AI-Infrastructure-at-OFC-2026/default.aspx">https://investor.lumentum.com/financial-news-releases/news-details/2026/Lumentum-Demonstrates-Industry-Leading-Technologies-and-Products-for-Scale-Out-Scale-Up-and-Scale-Across-AI-Infrastructure-at-OFC-2026/default.aspx</a>.
 </div>
 <div id="ref-lumentum2026nvidia" class="csl-entry" role="listitem">
-Lumentum. 2026c. <em>NVIDIA Announces Strategic Partnership with Lumentum to Develop State-of-the-Art Optics Technology</em>. <a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/NVIDIA-Announces-Strategic-Partnership-With-Lumentum-to-Develop-State-of-the-Art-Optics-Technology/default.aspx">https://investor.lumentum.com/financial-news-releases/news-details/2026/NVIDIA-Announces-Strategic-Partnership-With-Lumentum-to-Develop-State-of-the-Art-Optics-Technology/default.aspx</a>.
+Lumentum. 2026d. <em>NVIDIA Announces Strategic Partnership with Lumentum to Develop State-of-the-Art Optics Technology</em>. <a href="https://investor.lumentum.com/financial-news-releases/news-details/2026/NVIDIA-Announces-Strategic-Partnership-With-Lumentum-to-Develop-State-of-the-Art-Optics-Technology/default.aspx">https://investor.lumentum.com/financial-news-releases/news-details/2026/NVIDIA-Announces-Strategic-Partnership-With-Lumentum-to-Develop-State-of-the-Art-Optics-Technology/default.aspx</a>.
 </div>
 <div id="ref-marvell2025engine" class="csl-entry" role="listitem">
 Marvell. 2025. <em>Marvell Demonstrates Silicon Photonics Light Engine for Low-Power Rack-Scale Interconnect in AI Networks</em>. <a href="https://www.marvell.com/company/newsroom/marvell-demonstrates-silicon-photonics-light-engine-for-low-power-rack-scale-interconnect-in-ai-networks.html">https://www.marvell.com/company/newsroom/marvell-demonstrates-silicon-photonics-light-engine-for-low-power-rack-scale-interconnect-in-ai-networks.html</a>.
@@ -3169,16 +3298,22 @@ Marvell Technology. 2026. <em>Annual Report 2026</em>. <a href="https://investor
 Mordor Intelligence. 2025. <em>Co-Packaged Optics Market Size, Share and Growth</em>. <a href="https://www.marketresearch.com/Mordor-Intelligence-LLP-v4018/Packaged-Optics-Size-Share-Growth-39822098/">https://www.marketresearch.com/Mordor-Intelligence-LLP-v4018/Packaged-Optics-Size-Share-Growth-39822098/</a>.
 </div>
 <div id="ref-nvidia2025collaboration" class="csl-entry" role="listitem">
-NVIDIA. 2025a. <em>How Industry Collaboration Fosters NVIDIA Co-Packaged Optics</em>. <a href="https://developer.nvidia.com/blog/how-industry-collaboration-fosters-nvidia-co-packaged-optics/">https://developer.nvidia.com/blog/how-industry-collaboration-fosters-nvidia-co-packaged-optics/</a>.
+NVIDIA. 2025b. <em>How Industry Collaboration Fosters NVIDIA Co-Packaged Optics</em>. <a href="https://developer.nvidia.com/blog/how-industry-collaboration-fosters-nvidia-co-packaged-optics/">https://developer.nvidia.com/blog/how-industry-collaboration-fosters-nvidia-co-packaged-optics/</a>.
+</div>
+<div id="ref-nvidia2025sipho" class="csl-entry" role="listitem">
+NVIDIA. 2025a. <span>“How Industry Collaboration Fosters NVIDIA Co-Packaged Optics.”</span> <a href="https://developer.nvidia.com/blog/how-industry-collaboration-fosters-nvidia-co-packaged-optics/">https://developer.nvidia.com/blog/how-industry-collaboration-fosters-nvidia-co-packaged-optics/</a>.
 </div>
 <div id="ref-nvidia2025power" class="csl-entry" role="listitem">
-NVIDIA. 2025b. <em>Scaling AI Factories with Co-Packaged Optics for Better Power Efficiency</em>. <a href="https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency/">https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency/</a>.
+NVIDIA. 2025c. <em>Scaling AI Factories with Co-Packaged Optics for Better Power Efficiency</em>. <a href="https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency/">https://developer.nvidia.com/blog/scaling-ai-factories-with-co-packaged-optics-for-better-power-efficiency/</a>.
 </div>
 <div id="ref-nvidia2026rubinpod" class="csl-entry" role="listitem">
 NVIDIA. 2026a. <em>NVIDIA Vera Rubin POD: Seven Chips, Five Rack-Scale Systems, One AI Supercomputer</em>. <a href="https://developer.nvidia.com/blog/nvidia-vera-rubin-pod-seven-chips-five-rack-scale-systems-one-ai-supercomputer/">https://developer.nvidia.com/blog/nvidia-vera-rubin-pod-seven-chips-five-rack-scale-systems-one-ai-supercomputer/</a>.
 </div>
 <div id="ref-nvidia2026production" class="csl-entry" role="listitem">
 NVIDIA. 2026b. <em>NVIDIA Vera Rubin Ramps into Full Production to Power Agentic AI Factories Worldwide</em>. May. <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx">https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx</a>.
+</div>
+<div id="ref-nvidia2026photonicsrefresh" class="csl-entry" role="listitem">
+NVIDIA. 2026c. <span>“Silicon Photonics Networking Products and Adopters.”</span> <a href="https://www.nvidia.com/en-us/networking/products/silicon-photonics/">https://www.nvidia.com/en-us/networking/products/silicon-photonics/</a>.
 </div>
 <div id="ref-nvidia2026coherent" class="csl-entry" role="listitem">
 NVIDIA and Coherent. 2026. <em>NVIDIA and Coherent Announce Strategic Partnership to Develop Optics Technology to Scale Next-Generation Data Center Architecture</em>. <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Coherent-Announce-Strategic-Partnership-to-Develop-Optics-Technology-to-Scale-Next-Generation-Data-Center-Architecture/default.aspx">https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-and-Coherent-Announce-Strategic-Partnership-to-Develop-Optics-Technology-to-Scale-Next-Generation-Data-Center-Architecture/default.aspx</a>.
@@ -3192,6 +3327,9 @@ Optical Internetworking Forum. 2024. <em>System Vendor Requirements Document for
 <div id="ref-oif2025elsfp" class="csl-entry" role="listitem">
 Optical Internetworking Forum. 2025. <em>External Laser Small Form Factor Pluggable Implementation Agreement 2.0</em>. <a href="https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-IA-2.0.pdf">https://www.oiforum.com/wp-content/uploads/OIF-ELSFP-IA-2.0.pdf</a>.
 </div>
+<div id="ref-oif2026cei448" class="csl-entry" role="listitem">
+Optical Internetworking Forum. 2026. <em>Next Generation CEI-448G Framework</em>. <a href="https://www.oiforum.com/wp-content/uploads/OIF-FD-CEI-448G-01.0.pdf">https://www.oiforum.com/wp-content/uploads/OIF-FD-CEI-448G-01.0.pdf</a>.
+</div>
 <div id="ref-oracle2026acceleron" class="csl-entry" role="listitem">
 Oracle. 2026. <em>Oracle Acceleron: AI Network Innovation for the Cloud</em>. <a href="https://www.oracle.com/cloud/networking/acceleron/">https://www.oracle.com/cloud/networking/acceleron/</a>.
 </div>
@@ -3204,11 +3342,29 @@ ResearchAndMarkets. 2026. <em>Co-Packaged Optics Market Research Report</em>. <a
 <div id="ref-teradyne2025test" class="csl-entry" role="listitem">
 Teradyne. 2025. <em>Silicon Photonics Raises New Test Challenges</em>. <a href="https://www.teradyne.com/resources/silicon-photonics-raises-new-test-challenges/">https://www.teradyne.com/resources/silicon-photonics-raises-new-test-challenges/</a>.
 </div>
+<div id="ref-teradyne2026photon" class="csl-entry" role="listitem">
+Teradyne. 2026. <span>“Photon 100 Silicon-Photonics Test Platform.”</span> <a href="https://www.teradyne.com/products/photon-100/">https://www.teradyne.com/products/photon-100/</a>.
+</div>
+<div id="ref-tran2026driver" class="csl-entry" role="listitem">
+<span class="nocase">Tran, Minh et al.</span> 2026. <span>“180-GBaud PAM4 Driver and Modulator Subassembly for Optical Interconnects.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2026.W3E.6">https://doi.org/10.1364/OFC.2026.W3E.6</a>.
+</div>
 <div id="ref-tsmc2024symposium" class="csl-entry" role="listitem">
 TSMC. 2024. <em>TSMC Celebrates 30th North America Technology Symposium with Innovations Powering AI with Silicon Leadership</em>. <a href="https://pr.tsmc.com/english/news/3136">https://pr.tsmc.com/english/news/3136</a>.
 </div>
 <div id="ref-tsmc2025annual" class="csl-entry" role="listitem">
-TSMC. 2026. <em>Annual Report 2025</em>. <a href="https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf">https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf</a>.
+TSMC. 2026a. <em>Annual Report 2025</em>. <a href="https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf">https://investor.tsmc.com/sites/ir/annual-report/2025/2025%20TSMC%20Annual%20Report.E.pdf</a>.
+</div>
+<div id="ref-tsmc2026coupe" class="csl-entry" role="listitem">
+TSMC. 2026b. <span>“COUPE-on-Substrate Co-Packaged Optics Production Milestone.”</span> <a href="https://pr.tsmc.com/english/news/3302">https://pr.tsmc.com/english/news/3302</a>.
+</div>
+<div id="ref-wan2026integration" class="csl-entry" role="listitem">
+Wan, Yating, William He, James Jaussi, et al. 2026. <span>“Integrating Silicon Photonics with Complementary Metal–Oxide–Semiconductor Technologies.”</span> <em>Nature Reviews Electrical Engineering</em> 3: 15–31. <a href="https://doi.org/10.1038/s44287-025-00223-0">https://doi.org/10.1038/s44287-025-00223-0</a>.
+</div>
+<div id="ref-watanabe2025reflow" class="csl-entry" role="listitem">
+Watanabe, Kengo, Shosuke Ikeda, Yuki Fujimaki, Tsunetoshi Saito, and Masaki Kotoku. 2025. <span>“Ultra-Compact Reflow-Compatible Detachable Optical Connector for Co-Packaged Optics.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2025.M4J.2">https://doi.org/10.1364/OFC.2025.M4J.2</a>.
+</div>
+<div id="ref-wu2026fowlp" class="csl-entry" role="listitem">
+<span class="nocase">Wu, Shih-Chang et al.</span> 2026. <span>“Fan-Out Wafer-Level Packaging for High-Speed Optical Engine Interconnects.”</span> <em>SPIE Photonics West</em>. <a href="https://doi.org/10.1117/12.3085221">https://doi.org/10.1117/12.3085221</a>.
 </div>
 <div id="ref-zhou2026lpo" class="csl-entry" role="listitem">
 <span class="nocase">Zhou, Jianying et al.</span> 2026. <span>“400G/Lane for Linear-Drive Optics Applications.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2026.Th1C.3">https://doi.org/10.1364/OFC.2026.Th1C.3</a>.

@@ -171,6 +171,12 @@ div.csl-indent {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../research/cpo/digest.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">CPO digest</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../research/cpo/cpo-investment-brief.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CPO investment brief</span></a>
   </div>
@@ -191,7 +197,10 @@ div.csl-indent {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#five-architectures-five-different-constraints" id="toc-five-architectures-five-different-constraints" class="nav-link active" data-scroll-target="#five-architectures-five-different-constraints">Five architectures, five different constraints</a></li>
+  <li><a href="#five-architectures-five-different-constraints" id="toc-five-architectures-five-different-constraints" class="nav-link active" data-scroll-target="#five-architectures-five-different-constraints">Five architectures, five different constraints</a>
+  <ul class="collapse">
+  <li><a href="#how-to-read-the-matrix" id="toc-how-to-read-the-matrix" class="nav-link" data-scroll-target="#how-to-read-the-matrix">How to read the matrix</a></li>
+  </ul></li>
   <li><a href="#decision-matrix" id="toc-decision-matrix" class="nav-link" data-scroll-target="#decision-matrix">Decision matrix</a></li>
   <li><a href="#architecture-is-a-portfolio-of-trade-offs" id="toc-architecture-is-a-portfolio-of-trade-offs" class="nav-link" data-scroll-target="#architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</a></li>
   <li><a href="#the-200g-and-400g-distinction" id="toc-the-200g-and-400g-distinction" class="nav-link" data-scroll-target="#the-200g-and-400g-distinction">The 200G and 400G distinction</a></li>
@@ -279,6 +288,11 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+<section id="how-to-read-the-matrix" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-read-the-matrix">How to read the matrix</h3>
+<p>The comparison has one dominant countercase and two distinct alternatives. LPO is the immediate test of whether the host channel can carry the lane rate while preserving modular replacement. NPO is the compromise route when the electrical path must shorten but operators still value an intermediate service boundary. Switch-side CPO has the strongest 200G/lane timing signal because it moves the electrical boundary closest to the ASIC; its investment case depends on qualified yield and service economics, not on proximity alone. Accelerator optical I/O belongs in a separate scale-up adoption track rather than in the switch-CPO ranking.</p>
+<p><strong>Decision rule:</strong> CPO wins only when its electrical and density advantage is large enough to pay for the added package, attach, qualification and replacement burden. If LPO or NPO meets the channel and power requirement with materially better field economics, the system can remain modular even at a higher lane rate.</p>
+</section>
 </section>
 <section id="decision-matrix" class="level2">
 <h2 class="anchored" data-anchor-id="decision-matrix">Decision matrix</h2>
@@ -318,11 +332,12 @@ div.csl-indent {
 </tr>
 </tbody>
 </table>
+<p>This matrix makes the substitution test explicit. Pluggables and LPO are not inferior versions of CPO; they are the control case whenever channel margin and power remain acceptable. NPO is the intermediate test. CPO earns a preference only when the shorter electrical path solves a binding system constraint and the added qualification and service burden is shown to be manageable.</p>
 </section>
 <section id="architecture-is-a-portfolio-of-trade-offs" class="level2">
 <h2 class="anchored" data-anchor-id="architecture-is-a-portfolio-of-trade-offs">Architecture is a portfolio of trade-offs</h2>
 <p>Retimed pluggables move electrical complexity into the module and retain the cleanest replacement model. LPO removes or reduces module DSP complexity but demands a disciplined host-channel and interoperability environment. NPO is a useful category when the electrical path must shrink but the operator still wants an intermediate replacement boundary. CPO moves the optical engine closest to the ASIC; it has the greatest ability to compress the high-speed electrical path and the greatest exposure to package, attach, qualification and field-service economics.</p>
-<p>Accelerator optical I/O should not be used to inflate switch-side CPO adoption. Its product boundary is a scale-up fabric or chiplet/interposer architecture, with different buyers, host integration, failure domain and supplier set. Marvell’s silicon-photonics light-engine announcement and Intel’s optical-I/O-chiplet work demonstrate why this domain matters strategically, but they do not establish a switch-CPO volume curve <span class="citation" data-cites="marvell2025engine intel2024oci">(<a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>; <a href="#ref-intel2024oci" role="doc-biblioref">Intel 2024</a>)</span>.</p>
+<p>Accelerator optical I/O is a separate adoption track: a scale-up fabric or chiplet/interposer architecture with different buyers, host integration, failure domain and supplier set. Marvell’s silicon-photonics light-engine announcement and Intel’s optical-I/O-chiplet work make the strategic case, while leaving the switch-CPO volume curve as a separate question <span class="citation" data-cites="marvell2025engine intel2024oci">(<a href="#ref-marvell2025engine" role="doc-biblioref">Marvell 2025</a>; <a href="#ref-intel2024oci" role="doc-biblioref">Intel 2024</a>)</span>.</p>
 <table class="caption-top table">
 <colgroup>
 <col style="width: 33%">
@@ -362,7 +377,7 @@ div.csl-indent {
 </section>
 <section id="the-200g-and-400g-distinction" class="level2">
 <h2 class="anchored" data-anchor-id="the-200g-and-400g-distinction">The 200G and 400G distinction</h2>
-<p>At 200G/lane, product-route evidence is now specific enough to justify serious diligence: Broadcom describes the BCM78919 as a 102.4T multilayer CPO switch with 200G SerDes, and NVIDIA describes a 200G-SerDes Spectrum-X Photonics route <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026</a>)</span>. Neither disclosure supplies a matched pluggable/LPO TCO, a final yield waterfall or accepted unit data.</p>
+<p>At 200G/lane, product-route evidence is sufficiently specific to justify serious diligence: Broadcom describes the BCM78919 as a 102.4T multilayer CPO switch with 200G SerDes, and NVIDIA describes a 200G-SerDes Spectrum-X Photonics route <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026</a>)</span>. Neither disclosure supplies a matched pluggable/LPO TCO, a final yield waterfall or accepted unit data.</p>
 <p>At 400G/lane, technology demonstrators show why the boundary is being investigated but not why a CPO winner has been established. The Zhou paper models a 212.5-GBaud linear-drive environment; the disclosed result depends strongly on the assumed bump-to-bump loss <span class="citation" data-cites="zhou2026lpo">(<a href="#ref-zhou2026lpo" role="doc-biblioref"><span class="nocase">Zhou et al.</span> 2026</a>)</span>. The correct takeaway is conditional: as the electrical loss budget tightens, deep integration becomes more valuable. The incorrect takeaway is that a universal loss threshold automatically establishes CPO economics.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -432,7 +447,7 @@ div.csl-indent {
 </section>
 <section id="npo-deserves-separate-diligence" class="level2">
 <h2 class="anchored" data-anchor-id="npo-deserves-separate-diligence">NPO deserves separate diligence</h2>
-<p>NPO is often placed between pluggables and CPO on a simple integration spectrum. That is useful but incomplete. A near-packaged approach can alter the electrical path and thermal layout without inheriting every CPO service boundary; it may also create a new package, connector or cable-management problem. IEEE 400G-per-lane study-group material explicitly treats NPO and CPO as distinct considerations at the next lane-rate boundary <span class="citation" data-cites="ieee2026npo">(<a href="#ref-ieee2026npo" role="doc-biblioref">China Mobile and IEEE 802.3 400G per Lane Study Group 2026</a>)</span>.</p>
+<p>NPO is often placed between pluggables and CPO on a simple integration spectrum. That is useful but incomplete. A near-packaged approach can alter the electrical path and thermal layout without inheriting every CPO service boundary; it may also create a new package, connector or cable-management problem. IEEE 400G-per-lane study-group material and the OIF CEI-448G framework explicitly treat NPO and CPO as distinct electrical-attachment contexts. OIF also makes management, mechanical compatibility and multi-vendor interoperability separate requirements rather than consequences of a short path alone <span class="citation" data-cites="ieee2026npo oif2026cei448">(<a href="#ref-ieee2026npo" role="doc-biblioref">China Mobile and IEEE 802.3 400G per Lane Study Group 2026</a>; <a href="#ref-oif2026cei448" role="doc-biblioref">Optical Internetworking Forum 2026</a>)</span>.</p>
 <p>The investor implication is that NPO is not merely a delayed CPO outcome. It can be a genuine substitute if it captures enough electrical/power benefit while preserving a better acceptance, replacement or supply-chain model. Any claim that CPO necessarily wins at 400G/lane must therefore be tested against NPO as well as LPO and advanced pluggables.</p>
 
 
@@ -454,6 +469,9 @@ Marvell. 2025. <em>Marvell Demonstrates Silicon Photonics Light Engine for Low-P
 </div>
 <div id="ref-nvidia2026production" class="csl-entry" role="listitem">
 NVIDIA. 2026. <em>NVIDIA Vera Rubin Ramps into Full Production to Power Agentic AI Factories Worldwide</em>. May. <a href="https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx">https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Vera-Rubin-Ramps-Into-Full-Production-to-Power-Agentic-AI-Factories-Worldwide/default.aspx</a>.
+</div>
+<div id="ref-oif2026cei448" class="csl-entry" role="listitem">
+Optical Internetworking Forum. 2026. <em>Next Generation CEI-448G Framework</em>. <a href="https://www.oiforum.com/wp-content/uploads/OIF-FD-CEI-448G-01.0.pdf">https://www.oiforum.com/wp-content/uploads/OIF-FD-CEI-448G-01.0.pdf</a>.
 </div>
 <div id="ref-zhou2026lpo" class="csl-entry" role="listitem">
 <span class="nocase">Zhou, Jianying et al.</span> 2026. <span>“400G/Lane for Linear-Drive Optics Applications.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2026.Th1C.3">https://doi.org/10.1364/OFC.2026.Th1C.3</a>.
