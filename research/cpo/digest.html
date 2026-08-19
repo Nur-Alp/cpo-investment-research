@@ -387,7 +387,7 @@ Figure&nbsp;2: Source figure: Wan et al., Fig. 4, “Silicon photonic integratio
 </figcaption>
 </figure>
 </div>
-<p><a href="https://doi.org/10.1038/s44287-025-00223-0">Open the original Wan et al.&nbsp;article.</a></p>
+<p>The integration pathway is reproduced from Wan et al. <span class="citation" data-cites="wan2026integration">(<a href="#ref-wan2026integration" role="doc-biblioref">Wan et al. 2026</a>)</span>.</p>
 </section>
 <section id="why-the-industry-needs-a-new-interconnect" class="level2">
 <h2 class="anchored" data-anchor-id="why-the-industry-needs-a-new-interconnect">1. Why the industry needs a new interconnect</h2>
@@ -417,7 +417,7 @@ Figure&nbsp;4: Source figure: Chou et al., Fig. 1, “Block diagrams of retimed 
 </figcaption>
 </figure>
 </div>
-<p><a href="https://doi.org/10.1364/OFC.2024.W4H.3">Open the original Chou et al.&nbsp;paper.</a></p>
+<p>The signal-path comparison is reproduced from Chou et al. <span class="citation" data-cites="chou2024lpo">(<a href="#ref-chou2024lpo" role="doc-biblioref">Chou et al. 2024</a>)</span>.</p>
 <p><strong>What would solve it:</strong> shorten the electrical path, or make the existing path efficient enough with retimers, LPO, better equalisation or active electrical cables.</p>
 <p><strong>Why CPO is not automatically the winner:</strong> a shorter path is valuable only if its manufacturing and service burden is lower than the electrical burden it removes.</p>
 <p>The boundary becomes more important as the lane rate rises. At 200G/lane, Broadcom’s BCM78919 and NVIDIA’s Spectrum-X Ethernet Photonics show that vendors are defining a product around a short electrical path. At 400G/lane, the same logic becomes more sensitive to package loss, bump-to-bump loss and reach assumptions. A laboratory result at one loss boundary cannot settle the architecture decision for every switch <span class="citation" data-cites="broadcom2025th6 nvidia2026production zhou2026lpo">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025b</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026a</a>; <a href="#ref-zhou2026lpo" role="doc-biblioref"><span class="nocase">Zhou et al.</span> 2026</a>)</span>.</p>
@@ -461,7 +461,7 @@ Figure&nbsp;6: Source figure: Wu et al., Fig. 4, “FOWLP process flow of the OE
 </figcaption>
 </figure>
 </div>
-<p><a href="https://doi.org/10.1117/12.3085221">Open the original Wu et al.&nbsp;paper.</a></p>
+<p>The package-process route is reproduced from Wu et al. <span class="citation" data-cites="wu2026fowlp">(<a href="#ref-wu2026fowlp" role="doc-biblioref"><span class="nocase">Wu et al.</span> 2026</a>)</span>.</p>
 <p><strong>So what?</strong> The important manufacturing metric is the cost of an accepted engine, not the speed of one assembly step. Until stage yields and rework are disclosed, the binding constraint cannot be ranked confidently.</p>
 The manufacturing question is therefore not simply “can the machine align fibres?” It is whether alignment stays stable across temperature, vibration and reflow; whether a marginal engine can be reworked; whether test coverage catches latent optical and electrical defects; and whether the line can repeat the result at volume. Known-good-die screening and wafer-level probing can move failures earlier, but they add equipment, data and cycle time. The winning process minimises qualified cost, not just assembly time.
 </details>
@@ -490,7 +490,7 @@ Figure&nbsp;8: Source figure: Watanabe et al., Fig. 1, “Design concept for det
 </figcaption>
 </figure>
 </div>
-<p><a href="https://doi.org/10.1364/OFC.2025.M4J.2">Open the original Watanabe et al.&nbsp;paper.</a></p>
+<p>The detachable connector concept is reproduced from Watanabe et al. <span class="citation" data-cites="watanabe2025reflow">(<a href="#ref-watanabe2025reflow" role="doc-biblioref">Watanabe et al. 2025</a>)</span>.</p>
 <div id="fig-source-brusberg" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Detachable CPO connector, glass interconnect and co-packaged transceiver concept.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-brusberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -501,7 +501,7 @@ Figure&nbsp;9: Source figure: Brusberg et al., Fig. 1, “High-density evanescen
 </figcaption>
 </figure>
 </div>
-<p><a href="https://doi.org/10.1364/OFC.2025.Th3H.1">Open the original Brusberg et al.&nbsp;paper.</a></p>
+<p>The detachable CPO boundary is reproduced from Brusberg et al. <span class="citation" data-cites="brusberg2025detachable">(<a href="#ref-brusberg2025detachable" role="doc-biblioref">Brusberg et al. 2025</a>)</span>.</p>
 <p><strong>What would solve it:</strong> define which part can be replaced in the field, how long the repair takes, what spares are needed and who carries the warranty cost.</p>
 <p>This is a system-design choice, not a minor connector detail. A detachable external-laser or fibre interface may isolate one failure domain, while a failed PIC, interposer or bonded optical engine may still require replacement of a larger assembly. The relevant operating metrics are mean time to repair, spare-module policy, escape rate and warranty allocation—not merely whether a connector can be unplugged <span class="citation" data-cites="oif2025elsfp psaila2023connector">(<a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>; <a href="#ref-psaila2023connector" role="doc-biblioref">Psaila et al. 2023</a>)</span>.</p>
 The service boundary also changes inventory economics. A replaceable laser may require a small, qualified spare; a non-replaceable engine can require an entire switch tray or chassis intervention. Operators will trade lower power against truck rolls, spares, downtime and warranty exposure. Public CPO disclosures rarely report these costs, so serviceability remains a first-order adoption variable rather than a footnote.
@@ -803,8 +803,14 @@ Broadcom. 2026a. <span>“Broadcom Now Shipping the World’s First 1.024 Tbps S
 <div id="ref-broadcom2026ofc" class="csl-entry" role="listitem">
 Broadcom. 2026b. <em>Broadcom Showcases Industry-Leading Solutions for Scaling AI Infrastructure at OFC 2026</em>. March. <a href="https://investors.broadcom.com/node/64036/pdf">https://investors.broadcom.com/node/64036/pdf</a>.
 </div>
+<div id="ref-brusberg2025detachable" class="csl-entry" role="listitem">
+Brusberg, Lars, Jorge A. Holguin-Lerma, Janderson R. Rodrigues, et al. 2025. <span>“High-Density Evanescent Chip Coupling with Detachable Fiber Connector for Co-Packaged Optics.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2025.Th3H.1">https://doi.org/10.1364/OFC.2025.Th3H.1</a>.
+</div>
 <div id="ref-ieee2026npo" class="csl-entry" role="listitem">
 China Mobile and IEEE 802.3 400G per Lane Study Group. 2026. <em>Consideration on NPO and CPO at 400G/Lane</em>. <a href="https://www.ieee802.org/3/400GPL/public/2605/wang_h_400GPL_01_2605.pdf">https://www.ieee802.org/3/400GPL/public/2605/wang_h_400GPL_01_2605.pdf</a>.
+</div>
+<div id="ref-chou2024lpo" class="csl-entry" role="listitem">
+Chou, Elaine S., Yishen Huang, Siamak Amiralizadeh, et al. 2024. <span>“100G and 200G Per Lane Linear Drive Optics for Data Center Applications.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2024.W4H.3">https://doi.org/10.1364/OFC.2024.W4H.3</a>.
 </div>
 <div id="ref-coherent2026cpo" class="csl-entry" role="listitem">
 Coherent. 2026a. <em>Coherent Demonstrates Multiple Technologies for Co-Packaged Optics at OFC 2026</em>. March. <a href="https://www.coherent.com/news/press-releases/coherent-co-packaged-optics-cpo-technologies-ofc-2026">https://www.coherent.com/news/press-releases/coherent-co-packaged-optics-cpo-technologies-ofc-2026</a>.
@@ -868,6 +874,12 @@ TSMC. 2026a. <em>Annual Report 2025</em>. <a href="https://investor.tsmc.com/sit
 </div>
 <div id="ref-tsmc2026coupe" class="csl-entry" role="listitem">
 TSMC. 2026b. <span>“COUPE-on-Substrate Co-Packaged Optics Production Milestone.”</span> <a href="https://pr.tsmc.com/english/news/3302">https://pr.tsmc.com/english/news/3302</a>.
+</div>
+<div id="ref-wan2026integration" class="csl-entry" role="listitem">
+Wan, Yating, William He, James Jaussi, et al. 2026. <span>“Integrating Silicon Photonics with Complementary Metal–Oxide–Semiconductor Technologies.”</span> <em>Nature Reviews Electrical Engineering</em> 3: 15–31. <a href="https://doi.org/10.1038/s44287-025-00223-0">https://doi.org/10.1038/s44287-025-00223-0</a>.
+</div>
+<div id="ref-watanabe2025reflow" class="csl-entry" role="listitem">
+Watanabe, Kengo, Shosuke Ikeda, Yuki Fujimaki, Tsunetoshi Saito, and Masaki Kotoku. 2025. <span>“Ultra-Compact Reflow-Compatible Detachable Optical Connector for Co-Packaged Optics.”</span> <em>Optical Fiber Communication Conference</em>. <a href="https://doi.org/10.1364/OFC.2025.M4J.2">https://doi.org/10.1364/OFC.2025.M4J.2</a>.
 </div>
 <div id="ref-wu2026fowlp" class="csl-entry" role="listitem">
 <span class="nocase">Wu, Shih-Chang et al.</span> 2026. <span>“Fan-Out Wafer-Level Packaging for High-Speed Optical Engine Interconnects.”</span> <em>SPIE Photonics West</em>. <a href="https://doi.org/10.1117/12.3085221">https://doi.org/10.1117/12.3085221</a>.
