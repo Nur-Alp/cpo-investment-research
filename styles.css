@@ -8,16 +8,50 @@ body { color: var(--cpo-ink); }
 .callout-note { border-left-color: var(--cpo-blue); }
 .table { font-size: .92rem; }
 .table th { background: #f4f8fb; }
+/* Make inline author-date citations visibly clickable to their bibliography entries. */
+.citation a,
+a[role="doc-biblioref"] { color: var(--cpo-blue); text-decoration: underline; text-decoration-thickness: .08em; text-underline-offset: .12em; }
+.citation a:hover,
+a[role="doc-biblioref"]:hover { color: #0b4a78; }
 /* Keep analytical exhibits in the reading column rather than treating them as full-width slides. */
 figure { width: min(100%, 42rem); max-width: 42rem; margin: 1.15rem auto; border: 1px solid var(--cpo-line); border-radius: .35rem; padding: .65rem; background: #fff; }
 figure img, figure object, figure embed { display: block; max-width: 100%; height: auto; margin: 0 auto; }
 figcaption { color: var(--cpo-muted); font-size: .88rem; }
+.digest-figure { width: min(100%, 48rem); max-width: 48rem; margin: 1.35rem auto 1.6rem; padding: .55rem .65rem .7rem; border: 1px solid var(--cpo-line); border-radius: .45rem; background: #fff; }
+.digest-figure img { width: 100%; max-width: 100%; height: auto; }
+.digest-figure figcaption { margin: .55rem .25rem .05rem; line-height: 1.45; }
+.digest-figure-wide { max-width: 48rem; }
+
+.digest-source-figure {
+  width: min(100%, 48rem);
+  max-width: 48rem;
+  margin: 1.15rem auto 1.65rem;
+  padding: .65rem;
+  border: 1px solid var(--cpo-line);
+  border-radius: .45rem;
+  background: #fbfcfe;
+}
+.digest-source-figure img { width: 100%; max-width: 100%; height: auto; }
+.digest-source-figure figcaption {
+  margin: .55rem .25rem .05rem;
+  color: #4b5563;
+  font-size: .86rem;
+  line-height: 1.45;
+}
 .status-fact { color: #176b3a; font-weight: 700; }
 .status-inference { color: #8a5200; font-weight: 700; }
 .status-forecast { color: #7048a8; font-weight: 700; }
 .status-open { color: #8b1e2d; font-weight: 700; }
 .callout-warning { background: #fff8ed; }
 .callout-note { background: #f4f8fb; }
+.digest-hero { max-width: 48rem; margin: 0 auto 1.5rem; padding: 1.25rem 1.4rem; border: 1px solid #c8d9e7; border-radius: .5rem; background: linear-gradient(135deg, #f4f9fd, #ffffff); }
+.digest-hero h2 { margin-top: 0; }
+.digest-details { max-width: 48rem; margin: .75rem auto; border: 1px solid var(--cpo-line); border-radius: .4rem; background: #fff; box-shadow: 0 1px 2px rgba(18,35,59,.04); }
+.digest-details summary { cursor: pointer; padding: .85rem 1rem; color: var(--cpo-ink); font-size: 1.02rem; font-weight: 650; }
+.digest-details summary:hover { background: #f4f8fb; }
+.digest-details[open] summary { border-bottom: 1px solid var(--cpo-line); background: #f4f8fb; }
+.digest-details > p, .digest-details > ul, .digest-details > ol { max-width: none; margin: .8rem 1rem; }
+.digest-details > p:last-child, .digest-details > ul:last-child, .digest-details > ol:last-child { margin-bottom: 1rem; }
 #quarto-content main.content .cell-output-display { width: min(100%, 38rem); max-width: 38rem; margin: 1rem auto; }
 #quarto-content main.content .cell-output-display figure.figure { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
 #quarto-content main.content pre.mermaid,
@@ -31,9 +65,21 @@ figcaption { color: var(--cpo-muted); font-size: .88rem; }
 .process-step-cpo { border-color: #7daed2; background: #e7f3fb; }
 .process-arrow { display: flex; flex: 0 0 auto; align-items: center; color: var(--cpo-muted); font-size: 1.15rem; }
 .process-note { max-width: 42rem; margin: -.25rem auto 1rem; color: var(--cpo-muted); font-size: .9rem; text-align: center; }
+.architecture-diagram { max-width: 48rem; padding: .65rem; border: 1px solid var(--cpo-line); border-radius: .4rem; background: #fbfdff; }
+.architecture-diagram > p { display: flex; align-items: stretch; width: 100%; margin: .4rem 0; gap: .3rem; }
+.architecture-name { display: flex; flex: 0 0 8.5rem; align-items: center; color: var(--cpo-ink); font-size: .82rem; font-weight: 700; }
+.architecture-diagram .process-step { font-size: .78rem; padding: .42rem .3rem; }
+.architecture-diagram .process-arrow { font-size: .95rem; }
+.digest-gate { max-width: 48rem; margin: 1rem auto 1.5rem; padding: .85rem 1rem; border-left: 4px solid #d97706; border-radius: .3rem; background: #fff8ed; color: var(--cpo-ink); }
+.digest-takeaway { max-width: 48rem; margin: 1.25rem auto 1.75rem; padding: .8rem 1rem; border-left: 4px solid var(--cpo-blue); border-radius: .3rem; background: #f4f8fb; color: var(--cpo-ink); }
 .table-responsive { margin: 1.25rem 0; }
 #quarto-content main.content { max-width: 980px; }
-table td, table th { vertical-align: top; }
+table { border-collapse: collapse; }
+table td, table th { vertical-align: top; border-right: 1px solid #d5dfe8; }
+table td:last-child, table th:last-child { border-right: 0; }
+table thead tr { border-bottom: 2px solid #8fa4b8; }
+table tbody tr { border-bottom: 1px solid #d5dfe8; }
+table tbody tr:last-child { border-bottom: 0; }
 table td { line-height: 1.4; }
 .hanging-indent .csl-entry { padding-left: 1.5rem; text-indent: -1.5rem; margin-bottom: .65rem; }
 @media (max-width: 768px) {
@@ -61,6 +107,18 @@ table td { line-height: 1.4; }
   .process-row > p { flex-wrap: wrap; }
   .process-step { flex-basis: calc(50% - .1rem); padding: .45rem .3rem; font-size: .75rem; }
   .process-arrow { display: none; }
+  .architecture-diagram > p { flex-wrap: wrap; }
+  .architecture-name { flex: 0 0 100%; padding-bottom: .15rem; }
+  .architecture-diagram .process-step { flex-basis: calc(50% - .1rem); }
+  .digest-gate { margin-left: .2rem; margin-right: .2rem; }
   #quarto-content main.content { padding-left: .8rem; padding-right: .8rem; }
 }
 @media print { .navbar, .sidebar, .page-footer { display: none !important; } main.content { max-width: 100% !important; } a { color: inherit !important; text-decoration: none !important; } table { font-size: 8.5pt; } figure { max-width: 5.9in; break-inside: avoid; } .mermaid { max-width: 5.25in; } h1, h2, h3 { break-after: avoid; } }
+
+/* This repository publishes the CPO research site only. Keep portfolio-level navigation out of the research build. */
+#quarto-header .navbar-nav,
+#quarto-header .quarto-search,
+#quarto-header .aa-Autocomplete,
+#quarto-header .navbar .quarto-navbar-tools {
+  display: none !important;
+}
