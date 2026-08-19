@@ -52,6 +52,10 @@ figcaption { color: var(--cpo-muted); font-size: .88rem; }
 .digest-details[open] summary { border-bottom: 1px solid var(--cpo-line); background: #f4f8fb; }
 .digest-details > p, .digest-details > ul, .digest-details > ol { max-width: none; margin: .8rem 1rem; }
 .digest-details > p:last-child, .digest-details > ul:last-child, .digest-details > ol:last-child { margin-bottom: 1rem; }
+/* Keep Markdown paragraphs and bare prose inside raw <details> cards on one margin grid. */
+.digest-details { padding: 0 2rem 1rem; }
+.digest-details > summary { margin: 0 -2rem; padding-left: 2rem; padding-right: 2rem; }
+.digest-details > p, .digest-details > ul, .digest-details > ol { margin-left: 0; margin-right: 0; }
 #quarto-content main.content .cell-output-display { width: min(100%, 38rem); max-width: 38rem; margin: 1rem auto; }
 #quarto-content main.content .cell-output-display figure.figure { width: 100% !important; max-width: 100% !important; margin: 0 auto !important; }
 #quarto-content main.content pre.mermaid,
