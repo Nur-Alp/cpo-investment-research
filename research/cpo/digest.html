@@ -209,6 +209,7 @@ div.csl-indent {
   <li><a href="#architecture-choices" id="toc-architecture-choices" class="nav-link" data-scroll-target="#architecture-choices">3. Architecture choices</a></li>
   <li><a href="#which-companies-matter" id="toc-which-companies-matter" class="nav-link" data-scroll-target="#which-companies-matter">4. Which companies matter?</a></li>
   <li><a href="#bottom-line" id="toc-bottom-line" class="nav-link" data-scroll-target="#bottom-line">Bottom line</a></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">References</a></li>
   </ul>
 </nav>
     </div>
@@ -379,22 +380,22 @@ These are the few terms needed to follow the rest of the digest. The full report
 <img src="figures/digest-cpo-boundary.png" class="digest-figure img-fluid figure-img" alt="A front-panel pluggable path and a switch-side CPO path, with accelerator optical I/O shown as a separate adjacent track.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-digest-cpo-boundary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;1: CPO moves optical conversion closer to the switch ASIC. This original analytical recreation is based on the integration pathway described by Wan et al.&nbsp;and the CPO boundary described in OIF CEI materials. It is conceptual, not to scale, and does not imply that optical I/O is a direct switch-CPO competitor.
+Figure&nbsp;1: CPO moves optical conversion closer to the switch ASIC. This original analytical recreation is conceptual, not to scale, and shows accelerator optical I/O as an adjacent technology track rather than a direct switch-CPO competitor <span class="citation" data-cites="wan2026integration oif2023cpo">(<a href="#ref-wan2026integration" role="doc-biblioref">Wan et al. 2026</a>; <a href="#ref-oif2023cpo" role="doc-biblioref">Optical Internetworking Forum 2023</a>)</span>.
 </figcaption>
 </figure>
 </div>
 <p>Figure 1 sets the report’s boundary: switch-side CPO shortens the electrical path to the optical engine, while accelerator optical I/O is shown as a separate scale-up route rather than a direct substitute.</p>
-<div id="fig-source-wan" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Silicon photonic integration approaches and an evolutionary pathway from pluggable optics through co-packaged optics.">
+<div id="fig-source-wan" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Four cards compare monolithic, hybrid 2D, hybrid 3D and hybrid 2.5D electronic-photonic integration, followed by an illustrative path from pluggable optics to tighter co-packaging.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-wan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/source-snapshots/wan-fig4-integration-pathway.png" class="digest-source-figure img-fluid figure-img" alt="Silicon photonic integration approaches and an evolutionary pathway from pluggable optics through co-packaged optics.">
+<img src="figures/digest-wan-integration-pathway.png" class="digest-source-figure img-fluid figure-img" alt="Four cards compare monolithic, hybrid 2D, hybrid 3D and hybrid 2.5D electronic-photonic integration, followed by an illustrative path from pluggable optics to tighter co-packaging.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-wan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;2: Source figure: Wan et al., Fig. 4, “Silicon photonic integration approaches and evolutionary pathway,” <em>Nature Reviews Electrical Engineering</em> (2026), p.&nbsp;23. Reproduced as a source snapshot; this is an integration taxonomy, not a market-share or cost forecast.
+Figure&nbsp;2: Four electronic–photonic integration approaches and an illustrative pathway toward tighter co-packaging. This original analytical recreation preserves the taxonomy in Wan et al.; the pathway is not a market-share or adoption forecast <span class="citation" data-cites="wan2026integration">(<a href="#ref-wan2026integration" role="doc-biblioref">Wan et al. 2026</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p><strong>How to read Figure 2:</strong> panels (a)–(d) compare four ways to combine electronics and silicon photonics: (a) fabricates them together as one electronic–photonic chip; (b) places separate electronic and photonic chips side by side; (c) stacks them in 3D and adds an on-chip laser; and (d) joins them through an interposer in a 2.5D package. Panel (e) arranges these approaches as a progression from pluggable optics toward denser co-packaging. The important trade-off is that tighter integration shortens interconnects and can raise bandwidth density, but also couples packaging, thermal and yield risk more tightly. The “generations” are a technology taxonomy, not an adoption forecast <span class="citation" data-cites="wan2026integration">(<a href="#ref-wan2026integration" role="doc-biblioref">Wan et al. 2026</a>)</span>.</p>
+<p><strong>How to read Figure 2:</strong> cards A–D compare four ways to combine electronics and silicon photonics: fabricate them together on one electronic–photonic die; place separate dies side by side; stack the electronic die above the photonic die; or join separate dies through an interposer. The lower row shows the paper’s illustrative movement from pluggable optics toward denser co-packaging. The important trade-off is that tighter integration shortens interconnects and can raise bandwidth density, but also couples packaging, thermal and yield risk more tightly. The sequence is a technology taxonomy, not an adoption forecast <span class="citation" data-cites="wan2026integration">(<a href="#ref-wan2026integration" role="doc-biblioref">Wan et al. 2026</a>)</span>.</p>
 </details>
 </section>
 <section id="why-the-industry-needs-a-new-interconnect" class="level2">
@@ -405,28 +406,28 @@ Figure&nbsp;2: Source figure: Wan et al., Fig. 4, “Silicon photonic integratio
 <strong>Problem A — the electrical path is becoming expensive</strong>
 </summary>
 <p>At high lane rates, data travels from the switch ASIC through the package, circuit board, connectors and front-panel module before becoming light. That path consumes signal margin and power. CPO places the optical engine close to the ASIC, reducing the length of the most demanding electrical connection <span class="citation" data-cites="oif2023cpo oif2024eei">(<a href="#ref-oif2023cpo" role="doc-biblioref">Optical Internetworking Forum 2023</a>, <a href="#ref-oif2024eei" role="doc-biblioref">2024</a>)</span>.</p>
-<div id="fig-digest-architecture-comparison" class="digest-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Three rows compare retimed pluggable, LPO or NPO, and switch-side CPO signal paths.">
+<div id="fig-digest-architecture-comparison" class="digest-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Four rows compare retimed pluggable, LPO, NPO and switch-side CPO signal paths.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-digest-architecture-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/digest-architecture-comparison.png" class="digest-figure img-fluid figure-img" alt="Three rows compare retimed pluggable, LPO or NPO, and switch-side CPO signal paths.">
+<img src="figures/digest-architecture-comparison.png" class="digest-figure img-fluid figure-img" alt="Four rows compare retimed pluggable, LPO, NPO and switch-side CPO signal paths.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-digest-architecture-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;3: The architecture comparison is about where signal repair and optical conversion occur. It does not by itself establish which option has the lowest total system cost. Original analytical recreation based on Chou et al.’s signal-path comparison and the report’s system-boundary framework.
+Figure&nbsp;3: The architecture comparison separates retimed pluggables, LPO, NPO and switch-side CPO by electrical reach, signal repair and optical-engine location. It does not by itself establish the lowest-cost system <span class="citation" data-cites="chou2024lpo oif2024eei ieee2026npo">(<a href="#ref-chou2024lpo" role="doc-biblioref">Chou et al. 2024</a>; <a href="#ref-oif2024eei" role="doc-biblioref">Optical Internetworking Forum 2024</a>; <a href="#ref-ieee2026npo" role="doc-biblioref">China Mobile and IEEE 802.3 400G per Lane Study Group 2026</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p>Figure 3 shows the decision variable that matters most: where the electrical signal is repaired and where optical conversion occurs. Moving that boundary closer to the ASIC can reduce channel burden, but it also moves integration and service risk into the package.</p>
-<div id="fig-source-chou" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Panel a places a DSP retimer inside the optical transceiver; panel b removes that DSP and connects the switch ASIC through transmit and receive electrical lines to the optical driver and receiver.">
+<p>Figure 3 separates LPO and NPO because they preserve different physical boundaries. LPO keeps the optics in a front-panel module and asks the long host channel to remain linear; NPO shortens that channel by moving a separate engine near the ASIC; CPO places the engine in the ASIC package. Moving the boundary inward can reduce channel burden, but it also moves integration and service risk toward the package.</p>
+<div id="fig-source-chou" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Panel A places a DSP inside the optical module; panel B removes the module DSP and exposes the host-channel loss between the switch ASIC and linear optical module.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-chou-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/source-snapshots/chou-fig1-retimed-linear-drive.png" class="digest-source-figure img-fluid figure-img" alt="Panel a places a DSP retimer inside the optical transceiver; panel b removes that DSP and connects the switch ASIC through transmit and receive electrical lines to the optical driver and receiver.">
+<img src="figures/digest-chou-signal-path.png" class="digest-source-figure img-fluid figure-img" alt="Panel A places a DSP inside the optical module; panel B removes the module DSP and exposes the host-channel loss between the switch ASIC and linear optical module.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-chou-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;4: Source figure: Chou et al., Fig. 1, “Block diagrams of retimed and linear-drive WDM optics links,” OFC 2024, paper W4H.3. Panel (a) is retimed; panel (b) is linear drive. The figure supports the signal-path distinction; it does not establish total-system cost or adoption.
+Figure&nbsp;4: Where the signal is regenerated in retimed and linear-drive optics. This original analytical recreation preserves the transmit, receive and DSP boundaries in Chou et al.; it does not establish total-system cost or adoption <span class="citation" data-cites="chou2024lpo">(<a href="#ref-chou2024lpo" role="doc-biblioref">Chou et al. 2024</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p><strong>How to read Figure 4:</strong> in panel (a), the optical transceiver contains a DSP that regenerates the signal at the module boundary. That regeneration isolates the switch-to-module electrical path, shown with dashed lines, from the optical-link analysis. In panel (b), the module DSP is removed: the switch ASIC drives the optical transmitter and receives from the TIA through the labelled Tx and Rx transmission lines. Electrical loss and distortion therefore accumulate with the optical impairments across the full link. Look first for the DSP block present only in (a), then for the exposed transmission lines in (b). LPO and CPO can both use the linear-drive structure in (b); their main difference is the length and loss of the ASIC-to-optics electrical path <span class="citation" data-cites="chou2024lpo">(<a href="#ref-chou2024lpo" role="doc-biblioref">Chou et al. 2024</a>)</span>.</p>
+<p><strong>How to read Figure 4:</strong> panel A inserts a DSP inside the optical module. It regenerates the transmit and receive signals at the module boundary, so the board channel is not carried through the optical impairment budget. Panel B removes that DSP: the ASIC equaliser must carry the end-to-end link through the highlighted host-channel loss and the optical module. The blue arrows are the transmit path and the green arrows are the receive path. LPO and CPO can both use linear drive; their main difference is the length and loss of the ASIC-to-optics channel <span class="citation" data-cites="chou2024lpo">(<a href="#ref-chou2024lpo" role="doc-biblioref">Chou et al. 2024</a>)</span>.</p>
 <p><strong>What would solve it:</strong> shorten the electrical path, or make the existing path efficient enough with retimers, LPO, better equalisation or active electrical cables.</p>
 <p><strong>Why CPO is not automatically the winner:</strong> a shorter path is valuable only if its manufacturing and service burden is lower than the electrical burden it removes.</p>
 <p>The boundary becomes more important as the lane rate rises. At 200G/lane, Broadcom’s BCM78919 and NVIDIA’s Spectrum-X Ethernet Photonics show that vendors are defining a product around a short electrical path. At 400G/lane, the same logic becomes more sensitive to package loss, bump-to-bump loss and reach assumptions. A laboratory result at one loss boundary cannot settle the architecture decision for every switch <span class="citation" data-cites="broadcom2025th6 nvidia2026production zhou2026lpo">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025b</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026a</a>; <a href="#ref-zhou2026lpo" role="doc-biblioref"><span class="nocase">Zhou et al.</span> 2026</a>)</span>.</p>
@@ -460,22 +461,22 @@ Power must be measured at a common boundary. A component pJ/bit figure can omit 
 <img src="figures/digest-qualified-engine-flow.png" class="digest-figure img-fluid figure-img" alt="Seven-stage flow from wafer and die test through fibre attach, engine test, package integration, module test, burn-in and qualification.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-digest-qualified-engine-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;5: A qualified engine is the output of several test and assembly gates. The public record describes individual steps and test vehicles, but not a complete production yield waterfall. Based on public package/test process descriptions and IBM’s public qualification summary.
+Figure&nbsp;5: A qualified engine is the output of several test and assembly gates. The public record describes individual steps and test vehicles, but not a complete production yield waterfall. This original analytical recreation uses IBM’s public qualification summary and public package/test process descriptions <span class="citation" data-cites="knickerbocker2024cpo ase2025cpo">(<a href="#ref-knickerbocker2024cpo" role="doc-biblioref"><span class="nocase">Knickerbocker et al.</span> 2024</a>; <a href="#ref-ase2025cpo" role="doc-biblioref">ASE 2025</a>)</span>.
 </figcaption>
 </figure>
 </div>
 <p>Figure 5 follows the cost-bearing sequence from wafer and die screening to final qualification. The later a defect is found, the more assembled value is exposed to scrap or rework; the public record does not yet disclose the stage-by-stage yield waterfall.</p>
-<div id="fig-source-wu" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Fan-out wafer-level packaging process flow for an optical-engine package.">
+<div id="fig-source-wu" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Seven stages show photonic-die placement, molding, debonding, front- and back-side redistribution layers, electronic-die assembly and final solder-ball attachment.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-wu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/source-snapshots/wu-fig4-fowlp-process-flow.png" class="digest-source-figure img-fluid figure-img" alt="Fan-out wafer-level packaging process flow for an optical-engine package.">
+<img src="figures/digest-wu-fowlp-process.png" class="digest-source-figure img-fluid figure-img" alt="Seven stages show photonic-die placement, molding, debonding, front- and back-side redistribution layers, electronic-die assembly and final solder-ball attachment.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-wu-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;6: Source figure: Wu et al., Fig. 4, “FOWLP process flow of the OE package,” SPIE Photonics West 2026, paper 13905H-3. This is one package-process route; it does not disclose a complete production yield waterfall.
+Figure&nbsp;6: A representative fan-out wafer-level packaging flow for an optical-engine package. This original analytical recreation follows Wu et al., Proc. SPIE 13905, article 139050H; it does not disclose a production yield or cost waterfall <span class="citation" data-cites="wu2026fowlp">(<a href="#ref-wu2026fowlp" role="doc-biblioref"><span class="nocase">Wu et al.</span> 2026</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p><strong>How to read Figure 6:</strong> panel (a) starts with a photonic die designed for vertical or edge optical access; its silicon buffer keeps mould material out of the optical opening. Panels (b) and (c) embed that die in mould compound and release the reconstituted wafer. Panels (d) and (e) add front- and back-side redistribution layers plus through-mould vias. Panels (f) and (g) attach the electronic IC and add solder balls for the external electrical connection. The sequence shows how the package is built around the PIC before final electrical integration; it does not disclose stage yield, rework success or production cost <span class="citation" data-cites="wu2026fowlp">(<a href="#ref-wu2026fowlp" role="doc-biblioref"><span class="nocase">Wu et al.</span> 2026</a>)</span>.</p>
+<p><strong>How to read Figure 6:</strong> steps 1–3 place the photonic die face down, embed it in mould compound and release the reconstituted wafer. Steps 4–5 add front- and back-side redistribution layers and through-mould vias. Steps 6–7 attach the electronic IC and complete the external package interface. The lower arrow shows why late defects matter: every completed step adds materials, labour and test value that can be lost or reworked. The sequence describes a package route, not stage yield, rework success or production cost <span class="citation" data-cites="wu2026fowlp">(<a href="#ref-wu2026fowlp" role="doc-biblioref"><span class="nocase">Wu et al.</span> 2026</a>)</span>.</p>
 <p><strong>So what?</strong> The important manufacturing metric is the cost of an accepted engine, not the speed of one assembly step. Until stage yields and rework are disclosed, the binding constraint cannot be ranked confidently.</p>
 <p>
 The manufacturing question is therefore not simply “can the machine align fibres?” It is whether alignment stays stable across temperature, vibration and reflow; whether a marginal engine can be reworked; whether test coverage catches latent optical and electrical defects; and whether the line can repeat the result at volume. Known-good-die screening and wafer-level probing can move failures earlier, but they add equipment, data and cycle time. The winning process minimises qualified cost, not just assembly time.
@@ -486,39 +487,39 @@ The manufacturing question is therefore not simply “can the machine align fibr
 <strong>Problem D — replacing a failed part may be harder</strong>
 </summary>
 <p>A front-panel optical module can normally be replaced without replacing the switch. A deeply integrated engine may not be independently replaceable. External-laser and detachable-interface standards can separate part of the failure domain, but they do not automatically make the PIC or package serviceable <span class="citation" data-cites="oif2025elsfp psaila2023connector">(<a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>; <a href="#ref-psaila2023connector" role="doc-biblioref">Psaila et al. 2023</a>)</span>.</p>
-<div id="fig-digest-serviceability-boundary" class="digest-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Comparison of a fixed bonded fibre boundary with a detachable fibre-array or external-laser boundary.">
+<div id="fig-digest-serviceability-boundary" class="digest-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Three panels compare fixed fibre attach, a detachable fibre-array unit and a separately replaceable external laser.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-digest-serviceability-boundary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/digest-serviceability-boundary.png" class="digest-figure img-fluid figure-img" alt="Comparison of a fixed bonded fibre boundary with a detachable fibre-array or external-laser boundary.">
+<img src="figures/digest-serviceability-boundary.png" class="digest-figure img-fluid figure-img" alt="Three panels compare fixed fibre attach, a detachable fibre-array unit and a separately replaceable external laser.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-digest-serviceability-boundary-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;7: A detachable fibre-array or external-laser boundary can isolate one failure domain, but it does not make the complete CPO package field-replaceable. Original analytical recreation based on detachable-connector studies and the report’s serviceability framework.
+Figure&nbsp;7: Fixed fibre attach, a detachable fibre-array unit and an external laser isolate different failure domains. This original analytical recreation separates the service boundaries described in connector studies and external-laser specifications <span class="citation" data-cites="watanabe2025reflow brusberg2025detachable oif2025elsfp">(<a href="#ref-watanabe2025reflow" role="doc-biblioref">Watanabe et al. 2025</a>; <a href="#ref-brusberg2025detachable" role="doc-biblioref">Brusberg et al. 2025</a>; <a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p>Figure 7 compares a fixed bonded boundary with detachable fibre-array or external-laser options. The latter can isolate a replaceable failure domain, but neither option makes the entire CPO package field-serviceable by itself.</p>
-<div id="fig-source-watanabe" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Oblique and top views of a detachable waveguide and optical-fibre connector.">
+<p>Figure 7 shows why “detachable” needs a precise object. A detachable FAU isolates the fibre-array assembly; an external laser isolates the light source. Those are different service benefits, and neither makes the PIC/EIC engine independently field-replaceable.</p>
+<div id="fig-source-watanabe" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="A fixed substrate terminal and removable fibre-array terminal use lens arrays, magnets and guide pins across a non-contact optical gap.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-watanabe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/source-snapshots/watanabe-fig1-detachable-connector.png" class="digest-source-figure img-fluid figure-img" alt="Oblique and top views of a detachable waveguide and optical-fibre connector.">
+<img src="figures/digest-watanabe-detachable-connector.png" class="digest-source-figure img-fluid figure-img" alt="A fixed substrate terminal and removable fibre-array terminal use lens arrays, magnets and guide pins across a non-contact optical gap.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-watanabe-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;8: Source figure: Watanabe et al., Fig. 1, “Design concept for detachable Waveguide/Optical fiber connector,” OFC 2025, paper M4J.2. The design illustrates a detachable boundary; it does not prove field-replacement economics.
+Figure&nbsp;8: A detachable expanded-beam interface between a fixed glass-waveguide terminal and a removable fibre-array terminal. This original analytical recreation follows Watanabe et al.; the design does not establish field-replacement economics <span class="citation" data-cites="watanabe2025reflow">(<a href="#ref-watanabe2025reflow" role="doc-biblioref">Watanabe et al. 2025</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p><strong>How to read Figure 8:</strong> panel (a) is the three-dimensional view of the glass waveguide, substrate-side connector and removable fibre array. Panel (b) is the same interface from above: guide pins and moulded registration parts align opposing lens arrays, while magnets provide the mating force. The lenses expand and refocus the beam so the connection tolerates more mechanical misalignment than direct fibre-core contact. The detachable boundary is the fibre-array connection—not the PIC or the complete CPO package—and the diagram does not establish field repair time, spares or warranty cost <span class="citation" data-cites="watanabe2025reflow">(<a href="#ref-watanabe2025reflow" role="doc-biblioref">Watanabe et al. 2025</a>)</span>.</p>
-<div id="fig-source-brusberg" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="Detachable CPO connector, glass interconnect and co-packaged transceiver concept.">
+<p><strong>How to read Figure 8:</strong> the left side remains fixed to the glass substrate through package processing; the right-side fibre-array terminal is attached later and can be removed. Opposing lenses expand and refocus the beam across a non-contact gap, guide pins control lateral registration and magnets provide mating force. The detachable object is the fibre-array terminal—not the PIC or complete package—and connector measurements do not establish field repair time, spares or warranty cost <span class="citation" data-cites="watanabe2025reflow">(<a href="#ref-watanabe2025reflow" role="doc-biblioref">Watanabe et al. 2025</a>)</span>.</p>
+<div id="fig-source-brusberg" class="digest-source-figure quarto-float quarto-figure quarto-figure-center anchored" alt="A PIC couples to a fixed glass transfer waveguide, which terminates at a detachable fibre connector; a lower inset shows optical engines around a switch ASIC on a glass substrate.">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-source-brusberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="figures/source-snapshots/brusberg-fig1-detachable-connector.png" class="digest-source-figure img-fluid figure-img" alt="Detachable CPO connector, glass interconnect and co-packaged transceiver concept.">
+<img src="figures/digest-brusberg-glass-interconnect.png" class="digest-source-figure img-fluid figure-img" alt="A PIC couples to a fixed glass transfer waveguide, which terminates at a detachable fibre connector; a lower inset shows optical engines around a switch ASIC on a glass substrate.">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-source-brusberg-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figure&nbsp;9: Source figure: Brusberg et al., Fig. 1, “High-density evanescent chip coupling with detachable fiber connector for co-packaged optics,” OFC 2025, paper Th3H.1. The figure separates the detachable connector boundary from the PIC and ASIC package; it does not establish field-replacement cost.
+Figure&nbsp;9: A fixed PIC-to-glass transfer interface followed by a detachable glass-to-fibre connector. This original analytical recreation follows Brusberg et al.; it is an architecture concept, not evidence of field-service cost <span class="citation" data-cites="brusberg2025detachable">(<a href="#ref-brusberg2025detachable" role="doc-biblioref">Brusberg et al. 2025</a>)</span>.
 </figcaption>
 </figure>
 </div>
-<p><strong>How to read Figure 9:</strong> panel A locates the connector between the PIC/CPO module and the external fibre cable. Panel B enlarges the proposed path: a glass interconnect couples to the PIC and terminates at a detachable fibre connector. Panel C shows the longer-term system concept, with 16 flip-chip optical transceivers surrounding an ASIC on a glass substrate. The key distinction is between the fixed PIC-to-glass interface and the detachable glass-to-fibre interface; only the latter is presented as replaceable. The figure is an architecture concept, not evidence that the complete assembly can be serviced economically <span class="citation" data-cites="brusberg2025detachable">(<a href="#ref-brusberg2025detachable" role="doc-biblioref">Brusberg et al. 2025</a>)</span>.</p>
+<p><strong>How to read Figure 9:</strong> the upper path contains two optical interfaces. Evanescent coupling joins the PIC to a glass transfer waveguide as a fixed optical-mechanical interface; a guide-pin connector then creates the detachable boundary between that glass waveguide and the external fibre. The lower inset shows the paper’s longer-term package concept, with optical engines surrounding a switch ASIC on a glass substrate. Only the connector boundary is presented as replaceable <span class="citation" data-cites="brusberg2025detachable">(<a href="#ref-brusberg2025detachable" role="doc-biblioref">Brusberg et al. 2025</a>)</span>.</p>
 <p><strong>What would solve it:</strong> define which part can be replaced in the field, how long the repair takes, what spares are needed and who carries the warranty cost.</p>
 <p>This is a system-design choice, not a minor connector detail. A detachable external-laser or fibre interface may isolate one failure domain, while a failed PIC, interposer or bonded optical engine may still require replacement of a larger assembly. The relevant operating metrics are mean time to repair, spare-module policy, escape rate and warranty allocation—not merely whether a connector can be unplugged <span class="citation" data-cites="oif2025elsfp psaila2023connector">(<a href="#ref-oif2025elsfp" role="doc-biblioref">Optical Internetworking Forum 2025</a>; <a href="#ref-psaila2023connector" role="doc-biblioref">Psaila et al. 2023</a>)</span>.</p>
 <p>
@@ -559,7 +560,7 @@ This stage is still valuable. It narrows which mechanisms deserve manufacturing 
 <summary>
 <strong>Stage 2 — defined products and platforms</strong>
 </summary>
-<p>Broadcom has defined a 102.4T Tomahawk 6/Davisson CPO route, and NVIDIA describes Spectrum-X Ethernet Photonics as a 200G-SerDes CPO system <span class="citation" data-cites="broadcom2025th6 nvidia2026production">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025b</a>; <a href="#ref-nvidia2026production" role="doc-biblioref">NVIDIA 2026a</a>)</span>. This is stronger than a lab demo because a product boundary exists.</p>
+<p>Broadcom has defined a 102.4T Tomahawk 6/Davisson CPO route, and NVIDIA describes Spectrum-X Ethernet Photonics as a 200G-SerDes CPO system <span class="citation" data-cites="broadcom2025th6 nvidia2026photonicsrefresh">(<a href="#ref-broadcom2025th6" role="doc-biblioref">Broadcom 2025b</a>; <a href="#ref-nvidia2026photonicsrefresh" role="doc-biblioref">NVIDIA 2026b</a>)</span>. This is stronger than a lab demo because a product boundary exists.</p>
 <p>
 Product definition also narrows the diligence question. The relevant question is no longer “can CPO be built?” but “which configuration is actually being sold, to whom, in what quantity, and with what service boundary?” A broad switch-family announcement does not answer those questions for the CPO configuration.
 </p>
@@ -572,7 +573,7 @@ This is why the digest names the product routes but avoids converting them into 
 <summary>
 <strong>Stage 3 — production signals, but not complete commercial proof</strong>
 </summary>
-<p>NVIDIA uses “in production” language for Spectrum-X Ethernet Photonics, and Broadcom reports production-volume shipping for the broader Tomahawk 6 family. Public evidence still does not join an exact CPO SKU to a named customer, accepted unit range, repeat shipment, qualified yield or supplier economics. The report therefore treats this as <strong>early production evidence with an open commercial gate</strong>.</p>
+<p>NVIDIA uses “in production” language for Spectrum-X Ethernet Photonics, and Broadcom reports production-volume shipping for the broader Tomahawk 6 family. Public evidence still does not join an exact CPO SKU to a named customer, accepted unit range, repeat shipment, qualified yield or supplier economics. The report therefore treats this as <strong>early production evidence with an open commercial gate</strong> <span class="citation" data-cites="nvidia2026photonicsrefresh broadcom2026th6shipping">(<a href="#ref-nvidia2026photonicsrefresh" role="doc-biblioref">NVIDIA 2026b</a>; <a href="#ref-broadcom2026th6shipping" role="doc-biblioref">Broadcom 2026a</a>)</span>.</p>
 <p>
 That is a positive timing signal, not a negative technology verdict. It means the public record has crossed from component proof into vendor-declared product activity, while the evidence needed to estimate market share or supplier earnings remains unavailable. The key risk is that “production” resolves to evaluation systems, a wider platform family, or configurations that still use pluggable optics.
 </p>
@@ -833,6 +834,9 @@ TSMC can win even if no merchant CPO component becomes a large standalone busine
 <p><a href="../../research/cpo/index.html" class="btn btn-primary">Read the full report</a> <a href="../../research/cpo/cpo-investment-brief.html" class="btn btn-outline-primary">Read the investment brief</a></p>
 
 
+</section>
+<section id="bibliography" class="level1 unnumbered">
+
 
 </section>
 
@@ -856,7 +860,7 @@ Broadcom. 2025a. <em>Broadcom Announces Third-Generation Co-Packaged Optics Tech
 Broadcom. 2025b. <em>Tomahawk 6 Davisson: 102.4-Tb/s Ethernet Switch with Co-Packaged Optics</em>. <a href="https://www.broadcom.com/company/news/product-releases/63626">https://www.broadcom.com/company/news/product-releases/63626</a>.
 </div>
 <div id="ref-broadcom2026th6shipping" class="csl-entry" role="listitem">
-Broadcom. 2026a. <span>“Broadcom Now Shipping the World’s First 1.024 Tbps Switch in Production.”</span> <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production">https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production</a>.
+Broadcom. 2026a. <span>“Broadcom Now Shipping the World’s First 102.4 Tbps Switch in Production Volume.”</span> <a href="https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production">https://investors.broadcom.com/news-releases/news-release-details/broadcom-now-shipping-worlds-first-1024-tbps-switch-production</a>.
 </div>
 <div id="ref-broadcom2026ofc" class="csl-entry" role="listitem">
 Broadcom. 2026b. <em>Broadcom Showcases Industry-Leading Solutions for Scaling AI Infrastructure at OFC 2026</em>. March. <a href="https://investors.broadcom.com/node/64036/pdf">https://investors.broadcom.com/node/64036/pdf</a>.
@@ -878,6 +882,9 @@ Coherent. 2026b. <em>Technology Innovation: OFC 2026 Investor Event</em>. <a hre
 </div>
 <div id="ref-ficontec2025dlt" class="csl-entry" role="listitem">
 <span class="nocase">ficonTEC</span>. 2025. <span>“Multi-Site Die-Level Tester for Double-Sided Compact 3D CPO Optical Engines.”</span> <a href="https://www.ficontec.com/jp/multi-site-die-level-tester-for-double-sided-compact-3d-cpo-optical-engines/">https://www.ficontec.com/jp/multi-site-die-level-tester-for-double-sided-compact-3d-cpo-optical-engines/</a>.
+</div>
+<div id="ref-knickerbocker2024cpo" class="csl-entry" role="listitem">
+<span class="nocase">Knickerbocker, John et al.</span> 2024. <em>Next Generation Co-Packaged Optics Technology to Train and Run Generative <span>AI</span> Models in Data Centers and Other Computing Applications</em>. <a href="https://doi.org/10.48550/arXiv.2412.06570">https://doi.org/10.48550/arXiv.2412.06570</a>.
 </div>
 <div id="ref-lumentum2026elsfp" class="csl-entry" role="listitem">
 Lumentum. 2026a. <span>“External-Laser CPO Reliability White Paper.”</span> <a href="https://www.lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf">https://www.lumentum.com/sites/default/files/2026-06/elsfpreliability-wp-cl-ae.pdf</a>.
